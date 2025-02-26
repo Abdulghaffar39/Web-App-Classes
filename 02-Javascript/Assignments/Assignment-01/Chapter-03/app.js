@@ -23,3 +23,20 @@ alert("You have visited this site " + visitCount + " times.");
 
 // -----------------------------------------------------
 
+var brith_year = ("1990")
+
+document.write("My brith year is" + brith_year );
+
+// -----------------------------------------------------
+
+var visiter_name = prompt("Enter your Name")
+var visiter_product = prompt("Cloth Type");
+var visiter_quantity = prompt("Order")
+
+var order_detail = ( visiter_name + " ordered " + visiter_quantity + "-" + visiter_product + "(s) NewClothing Store");
+
+document.write(order_detail);
+
+
+// -----------------------------------------------------
+
