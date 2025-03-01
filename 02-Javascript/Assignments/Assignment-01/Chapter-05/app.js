@@ -116,45 +116,44 @@
 
 
 // Chapter 5, Question 7 started
-var item_1 = (650);
-var ordered_1 = prompt(
-  "Price of items 1 is 650. Ordered Shipping Charges is 100 " + "\n" + "Ordered Quantity of items?"
-);
-
-
-var item_2 = (100);
-var ordered_2 = prompt(
-  "Price of items 2 is 200. Shipping Charges is 100 " + "\n" + "Ordered Quantity of items?"
-);
-
-var shipping_charges = (100)
-
-
-
-// document.write(
-//   "Price of items 1 is: 650 "
-//    + "</br>" + 
-   
-//    " Quantity of items: " + ordered_1 
-//    + "</br>" + 
-   
-//    " Price of items 2 is: 200 " 
-//    + "</br>" +  
-   
-//    "Quantity of items: "  + ordered_2 
-//    + "</br>" + 
-   
-//    "Shipping Charges:  " + shipping_charges  
-//    + "</br>" +  
-   
-//    "Total cost of First order is: " + (item_1 * ordered_1 + shipping_charges) 
-//    + "</br>" + 
-   
-//    " Total cost of Second order is: " + (item_2 * ordered_2 + shipping_charges) 
-//    + "</br></br>" + 
-   
-//    " Total cost of your order is: " + (item_1 * ordered_1 + shipping_charges + item_2 * ordered_2 + shipping_charges)
+// var item_1 = (650);
+// var ordered_1 = prompt(
+//   "Price of items 1 is 650. Ordered Shipping Charges is 100 " + "\n" + "Ordered Quantity of items?"
 // );
+
+
+// var item_2 = (100);
+// var ordered_2 = prompt(
+//   "Price of items 2 is 200. Shipping Charges is 100 " + "\n" + "Ordered Quantity of items?"
+// );
+
+// var shipping_charges = (100)
+
+
+// // document.write(
+// //   "Price of items 1 is: 650 "
+// //    + "</br>" + 
+   
+// //    " Quantity of items: " + ordered_1 
+// //    + "</br>" + 
+   
+// //    " Price of items 2 is: 200 " 
+// //    + "</br>" +  
+   
+// //    "Quantity of items: "  + ordered_2 
+// //    + "</br>" + 
+   
+// //    "Shipping Charges:  " + shipping_charges  
+// //    + "</br>" +  
+   
+// //    "Total cost of First order is: " + (item_1 * ordered_1 + shipping_charges) 
+// //    + "</br>" + 
+   
+// //    " Total cost of Second order is: " + (item_2 * ordered_2 + shipping_charges) 
+// //    + "</br></br>" + 
+   
+// //    " Total cost of your order is: " + (item_1 * ordered_1 + shipping_charges + item_2 * ordered_2 + shipping_charges)
+// // );
 // Chapter 5, Question 7 ended
 
 
