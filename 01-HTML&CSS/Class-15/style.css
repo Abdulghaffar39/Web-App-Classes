@@ -1,0 +1,84 @@
+/* .parent {
+
+    border: 2px solid red;
+    height: 100px;
+    width: 50%;
+    height: 50vh;
+    width: 70vw;  
+} */
+
+/* .children {
+
+    border: 1px solid black; 
+    height: 100px;
+    width: 50%;
+    height: 200vh;
+     width: 100vw;
+} */
+
+/* 
+.container {
+
+    font-size: 50px;
+}
+
+h1 {
+
+    font-size: 3rem;
+}
+
+p {
+
+    font-size: 2rem;
+} */
+
+/* .one {
+    
+    font-size: 4rem;
+}
+
+.two {
+
+    font-size: 64px;
+} */
+
+
+/* html {
+
+    font-size: 62.5%;
+}
+
+
+h1 {
+
+    font-size: 3.8rem;
+}
+
+.one {
+
+    font-size: 2.8rem;
+}
+
+.two {
+
+    font-size: 28px;
+} */
+
+/* h1,p {
+
+    text-transform: capitalize;
+} */
+
+ /* h1,p { */
+
+    /* text-decoration: overline; */
+    /* text-decoration: underline; */
+    /* text-decoration: line-through; */
+    /* text-decoration: blink; */
+/* } */
+
+p {
+
+    line-height: 5rem; 
+    letter-spacing: 10px;
+}
