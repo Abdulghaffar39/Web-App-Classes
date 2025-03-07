@@ -1,0 +1,75 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* h1 {
+
+    display: inline;
+    margin: 50px;
+    padding: 50px;
+}
+
+a {
+
+    display: inline;
+    display: block;
+    width: 500px;
+    height: 500px;
+    inline par kabhi bhi width, heigth, margin top, margin bottom Kam nhi karta
+
+}
+
+ul {
+
+    text-align: end;
+}
+
+li {
+
+    display: inline;
+}
+
+img {
+
+    display: inline-block;
+    width: 100px;
+    image: center;
+    margin: ;
+} */
+
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+ul {
+
+    list-style: none;
+    text-align: end;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+li {
+
+    display: inline-block;
+    padding: 30px;
+    margin: 20px;
+    cursor: pointer;
+
+
+}
+
+#img {
+
+    border: 2px solid white;
+
+    width: 200px;
+    height: 200px;
+
+} */
