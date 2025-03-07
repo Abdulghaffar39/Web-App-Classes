@@ -65,7 +65,7 @@
 
 // ------------------------------------------------------------------------------------------------
 
-// Question - 06 Started
+// Question - 07 Started
 // var num1 = +prompt ("Enter Number 1")
 // var num2 = +prompt ("Enter Number 2")
 // var operator = prompt ("Enter (+ , - , * , / , %)")
@@ -88,11 +88,11 @@
 // } else {
 //     console.log ("Invalid Operator")
 // }
-// Question - 06 ended
+// Question - 07 ended
 
 // ------------------------------------------------------------------------------------------------
 
-// Question - 07 Started
+// Question - 08 Started
 // var time = +prompt("Enter What time");
 
 // if (time >= 0000 && time < 1200) {
@@ -110,11 +110,10 @@
 // }else {
 //     console.log ("wrong past");
 // }
-// Question - 07 ended
-
+// Question - 08 ended
 // ------------------------------------------------------------------------------------------------
 
-// Question - 08 Started
+// Question - 09 Started
 // var year = 2032;
 
 // if (year % 4 == 0){
@@ -123,10 +122,10 @@
 // }else {
 //     console.log("This is not a leap year");
 // }
-// Question - 08 ended
+// Question - 09 ended
 
 // ------------------------------------------------------------------------------------------------
-// Question - 09 Started
+// Question - 10 Started
 // var correct_password = ("AbdulGhaffar123");
 
 // var user = prompt("Enter Password")
@@ -137,10 +136,10 @@
 // } else {
 //     console.log("Incorrect Password")
 // }
-// Question - 09 ended
+// Question - 10 ended
 
 // ------------------------------------------------------------------------------------------------
-// Question - 10 Started
+// Question - 11 Started
 // var first_name = prompt("Enter Name");
 
 // if(first_name === "Fahad"){
@@ -149,11 +148,11 @@
 // }else {
 //     document.write("You are not Fahad")
 // }
-// Question - 10 ended
+// Question - 11 ended
 
 // ------------------------------------------------------------------------------------------------
 
-// Question - 11 Started
+// Question - 12 Started
 // var greeting;
 // var hour = 20;
 
@@ -164,12 +163,12 @@
 //     console.log ("Good evening ");
 
 // }
-// Question - 11 ended
+// Question - 12 ended
 
 
 // ------------------------------------------------------------------------------------------------
 
-// Question - 11 Started
+// Question - 13 Started
 // var num1 = 20;
 // var num2 = 20;
 
@@ -184,11 +183,11 @@
 //     console.log ("Both are Equal ")
 
 // }
-// Question - 11 ended
+// Question - 13 ended
 
 
 // ------------------------------------------------------------------------------------------------
-// // Question - 12 Started
+// // Question - 14 Started
 // var number = 60 - 60;
 
 // if (number > 0){
@@ -200,11 +199,11 @@
 // }else {
 //     console.log ("Numer is Zero")
 // }
-// // Question - 12 ended
+// // Question - 14 ended
 
 
 // ------------------------------------------------------------------------------------------------
-// // Question - 12 Started
+// // Question - 15 Started
 // var current_hour = prompt ("Enter Current Time");
 
 // if (current_hour >= "6am" && current_hour <= "9am") {
@@ -219,11 +218,11 @@
 // }else {
 //     console.log ("Sorry, You'll have to wait")
 // }
-// // Question - 12 ended
+// // Question - 15 ended
 
 
 // ------------------------------------------------------------------------------------------------
-// // Question - 12 Started
+// // Question - 16 Started
 // var text_1 = 20;
 // var text_2 = "Abdul Ghaffar";
 // var text_3 = true;
@@ -234,23 +233,24 @@
 // console.log("Type of Content is: " + typeof text_2);
 // console.log("Type of Content is: " + typeof text_3);
 // console.log("Type of Content is: " + typeof text_4);
-// // Question - 12 ended
+// // Question - 16 ended
 
 
 // ------------------------------------------------------------------------------------------------
-// // Question - 13 Started
-var vowel = prompt("Enter only 1 small character");
+// // Question - 17 Started
+// var vowel = prompt("Enter only 1 small character");
 
-if (vowel == "a" || vowel == "e" || vowel == "i" || vowel == "o" || vowel == "u"){
-    console.log("This is a vowel: " + true);
+// if (vowel == "a" || vowel == "e" || vowel == "i" || vowel == "o" || vowel == "u"){
+//     console.log("This is a vowel: " + true);
 
-}else {
-    console.log("This is not a vowel: " + false)
-}
-  // // Question - 13 ended
+// }else {
+//     console.log("This is not a vowel: " + false)
+// }
+  // // Question - 17 ended
 
-  // ------------------------------------------------------------------------------------------------
-  // // Question - 14 Started
+
+// ------------------------------------------------------------------------------------------------
+// // Question - 18 Started
 //   var num1 = 20;
 // var num2 = 10;
 
@@ -260,4 +260,53 @@ if (vowel == "a" || vowel == "e" || vowel == "i" || vowel == "o" || vowel == "u"
 // }else {
 //     console.log("The answer is: " + false);
 // }
-// // Question - 14 ended
+// // Question - 18 ended
+
+
+// ------------------------------------------------------------------------------------------------
+// // Question - 18 Started
+
+// var month = prompt("Enter Month")
+
+// if (month == 1) {
+//   alert("January");
+
+// } else if (month == 2) {
+//   alert("February");
+
+// } else if (month == 3) {
+//   alert("March");
+
+// } else if (month == 4) {
+//   alert("April");
+
+// } else if (month == 5) {
+//   alert("May");
+
+// } else if (month == 6) {
+//   alert("Jun");
+
+// } else if (month == 7) {
+//   alert("July");
+
+// } else if (month == 8) {
+//   alert("August");
+
+// } else if (month == 9) {
+//   alert("September");
+
+// } else if (month == 10) {
+//   alert("October");
+
+// } else if (month == 11) {
+//   alert("November");
+
+// } else if (month == 12) {
+//   alert("December");
+
+// }else {
+//   alert ("Invalid Month")
+// }
+
+
+// // Question - 18 ended
