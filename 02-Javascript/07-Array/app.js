@@ -124,4 +124,42 @@
 
 // ----------------------------------------------------------
 
+// Concat (do(2) array ko ek sath milata ha is 2 se ziyada ko nhi milata ha)
+
+// // var num1 = [1, 2, 3, 4]
+// // var num2 = [5, 6, 7, 8]
+
+// var fname = ["Abdul"]
+// var lname = ["Ghaffar"]
+
+// // console.log(num1.concat(num2))
+// console.log(fname.concat(lname));
+
+// ----------------------------------------------------------
+
+// Sort (Ye number/string ko tarteeb ke sath likhta ha)
+
+// var num1 = [8, 2, 6, 4, 122, 6, 3, 8]   // (Ye number ke suru wali value ko dekhta ha)
+// var num1 = [8, 2, 6, 4, 1, 6, 3, 8]
+
+// console.log(num1.sort())
+
+// ----------------------------------------------------------
+
+// IndexOf (Ye value ko find karta ha agar wo value nhi hogi to (-1) show kare ga)
+
+// var num1 = [8, 2, 6, 4, 1, 6, 3, 8]
+
+// console.log(num1.indexOf(6))
+
+// ----------------------------------------------------------
+
+// IndexOf (Ye value ko Reverse karta hai)
+
+// var num1 = [8, 7, 6, 5, 4, 3, 2, 1]
+
+// console.log(num1.reverse());
+
+// ----------------------------------------------------------
+
 
