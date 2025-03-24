@@ -1,0 +1,44 @@
+/* .parents_Child>p {
+
+    color: red;
+}
+
+.parents_Descendant p {
+
+    color: red;
+} */
+
+
+/* h1, p {
+
+    color: blue;
+} */
+
+/* #head {
+
+    color: yellow;
+}
+
+
+.CSS_Rules {
+
+    color: blue;
+}
+
+h1 {
+
+    color: red !important;
+}  */
+
+body {
+
+    text-align: center;
+    color: red;
+    border: 1px solid black;
+}
+
+
+h1, p {
+
+    border: inherit;
+}

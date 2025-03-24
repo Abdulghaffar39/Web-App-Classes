@@ -1,0 +1,93 @@
+* {
+
+    text-align: center;
+}
+
+
+
+
+#parent_1 {
+
+    background-color: skyblue;
+    color: Black;
+    border: 3px solid blue;
+    margin: 30px;
+}
+
+#parent_2 {
+
+    background-color: lightgreen;
+    color: black;
+    border: 3px solid green;
+    margin: 30px;
+}
+
+
+h1 {
+
+    border: inherit;
+}
+
+
+.margin {
+
+    background-color: skyblue;
+    color: blue;
+    border: 1px solid black;
+    margin: 50px;
+}
+
+.padding {
+
+    background-color: lightgreen;
+    color: green;
+    border: 1px solid black;
+    margin: 0px;
+    padding: 30px;
+}
+
+
+ @font-face {
+    font-family: Abdul-bold;
+    src: url(./font/Rubik_Vinyl/RubikVinyl-Regular.ttf);
+ }
+
+#head  {
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+
+#para_1 {
+
+    font-family: "Playwrite AU VIC Guides", serif;
+    font-weight: 800;
+    font-size: large;
+}
+
+#para_2 {
+
+    font-family: "Oswald", serif;
+    font-size: x-large;
+}
+
+#para_3 {
+
+    font-family: "Playfair Display", serif;
+    font-size:x-small;
+}
+
+#para_4 {
+
+    font-family: cursive;
+    
+}
+
+#para_5 {
+
+    font-family: Abdul-bold;
+    font-weight: 800;
+}
+
+

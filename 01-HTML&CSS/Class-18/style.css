@@ -1,0 +1,37 @@
+* {
+
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   border: 1px solid #000000; 
+}
+
+li {
+
+/* inline par margin top,bottom kam nhi karta */
+
+    display: inline;
+    padding: 10px;
+    margin: 10px;
+
+/* Inline par width/height kam nhi karti */
+
+    width: 100px;
+    height: 100px;
+}
+
+/* 
+div {
+
+    text-align: center;
+} */
+
+img {
+
+    display: block;
+    margin: 0 auto;
+
+}
+
+
+

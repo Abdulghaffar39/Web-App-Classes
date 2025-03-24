@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Student Result</h1>
+    
+    <form id="resultform"> 
+
+        
+    <label for="computer">Computer</label><br />
+    <input type="number" id="computer" required><br /><br />
+
+    <label for="islamiyat">Islamiyat</label><br />
+    <input type="number" id="islamiyat" required><br /><br />
+
+    <label for="urdu">Urdu</label><br />
+    <input type="number" id="urdu" required><br /><br />
+
+    <label for="english">English</label><br />
+    <input type="number" id="english" required><br /><br />
+
+    <label for="math">Math</label><br />
+    <input type="number" id="math" required><br /><br />
+
+    <button type="button" onclick="calculateResult()">Result</button>
+
+    </form>
+
+    
+    <h2>Result:</h2>
+    <p>Total Marks: 500</p>
+    <p>Obtained Marks: <span id="totalMarks"></span></p>
+    <p>Percentage: <span id="percentage"></span>%</p>
+    <p>Grade: <span id="grade"></span></p>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>

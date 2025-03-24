@@ -1,0 +1,167 @@
+* {
+
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/* <!-- ------------------------------------------Image-Element--------------------------------------------------- --> */
+
+/* div {
+
+    text-align: center;
+} */
+
+/* <!-- ------------------------------------------vertical-align-Element--------------------------------------------------- --> */
+
+/* .head_1 {
+
+    vertical-align: baseline;
+}
+
+.head_2 {
+
+    vertical-align: baseline;
+}
+
+span {
+
+    vertical-align: text-top;
+    font-size: 8px;
+} */
+
+/* <!-- ------------------------------------------Indent-Element--------------------------------------------------- --> */
+
+/* p {
+
+    text-indent: 150px;
+} */
+
+/* <!-- ------------------------------------------Text-Shadow-Element--------------------------------------------------- --> */
+
+/* h1 {
+
+    text-shadow: -3px -3px 9px red;
+    font-size: 5rem;
+    
+}
+
+h2 {
+
+    text-shadow: -3px -3px red;
+    font-size: 5rem;
+
+} */
+
+ /* <!-- ------------------------------------------Pesudo-Element--------------------------------------------------- --> */
+
+/* .head_1:hover {
+
+    color: #ff0000;
+}
+
+a:link {
+
+    color: #ff0000;
+}
+
+a:visited {
+
+    color: #008000;
+}
+
+.active:active {
+
+    color: blue;
+}
+
+.focus_1:focus {
+
+    background-color: #008000;
+
+}
+
+.head_2 {
+
+    color: #ff0000;
+}
+
+.para_2:first-letter {
+
+    color: #ff0000;
+    font-size: 6rem;
+}
+
+.head_3 {
+
+    color: #0000ff;
+
+}
+
+.para_3:first-line {
+
+    color: #0000ff;
+} */
+
+
+
+/* <!-- ------------------------------------------Box Dimentions/ Limiting_Width-Element--------------------------------------------------- --> */
+
+
+
+ /* div {
+
+    border: 2px solid black;
+    margin: 10px; 
+    width: 30%;   
+    height: 150px;
+
+    min-width: 400px;
+    max-width: 600px;
+
+    min-height: 300px;
+    max-height: 500;
+
+} */
+
+
+/* <!-- ------------------------------------------Overflowing-Content--------------------------------------------------- --> */
+
+
+/* div {
+
+    overflow: hidden;
+    overflow: scroll;
+    overflow: visible;
+} */
+
+
+/* -------------------------------------------------------border Width---------------------------------------------- */
+
+
+/* h1 {
+
+
+    border-bottom: 1px;
+    border-style: dotted;
+    border-color: blue;
+    border: 2px solid #ff0000;
+
+    padding-left: 50px;
+    padding: 10px 15px 20px 25px;
+    padding: 10px 15px;
+    padding: 50px;
+
+    margin: 10px 20px;
+    margin: 20px;
+
+    box-sizing: border-box;
+    
+} */
+
+
+
+ /* <!-- ------------------------------------------Attributes-Selector--------------------------------------------------- --> */
+
+
+

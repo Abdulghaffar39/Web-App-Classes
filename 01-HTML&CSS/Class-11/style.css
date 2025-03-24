@@ -1,0 +1,99 @@
+/* Type Selector */
+
+/* h1, h3, p {
+
+    border: 1px solid black;
+    background-color: skyblue;
+    color: black;
+    text-align: center;
+} */
+
+
+/* Universal selector */
+
+/* * {
+
+    background-color: lightgreen;
+    color: red;
+    border: 1px solid black;
+
+} */
+
+/* Class Selector */
+
+/* .h1 { 
+
+    background-color: blue;
+    color: white;
+
+} */
+
+/* #p {
+
+    background-color: aqua;
+    color: black;
+    text-align: center;
+} */
+
+/* Child Selector */
+
+/* ul>li  {
+
+    color: red;
+    border: 1px solid red;
+} */
+
+ /* Descendand Selector */
+
+/* ul li {
+
+    border:1px solid black;
+} */
+
+/* Adjacent Sibline Selector */
+
+/* h1+p{
+
+    color:red
+} */
+
+/* General Subline Selector */
+
+/* h1~p {
+
+    color:red
+} */
+
+
+
+
+
+
+
+
+
+/* h1 {
+
+
+    border: 1px solid black;
+    background-color: skyblue;
+    color: black;
+    text-align: center;
+}
+
+h3 {
+
+    color: red;
+    text-align: center;
+}
+
+p {
+
+
+    text-align: center;
+} */
+
+/* h1+p {
+
+    color: green;
+} */

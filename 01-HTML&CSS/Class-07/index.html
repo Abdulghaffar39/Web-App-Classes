@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Document</title>
+
+    <style>
+        h1 {
+
+            background: black;
+            color: white;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        table {
+
+            border: 1px solid skyblue;
+            text-align: center;
+            width: 1000px;
+
+        }
+
+        tr {
+
+            border: 1px solid black;
+
+        }
+
+        th {
+
+            border: 1px solid black;
+            background-color: skyblue;
+
+
+        }
+
+        td {
+
+            border: 1px solid black;
+            background-color: lightblue;
+
+        }
+
+        #break_time {
+
+            background-color: lightcyan;
+
+        }
+
+        #Off {
+
+            background-color: lightcyan;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Hello Table</h1>
+
+    <table>
+
+        <tr>
+            <th></th>
+            <th>9am</th>
+            <th>10am</th>
+            <th>11am</th>
+            <th>12am</th>
+            <th>1pm</th>
+            <th>2am</th>
+        </tr>
+
+        <tr>
+            <th>Monday</th>
+            <td>english</td>
+            <td>urdu</td>
+            <td>Chem</td>
+            <td id="break_time" rowspan="5">Break Time</td>
+            <td colspan="2">Math</td>
+        </tr>
+
+        <tr>
+            <th>Tuesday</th>
+            <td colspan="2">english</td>
+            <td>Math</td>
+            <td>Chem</td>
+            <td>pst</td>
+
+        </tr>
+
+        <tr>
+            <th>Wednesday</th>
+            <td>Chem</td>
+            <td colspan="2">Math</td>
+            <td>pst</td>
+            <td>Math</td>
+
+        </tr>
+
+        <tr>
+            <th>Thursday</th>
+            <td>pst</td>
+            <td>urdu</td>
+            <td>Chem</td>
+            <td colspan="2">Islamiyad</td>
+        </tr>
+
+        <tr>
+            <th>Friday</th>
+            <td>pst</td>
+            <td>urdu</td>
+            <td>Chem</td>
+            <td>Math</td>
+            <td>english</td>
+
+        </tr>
+
+
+        <tr>
+            <th>Sataday</th>
+            <td id="Off" colspan="6" rowspan="2">OFF</td>
+        </tr>
+
+
+        <tr>
+            <th>Sunday</th>
+        </tr>
+
+    </table>
+
+
+</body>
+
+</html>

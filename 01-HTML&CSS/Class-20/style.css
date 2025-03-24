@@ -1,0 +1,37 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+h1 {
+
+    text-align: center;
+}
+
+p {
+
+    text-align: center;
+    border: 1px solid black;
+    margin: 30px;
+    padding: 30px;
+    /* display: none;  */
+    /* visibility: hidden; */
+    /* visibility: visible; */
+    
+}
+
+.img {
+
+   border: 10px solid black;
+   /* border-radius: 20px 30px 10px 15px; */
+   border-radius: 6% 94% 17% 83% / 54% 44% 56% 46%;
+   padding: 15px;
+    /* border-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLQVXnL6OCjLu0Fq8dUrcFkbsorHbFw_nccw&s) 50 repeat; */
+}
+
+ul {
+
+    margin: 30px;
+}
