@@ -1,6 +1,7 @@
-// Table started
+// ----------------------------------------------------
 
-// var num = 10;
+// var num = 20;
+
 // console.log(num + " X 1 = " + num * 1)
 // console.log(num + " X 2 = " + num * 2)
 // console.log(num + " X 3 = " + num * 3)
@@ -12,30 +13,40 @@
 // console.log(num + " X 9 = " + num * 9)
 // console.log(num + " X 10 = " + num * 10)
 
-// Table ended
+// ----------------------------------------------------
 
-// -----------------------------------------------------------
-
-// Loops (Ek task ko multiple dafa karwane ka liya)
-
-// Types of loop
+// Types of Loops
 
 // for loop
 // while loop
 // do-while loop
 
-// -----------------------------------------------------------
+// ----------------------------------------------------
 
-var num = 2;
+// var num = 2;
 
-for (var i = 0; 0 < 10; i++){
-    console.log(num + " X i = " + num * i )
-}
+// for (var i = 1; i <= 10; i++){
+//     console.log(num + " X " + i + " = " + num * i)
+// }
 
-// -----------------------------------------------------------
-// -----------------------------------------------------------
+// ----------------------------------------------------
 
+// variable ka name (i) rakhna Good Practice hai
 
+// ----------------------------------------------------
 
+// var input = document.querySelector("#number")
+// var head = document.querySelector("#head")
 
+// function button(){
 
+//     console.log(typeof input.value);
+//     div.innerHTML = "";
+
+//   for (var i = 1; i <= 10; i++){
+//     console.log(input.value + " X " + i + " = " + input.value * i);
+//     head.innerHTML = input.value + " X " + i + " = " + input.value * i;
+// }
+// }
+
+// ----------------------------------------------------
