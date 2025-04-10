@@ -64,34 +64,49 @@
 // -------------------------------------------------------------
 
 
-var username = document.querySelector("#username")
-var head = document.querySelector("#head")
+// var username = document.querySelector("#username")
+// var head = document.querySelector("#head")
 
 
-function greetuser(){
+// function greetuser(){
 
-  if (head.innerHTML = username.value) {
+//   if (head.innerHTML = username.value) {
 
-    head.innerHTML =   "Hello " + username.value
+//     head.innerHTML =   "Hello " + username.value
 
-  }else {
+//   }else {
 
-    head.innerHTML = "Please Put Your Name"
+//     head.innerHTML = "Please Put Your Name"
 
-  }
+//   }
 
+// }
+
+
+// function hide(){
+
+//   head.innerHTML = "";
+
+// }
+
+// // -------------------------------------------------------------
+
+var head = document.querySelector(`#head`)
+
+
+function button(){
+    if (head.innerHTML === `Hello world`){
+
+      head.innerHTML = `Change through Javascript`;
+      console.log(head.innerHTML);
+
+    } else {
+
+      head.innerHTML = `Hello world`;
+      
+    }
 }
 
+// --------------------------------------------------
 
-function hide(){
-
-  head.innerHTML = "";
-
-}
-
-
-
-
-
-// -------------------------------------------------------------
 

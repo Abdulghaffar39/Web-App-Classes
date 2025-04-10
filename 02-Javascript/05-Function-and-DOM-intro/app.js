@@ -169,19 +169,79 @@
 // console.log(detail)
 
 
+// --------------------------------------------------
 
+// function greetuser(username){
+//     console.log("Hello " + username)
+// }
+
+// function secondfunc(){
+//     console.log("HEllO WORLD")
+//     greetuser("usman")
+// }
+
+// secondfunc()
+
+// --------------------------------------------------
+
+// Function
+
+// function user(){
+
+//     console.log(`Hello World 1`);
+//     console.log(`Hello World 2`);
+//     console.log(`Hello World 3`);
+//     console.log(`Hello World 4`);
+//     console.log(`-------------`);
+
+// }
+
+// user()
+// user()
+// user()
+// user()
+
+// --------------------------------------------------
+
+// Argument
+// Parameter
+// return
+
+// --------------------------------------------------
+
+// function greet(username , age){
+
+//     console.log(`Your name is ${username} and your age is ${age}`)
+
+// }
+
+// greet( `Abdul Ghaffar` , 21 )
+
+// --------------------------------------------------
+
+// function sum(num1 , num2){
+
+//     console.log(num1 + num2);
+//     return num1 + num1
+
+// }
+
+// var total = sum(200 , 100)
+// console.log(total)
+
+// --------------------------------------------------
+
+// // Return in function 
+
+// function user(username , email , age){
+//     return `Your name is ${username} with email ${email} and your age is ${age}`;
+
+// } 
+
+// var return_value = user(`Abdul Ghaffar` , `Abdulghaffar39@gmail.com` , 21);
+// console.log(return_value);
 
 // --------------------------------------------------
 
 
 
-function greetuser(username){
-    console.log("Hello " + username)
-}
-
-function secondfunc(){
-    console.log("HEllO WORLD")
-    greetuser("usman")
-}
-
-secondfunc()
