@@ -91,22 +91,37 @@
 
 // // -------------------------------------------------------------
 
-var head = document.querySelector(`#head`)
+// var head = document.querySelector(`#head`)
 
 
-function button(){
-    if (head.innerHTML === `Hello world`){
+// function button(){
+//     if (head.innerHTML === `Hello world`){
 
-      head.innerHTML = `Change through Javascript`;
-      console.log(head.innerHTML);
+//       head.innerHTML = `Change through Javascript`;
+//       console.log(head.innerHTML);
 
-    } else {
+//     } else {
 
-      head.innerHTML = `Hello world`;
+//       head.innerHTML = `Hello world`;
       
-    }
+//     }
+// }
+
+// // --------------------------------------------------
+
+var input = document.querySelector(`#input`);
+var ol = document.querySelector(`#ordered_list`);
+
+function Add_task(){
+  console.log(input.value);
+  ol.innerHTML += `<li>${input.value}</li>`
+  input.value = ``
 }
 
-// --------------------------------------------------
+function Clear_task() {
+  ol.innerHTML = ``;  
+}
+
+// // --------------------------------------------------
 
 
