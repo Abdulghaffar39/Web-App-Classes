@@ -138,6 +138,8 @@
 
 // ----------------------------------------------------
 
+// Array in Index
+
 // var div = document.querySelector("#container");
 
 // var fruits = ['watermelon', 'banana', 'apple', 'grapes', 'orange', 'mango', 'strawberry', 'pineapple', 'kiwi', 'cherry']
@@ -150,6 +152,8 @@
 // }
 
 // ----------------------------------------------------
+
+// Array & Loop
 
 // var ol = document.querySelector("#ordered_list");
 
@@ -167,4 +171,92 @@
 
 // ----------------------------------------------------
 
+
+// // Break Loop
+
+// for (var i = 1; i <= 10; i++){
+    
+//     console.log(i)
+
+//     if(i == 4){
+//         break
+//     }
+    
+// }
+
+// //////////////////////////////////////////////////////
+
+// for (var i = 1; i <= 10; i++){
+    
+    
+//     if(i == 4){
+//         break
+//     }
+    
+//     console.log(i)
+// }
+
+// ----------------------------------------------------
+
+// Get Array value in List
+
+// var Names = ["Alice", "Bob", "Charlie", "David", "Eva", "Frank", "Grace", "Hannah", "Ivy", "Jack", "Kathy", "Liam", "Mia", "Noah", "Olivia", "Paul",    "Quincy", "Rachel", "Sam", "Tina", "Ursula", "Victor", "Wendy", "Xander", "Yara", "Zach", "Amelia", "Benjamin", "Clara", "Daniel", "Ella"];
+
+// var ol = document.querySelector(`#ordered_list`);
+
+// for (var i = 1; i < Names.length; i++){
+    
+//     console.log(Names[i]);
+//     ol.innerHTML +=`<li>${Names[i]}</li>`;
+// }
+
+
+// ----------------------------------------------------
+
+// Splice Method
+
+// var fruits = ['watermelon', 'banana', 'apple', 'grapes', 'orange', 'mango', 'strawberry', 'pineapple', 'kiwi', 'cherry'];
+
+// fruits.splice(5, 4, "Hassan Shareef")
+// console.log(fruits)
+
+// ----------------------------------------------------
+
+// // while Loop
+
+// // Correct Loop
+// var i = 1;
+
+// while (i <= 10){
+
+//     console.log(i)
+//     i++
+// }
+
+// ///////////////////////////////////////////////////////////
+
+// // InCorrect Loop
+// var i = 11;
+
+// while (i <= 10){
+
+//     console.log(i)
+//     i++
+// }
+
+
+// ----------------------------------------------------
+
+// do while Loop
+
+var i = 1;
+
+do {
+
+    console.log(i);
+    i++
+
+}while (i < 10);
+
+// ----------------------------------------------------
 

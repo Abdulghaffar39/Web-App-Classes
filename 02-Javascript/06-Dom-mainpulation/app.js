@@ -109,18 +109,20 @@
 
 // // --------------------------------------------------
 
-var input = document.querySelector(`#input`);
-var ol = document.querySelector(`#ordered_list`);
+// // List Order
 
-function Add_task(){
-  console.log(input.value);
-  ol.innerHTML += `<li>${input.value}</li>`
-  input.value = ``
-}
+// var input = document.querySelector(`#input`);
+// var ol = document.querySelector(`#ordered_list`);
 
-function Clear_task() {
-  ol.innerHTML = ``;  
-}
+// function Add_task(){
+//   console.log(input.value);
+//   ol.innerHTML += `<li>${input.value}</li>`
+//   input.value = ``
+// }
+
+// function Clear_task() {
+//   ol.innerHTML = ``;  
+// }
 
 // // --------------------------------------------------
 
