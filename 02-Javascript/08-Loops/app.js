@@ -249,14 +249,14 @@
 
 // do while Loop
 
-var i = 1;
+// var i = 1;
 
-do {
+// do {
 
-    console.log(i);
-    i++
+//     console.log(i);
+//     i++
 
-}while (i < 10);
+// }while (i < 10);
 
 // ----------------------------------------------------
 
