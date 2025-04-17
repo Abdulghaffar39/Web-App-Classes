@@ -143,7 +143,7 @@ console.log(statement.split(``).reverse().join(``));
 
 // City Form
 
-const cities = [`karachi` , `sukkar` , `dado` , `larkana` , `mirpurkhas` , `hyderabad`]
+const cities = [`karachi` , `sukkar` , `dado` , `larkana` , `mirpurkhas` , `hyderabad`];
 
 const input = document.querySelector(`#input`)  
 const p = document.querySelector(`#para`)  
