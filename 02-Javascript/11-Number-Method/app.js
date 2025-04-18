@@ -44,17 +44,43 @@
 
 // Random
 
-let numrandom = Math.random();
-console.log(numrandom);
+// let numrandom = Math.random();
+// console.log(numrandom);
 
 
 
-console.log(Math.random() * 10);
+// console.log(Math.random() * 10);
 
 
 
-console.log(Math.ceil(Math.random() * 10));
+// console.log(Math.ceil(Math.random() * 10));
 
+
+// ------------------------------------------------
+
+const masjadimg =
+  "https://en.numista.com/catalogue/photos/pakistan/424-original.jpg";
+
+const chandimg =
+  "https://www.foreigncurrencyandcoin.com/wp-content/uploads/2018/12/products-18814.jpg";
+
+
+const img = document.querySelector('#img');
+img.src = chandimg;
+
+function toss(coin){
+    let randomNum = (Math.floor(Math.random() * 2))
+    console.log(randomNum);
+    
+    if (
+        (coin === `masjad` &&  randomNum === 0)
+        (coin === `chand` &&  randomNum === 1)
+    ){
+       
+        
+    }
+}
+  
 
 // ------------------------------------------------
 
