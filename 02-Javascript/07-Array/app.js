@@ -15,17 +15,18 @@
 
 // Array Methods
 
-// push
-// pop
-// unshift
-// shift
+// push     (Array ke End me New value store karta ha)
+// pop      (Array ka End wale method ko delete karta ha)
+// unshift  (Array ke Start me New value store karta ha)
+// shift    (Array ka Start wale method ko delete karta ha)
 // slice
-// split
-// join
-// concat
-// sort
-// reverse
-// indexof
+// Splice   (Array me agar center me koi cheez [add/delete] karte ha. lakin phele isaa {starting index} dena parta ha)
+// split    (Ek String ko Array me convert karna ka liya Split method ka istamal kia jata ha)
+// join     (Method of String) (Ek Array ko String me convert karna ka liya join method ka istamal kia jata ha)
+// concat   (do(2) array ko ek sath milata ha is 2 se ziyada ko nhi milata ha)
+// sort     (Ye number/string ko tarteeb ke sath likhta ha)
+// reverse  (Ye Array ki value ko revese karta hai)
+// indexof  (Ye value ko find karta ha agar wo value nhi hogi to (-1) show kare ga)
 
 // ----------------------------------------------------------
 
@@ -92,7 +93,7 @@
 // ----------------------------------------------------------
 
 
-// // Join (Method of String) (Ek String ko Array me convert karna ka liya Split method ka istamal kia jata ha)
+// // split (Method of String) (Ek String ko Array me convert karna ka liya Split method ka istamal kia jata ha)
 
 
 // var username = "Meher Abdul Ghaffar"
@@ -101,7 +102,6 @@
 // console.log(username.split("  ")) 
 
 // ----------------------------------------------------------
-
 
 // // Join (Method of String) (Ek Array ko String me convert karna ka liya join method ka istamal kia jata ha)
 
@@ -112,7 +112,6 @@
 // console.log(FullName.join(" "))
 
 // ----------------------------------------------------------
-
 
 // Nested Array
 
@@ -156,6 +155,62 @@
 // var num1 = [8, 7, 6, 5, 4, 3, 2, 1]
 
 // console.log(num1.reverse());
+
+// ----------------------------------------------------------
+
+
+
+
+// -----------------Revision-----------------------
+
+// let fruits = [`banana` , `watermelon` , `melon` , `mango` , `apple` ];
+
+// console.log(fruits);    // This is Length
+// console.log(fruits[3]); // This is Index
+
+// ----------------------------------------------------------
+
+// // Splice Method
+// var fruits = ['watermelon', 'banana', 'apple', 'grapes', 'orange', 'mango', 'strawberry', 'pineapple', 'kiwi', 'cherry']
+
+// // fruits.splice(1 , 1);
+// fruits.splice(1 , 1 , `Cherry`);
+// console.log(fruits);
+
+
+// ----------------------------------------------------------
+
+// Slice Method
+
+// 1 = 'banana', 'apple'
+// 2 = 'strawberry', 'pineapple'
+// 3 = 'cherry' ==> Pomegranate
+// 4 = 'mango', 'strawberry', 'pineapple' ==> updated
+
+var fruits = ['watermelon', 'banana', 'apple', 'grapes', 'orange', 'mango', 'strawberry', 'pineapple', 'kiwi', 'cherry']
+
+// fruits.splice(1 , 2);
+// fruits.splice(6 , 2);
+// fruits.splice(9 , 1, "Pomegranate");
+// fruits.splice(5 , 3, "updated");
+console.log(fruits);
+
+
+// ----------------------------------------------------------
+
+// join Method
+// var fruits = ['watermelon', 'banana', 'apple', 'grapes', 'orange', 'mango', 'strawberry', 'pineapple', 'kiwi', 'cherry']
+
+
+// console.log(fruits.join(` `));
+
+// ----------------------------------------------------------
+
+// Splite Method
+
+// var fullname = `Meher Abdul Ghaffar`
+
+// console.log(fullname.split(`,`));
 
 // ----------------------------------------------------------
 
