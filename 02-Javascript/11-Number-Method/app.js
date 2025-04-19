@@ -57,30 +57,45 @@
 
 
 // ------------------------------------------------
+// Create Toss App
 
-const masjadimg =
-  "https://en.numista.com/catalogue/photos/pakistan/424-original.jpg";
 
-const chandimg =
+var masjadImg =
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT7_4TnSKZkWs5pVRrkfsPJg0eA7mC71OL9AOYCWE5z_V0Cp7tVHjn8xfTonsOL_rhMzE&usqp=CAU";
+
+var chandImg =
   "https://www.foreigncurrencyandcoin.com/wp-content/uploads/2018/12/products-18814.jpg";
 
 
-const img = document.querySelector('#img');
-img.src = chandimg;
 
-function toss(coin){
-    let randomNum = (Math.floor(Math.random() * 2))
-    console.log(randomNum);
-    
-    if (
-        (coin === `masjad` &&  randomNum === 0)
-        (coin === `chand` &&  randomNum === 1)
-    ){
-       
-        
-    }
-}
+var para = document.querySelector(`#para`)
+var img = document.querySelector(`#img`)
+img.src = chandImg;
+
+
+function toss(coin) {
+
+  let randomNum =(Math.floor(Math.random() * 2)); 
+  console.log(randomNum);
   
+  if (coin === `masjad` && randomNum === 0 || coin === `chand` && randomNum === 1){
+    para.innerHTML = `You won the Toss`
+
+  }else{
+    para.innerHTML = `You loss the Toss`
+
+  }
+
+
+  if  (randomNum === 0){
+    img.src = masjadImg
+
+  }else{
+    img.src = chandImg;
+
+  }
+}
+
 
 // ------------------------------------------------
 
