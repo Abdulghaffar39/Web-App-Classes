@@ -13,8 +13,8 @@
 // floor      (Ye point ke bad wali value ko minus(-) kar ke normal number bnata ha [10.9 >>> (change in) >>> (10) ] )
 // ceil       (Ye point ke bad wali value ko ziyada kar ke normal number bata ha [10.2 >>> (change in) >>> (11) ] )
 // random     (Ye apni marzi se koi bhi number(random num) dedeta hai)
-// parseInt   (Ye String ko Num me convert karta hai. magar first value. (String >> Convert >> Num))
-// parseFloat (Ye String ko Num me convert karta hai & point wali value bhi. (String >> Convert >> Num))
+// parseInt   (Ye String ko Num me convert karta hai. magar first value.)
+// parseFloat (Ye String ko Num me convert karta hai & point wali value bhi. )
 // .tofixed   (Ye Number ko String me convert karta hai (Num >> Convert >> String))
 
 // ------------------------------------------------
