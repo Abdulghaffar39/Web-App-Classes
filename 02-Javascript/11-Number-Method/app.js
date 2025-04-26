@@ -13,8 +13,9 @@
 // floor      (Ye point ke bad wali value ko minus(-) kar ke normal number bnata ha [10.9 >>> (change in) >>> (10) ] )
 // ceil       (Ye point ke bad wali value ko ziyada kar ke normal number bata ha [10.2 >>> (change in) >>> (11) ] )
 // random     (Ye apni marzi se koi bhi number(random num) dedeta hai)
-// parseInt   (Ye String ko Num me convert karta hai. magar first value)
-// parseFloat (Ye String ko Num me convert karta hai & point wali value bhi)
+// parseInt   (Ye String ko Num me convert karta hai. magar first value. (String >> Convert >> Num))
+// parseFloat (Ye String ko Num me convert karta hai & point wali value bhi. (String >> Convert >> Num))
+// .tofixed   (Ye Number ko String me convert karta hai (Num >> Convert >> String))
 
 // ------------------------------------------------
 
@@ -104,6 +105,24 @@
 // console.log(typeof (convertStr), convertStr);
 
 // ---------------------------------------------------------------
+
+// .tofixed
+
+// var num = 23;
+// var convertNum = num.toFixed();
+// console.log(convertNum);
+
+
+// .tofixed(3) braket ke undar value ye show karti ha ke iska undar point ke bad kitna number ayae gaa
+
+// var num = 23.3567345435345;
+// var convertNum = num.toFixed(3);
+// console.log(convertNum);
+
+
+// ---------------------------------------------------------------
+
+
 // Create Toss App
 
 
