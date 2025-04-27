@@ -1,32 +1,37 @@
-console.log("date and time")
+// -------------------------------------------------------------
 
-// var rightNow = new Date();
-// var days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]
+// Day & Time
+
+// new Date()
+// .getDay()
+// .getMonth()
+// .getDate()
+// .getFullYear()
+// .getSeconds()
+// .getMilliseconds()
+// .getTime()
+
+// -------------------------------------------------------------
+
+var rightNow = new Date();
+// var day = [`Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`];
+
 // console.log(rightNow.toString());
-// console.log(days[rightNow.getDay()]);
-// console.log(rightNow.getMonth());
-// console.log(rightNow.getDate());
-// console.log(rightNow.getFullYear());
-// console.log(rightNow.getSeconds());
-// console.log(rightNow.getMilliseconds());
+// console.log(day[rightNow.getDay()]);      // Day
+// console.log(rightNow.getDay());           // Day Count
+// console.log(rightNow.getMonth());         // Month
+// console.log(rightNow.getDate());          // Date
+// console.log(rightNow.toDateString());     // Day / Date / Month / Year
+// console.log(rightNow.getFullYear());      // Full Year
+// console.log(rightNow.getHours());         // Hours
+// console.log(rightNow.getMinutes());       // Minutes
+// console.log(rightNow.getSeconds());       // Seconds
+// console.log(rightNow.getMilliseconds());  // Milli Seconds
+// console.log(rightNow.getTime());          // Time
 // console.log(rightNow.getTime() / 1000 / 60 / 60 / 24);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// -------------------------------------------------------------
 
 
 // function calculateAge(dateOfBirth) {
@@ -39,3 +44,23 @@ console.log("date and time")
 
 // calculateAge('November 27 , 2003')
 // calculateAge('October 22 , 1920')
+
+var age = prompt(`Enter your Birth Month,Day & Year`)
+
+function calculateAge(dateOfBirth) {
+    console.log(`Abdul Ghaffar`);
+
+    var myBirthDate = new Date(dateOfBirth).getTime();
+    var rightNow = new Date().getTime();
+
+    var remainingMilliseconds = rightNow - myBirthDate;
+    
+    console.log(Math.floor(remainingMilliseconds / 1000 / 60 / 60 / 24 / 30 / 12));
+    
+}
+
+calculateAge(age);
+// calculateAge('October 22 , 1920')
+
+console.log(1000);
+
