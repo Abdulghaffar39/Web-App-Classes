@@ -1,0 +1,106 @@
+h1 {
+
+    background-color: rgb(192, 192, 192);
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+
+
+#p_zero {
+
+    background-color: rgb(92, 92, 255);
+}
+
+#p_1 {
+
+    background-color: rgb(100, 100, 254);
+}
+
+#p_2 {
+
+    background-color: rgb(110, 110, 254);
+}
+
+#p_3 {
+
+    background-color: rgb(122, 122, 253);
+}
+
+#p_4 {
+
+    background-color: rgb(133, 133, 252);
+}
+
+#p_5 {
+
+    background-color: rgb(148, 148, 255);
+}
+
+#p_6 {
+
+    background-color: rgb(155, 155, 255);
+}
+
+#p_7 {
+
+    background-color: rgb(167, 167, 248);
+}
+
+#p_8{
+
+    background-color: rgb(166, 166, 255);
+}
+
+
+#green {
+
+    background-color: rgb(43, 189, 43);
+}
+
+
+
+#pink_8 {
+
+    background-color: rgb(255, 164, 179);
+}
+
+#pink_7 {
+
+    background-color: rgb(255, 154, 171);
+}
+
+#pink_6 {
+
+    background-color: rgb(255, 145, 164);
+}
+
+#pink_5 {
+
+    background-color: rgb(255, 135, 155);
+}
+
+#pink_4 {
+
+    background-color: rgb(255, 126, 148);
+}
+
+#pink_3 {
+
+    background-color: rgb(255, 117, 140);
+}
+
+#pink_2 {
+
+    background-color: rgb(255, 107, 132);
+}
+
+#pink_1 {
+
+    background-color: rgb(255, 94, 120);
+}
+
+#pink_0 {
+
+    background-color: rgb(255, 83, 115);
+}
