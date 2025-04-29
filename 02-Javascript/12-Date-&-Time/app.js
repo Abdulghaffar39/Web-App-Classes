@@ -13,7 +13,7 @@
 
 // -------------------------------------------------------------
 
-var rightNow = new Date();
+// var rightNow = new Date();
 // var day = [`Sunday`, `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`];
 
 // console.log(rightNow.toString());
@@ -45,9 +45,17 @@ var rightNow = new Date();
 // calculateAge('November 27 , 2003')
 // calculateAge('October 22 , 1920')
 
-var age = prompt(`Enter your Birth Month,Day & Year`)
+
+// -----------------------------------------------------------------------------------
+
+// AGE 
+
+var para = document.getElementById(`para`)
+
+var age = prompt(`Enter your Brith Year`)
 
 function calculateAge(dateOfBirth) {
+
     console.log(`Abdul Ghaffar`);
 
     var myBirthDate = new Date(dateOfBirth).getTime();
@@ -55,12 +63,16 @@ function calculateAge(dateOfBirth) {
 
     var remainingMilliseconds = rightNow - myBirthDate;
     
-    console.log(Math.floor(remainingMilliseconds / 1000 / 60 / 60 / 24 / 30 / 12));
+    var age = (Math.floor(remainingMilliseconds / 1000 / 60 / 60 / 24 / 30 / 12));
+
+    para.innerHTML = (`Your age is ${age}year`);
+    
     
 }
 
 calculateAge(age);
 // calculateAge('October 22 , 1920')
 
-console.log(1000);
 
+
+// -----------------------------------------------------------------------------------
