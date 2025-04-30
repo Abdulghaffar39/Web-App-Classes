@@ -1,0 +1,34 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: poppins;
+    src: url(./fonts/Poppins-Medium.ttf);
+}
+
+ul {
+
+    text-align: end;
+    background-color: #000000;
+    color: #ffffff;
+    list-style: none;
+    padding: 30px;
+}
+
+li {
+
+    font-family: poppins;
+    display: inline;
+    cursor: pointer;
+    margin: 30px;
+}
+
+li:hover {
+
+    color: rgb(218, 241, 249);
+
+}

@@ -1,0 +1,32 @@
+
+
+@font-face {
+    font-family: poppins;
+    src: url(./font/Poppins-Medium.ttf);
+}
+
+.para {
+
+    font-family: poppins;
+}
+
+h2:hover {
+
+    color: green;
+}
+
+
+.one:focus {
+
+    color: red;
+}
+
+.two:link {
+
+    color: rgb(0, 242, 255);
+}
+
+.two:visited {
+
+    color: red;
+}
