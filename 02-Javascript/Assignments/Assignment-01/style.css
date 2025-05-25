@@ -1,0 +1,91 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 62.5px;
+    font-weight: 800;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(181, 214, 64);
+}
+
+.head-1{
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(108, 132, 21);
+    margin: 1rem 0rem;
+}
+
+.container{
+    margin: 2rem auto;
+    width: 90%;
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.box{
+    width: 330px;
+    height: 280px;
+    padding: 1rem 0rem;
+    text-align: center;
+    border-radius: 15px;
+    border: 5px dotted rgb(198, 228, 75);
+    background-color: rgb(161, 190, 54);
+    box-shadow: 0 0 1rem 0.8rem rgb(198, 228, 75);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.box:hover{
+    background-color: rgb(181, 214, 64);
+    border: 5px dotted rgb(108, 132, 21);
+    color: rgb(181, 214, 64);
+}
+
+
+.container .box h1{
+    font-size: 2.4rem;
+    color: rgb(108, 132, 21);
+    padding: 0rem 1rem;
+}
+
+
+.container .box p{
+    font-size: 1.5rem;
+    color: rgb(108, 132, 21);
+    padding: 0rem 1rem;
+}
+
+
+.container .box a button{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: rgb(181, 214, 64);
+    background-color: rgb(108, 132, 21);
+    border-style: none;
+    padding: 0.4rem 2rem;
+    border-radius: 1rem;
+}
+
+.container .box button:hover{
+    background-color: rgb(181, 214, 64);
+    color: rgb(108, 132, 21);
+    border: 2px solid rgb(108, 132, 21);
+}
+
+
+
+
+
