@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+body{
+    background-color: rgb(181, 214, 64);
+    color: rgb(108, 132, 21);
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 800;
+    font-size: 62.5%;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+
+.container .input{
+    width: 80%;
+    margin: 3rem auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+
+
+.container .input div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+.container .input div label{
+    width: 23rem;
+    position: relative;
+    left: 0rem;
+    font-size: 2rem;
+    display: flex;
+    
+}
+
+
+.container .input div input{
+    width: 25rem;
+    height: 4rem;
+    font-size: 3rem;
+    font-weight: 800;
+    padding: 1.5rem;
+    border-radius: 0rem 1rem 1rem 1rem ;
+    color: rgb(108, 132, 21);
+    background-color: rgb(161, 190, 54);
+    box-shadow: 0 0 1rem 0.8rem rgb(198, 228, 75);
+    border-style: none;
+    outline-style: none;
+    
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+
+.container .input div input:hover{
+    background-color: rgb(149, 176, 51);
+
+}
+
+.Result_button{
+    margin-bottom: 5rem;
+}
+
+
+.Result{
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+    border-radius: 0.6rem;
+    color: rgb(181, 214, 64);
+    background-color: rgb(108, 132, 21);
+    box-shadow: 4rem 0rem 3rem 0.8rem rgb(198, 228, 75);
+    border-style: none;
+
+}
+
+
+.Result:hover{
+    color: rgb(108, 132, 21);
+    background-color: rgb(181, 214, 64);
+    border: 3px solid rgb(108, 132, 21);
+}
+    
+
+.container .child_container{
+    width: 50rem;
+    height: 22rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: 0 0 1rem 1px black;
+    border-radius: 2rem;
+    padding: 1rem 0rem;
+    
+}
+    
+
+.child_container div{
+
+    width: 50rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    line-height: 5rem;
+
+    position: relative;
+    top: 0rem;
+    
+}
+
+#head-3{
+    margin-top: 4rem;
+}
+    
+
+.container .child_container div h1{
+    font-size: 2.6rem;
+}
+    
+    
+    
+.container .child_container div p{
+    font-size: 2.6rem;
+}
+
+.footer_container{
+    width: 100%;
+    height: 8rem;
+}
+
+.buttons{
+    width: 80%;
+    height: 8rem;
+    margin:  0 auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5rem;
+}
+
+#back{
+    width: 7rem;
+    height: 40px;
+    cursor: pointer;
+    border-style: none;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem 0.1px rgb(101, 120, 33);
+    background-color: rgb(181, 214, 64);
+
+}
+
+#back:hover{
+    color: rgb(181, 214, 64);
+    background-color: rgb(108, 132, 21)
+}
+
+#Reset{
+    width: 7rem;
+    height: 40px;
+    cursor: pointer;
+    border-style: none;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem 0.1px rgb(101, 120, 33);
+    background-color: rgb(181, 214, 64);
+    color: rgb(108, 132, 21);
+    font-size: 1.4rem;
+    font-weight: 600;
+
+}
+
+#Reset:hover{
+    color: rgb(181, 214, 64);
+    background-color: rgb(108, 132, 21);
+}
+    
+
+#back a{
+    text-decoration: none;
+    color: rgb(108, 132, 21);
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 0.4rem 1.6rem;
+    border-radius: 3rem;
+
+}
+    
+
+#back a:hover{
+    color: rgb(181, 214, 64);
+    background-color: rgb(108, 132, 21)
+}
+
+
+
+
+
+@media (max-width: 1050px) {
+
+    .container .input div input{
+        width: 20rem;
+        display: flex;
+        
+    }
+
+    .container .input div label{
+       width: 18rem;
+        
+    }
+}
+    
+
+
+
+

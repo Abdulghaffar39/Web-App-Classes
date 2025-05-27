@@ -11,8 +11,7 @@ var head_3 = document.querySelector("#head-3");
 
 function Result() {
     
-  if ((input_1.value === input_2.value)) {
-
+  if (input_1.value === input_2.value && input_1.value !== "" && input_2.value !== "") {
     head_1.innerHTML = `First Value`;
     para_1.innerHTML = `${input_1.value}`;
 
@@ -21,11 +20,40 @@ function Result() {
 
     head_3.innerHTML = `Both numbers are EQUAL`;
 
-    input.value = "";
+    input_1.value = "";
+    input_2.value = "";
 
 
-  } else if ((input_1.value > input_2.value)) {
 
+  } else if (input_2.value === "" && input_1.value !== '') {
+    head_1.innerHTML = `First Value`;
+    para_1.innerHTML = `${input_1.value}`;
+
+    head_2.innerHTML = `Second Value`;
+    para_2.innerHTML = `?`;
+
+    head_3.innerHTML = `Please put Second value`;
+
+    input_1.value = "";
+    input_2.value = "";
+
+
+
+  } else if (input_1.value === "" && input_2.value !== '') {
+    head_1.innerHTML = `First Value`;
+    para_1.innerHTML = `?`;
+
+    head_2.innerHTML = `Second Value`;
+    para_2.innerHTML = `${input_2.value}`;
+
+    head_3.innerHTML = `Please put First value`;
+
+    input_1.value = "";
+    input_2.value = "";
+
+
+
+  } else if (input_1.value > input_2.value && input_2.value !== "" && input_1.value !== "") {
     head_1.innerHTML = `First Value`;
     para_1.innerHTML = `${input_1.value}`;
 
@@ -34,39 +62,41 @@ function Result() {
 
     head_3.innerHTML = `First value is GREATER THAN second value`;
 
-    input.value = "";
+    input_1.value = "";
+    input_2.value = "";
+  } else if (input_1.value < input_2.value && input_2.value !== "" && input_1.value !== "") {
+    head_1.innerHTML = `First Value`;
+    para_1.innerHTML = `${input_1.value}`;
 
-    
-  } else if (input.value < 100) {
-    head_1.innerHTML = `Comparing Number:`;
-    para_1.innerHTML = `100`;
+    head_2.innerHTML = `Second Value`;
+    para_2.innerHTML = `${input_2.value}`;
 
-    head_2.innerHTML = `Your Number:`;
-    para_2.innerHTML = `${input.value}`;
+    head_3.innerHTML = `Second value is GREATER THAN First value`;
 
-    head_3.innerHTML = `Number is LESS THAN 100`;
+    input_1.value = "";
+    input_2.value = "";
+  } else if (input_1.value === "" && input_2.value === "") {
+    head_1.innerHTML = `First Value`;
+    para_1.innerHTML = `0`;
 
-    input.value = "";
-  } else if (input.value == 0) {
-    head_1.innerHTML = `Comparing Number:`;
-    para_1.innerHTML = `100`;
+    head_2.innerHTML = `Second Value`;
+    para_2.innerHTML = `0`;
 
-    head_2.innerHTML = `Your Number:`;
-    para_2.innerHTML = `${input.value}`;
+    head_3.innerHTML = `Please put both values`;
 
-    head_3.innerHTML = `Number is LESS THAN 100`;
-
-    input.value = "";
+    input_1.value = "";
+    input_2.value = "";
   } else {
-    head_1.innerHTML = `Comparing Number:`;
-    para_1.innerHTML = `100`;
+    head_1.innerHTML = `First Value`;
+    para_1.innerHTML = `${input_1.value}`;
 
-    head_2.innerHTML = `Your Value:`;
-    para_2.innerHTML = `${input.value}`;
+    head_2.innerHTML = `Second Value`;
+    para_2.innerHTML = `${input_2.value}`;
 
-    head_3.innerHTML = `Please Enter Valid Value`;
+    head_3.innerHTML = `Please Enter Valid Number`;
 
-    input.value = "";
+    input_1.value = "";
+    input_2.value = "";
   }
 }
 
