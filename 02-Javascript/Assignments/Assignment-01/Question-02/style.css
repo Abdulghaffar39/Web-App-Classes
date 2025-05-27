@@ -33,26 +33,36 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-
-    line-height: 1.3rem;
     
+}
+
+
+.container .input div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
 }
 
 
 .container .input div label{
     position: relative;
-    right: 12rem;
-    font-size: 2.4rem;
+    left: 1.2rem;
+    font-size: 2rem;
+    display: flex;
+    margin-right: 13.6rem;
 }
 
 
 .container .input div input{
-    width: 30rem;
-    height: 5rem;
+    width: 25rem;
+    height: 4rem;
     font-size: 3rem;
     font-weight: 800;
     padding: 1.5rem;
-    border-radius: 0rem 0rem 0rem 1rem;
+    border-radius: 0rem 1rem 1rem 1rem ;
     color: rgb(108, 132, 21);
     background-color: rgb(161, 190, 54);
     box-shadow: 0 0 1rem 0.8rem rgb(198, 228, 75);
@@ -73,27 +83,29 @@ input[type=number]::-webkit-outer-spin-button {
 
 }
 
-
-.container .input div button{
-    width: 8rem;
-    height: 5rem;
-    font-size: 1.4rem;
-    font-weight: 800;
-    border-radius: 0rem 1rem 0rem 0rem;
-    color: rgb(108, 132, 21);
-    background-color: rgb(161, 190, 54);
-    box-shadow: 4rem 0rem 3rem 0.8rem rgb(198, 228, 75);
-    border-style: none;
-
-    position: relative;
-    bottom: 11px;
-    right: 2rem;
+.Result_button{
+    margin-bottom: 4rem;
 }
 
 
-.container .input div button:hover{
-    background-color: rgb(149, 176, 51);
-    
+.Result{
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+    border-radius: 0.6rem;
+    color: rgb(181, 214, 64);
+    background-color: rgb(108, 132, 21);
+    box-shadow: 4rem 0rem 3rem 0.8rem rgb(198, 228, 75);
+    border-style: none;
+
+}
+
+
+.Result:hover{
+    color: rgb(108, 132, 21);
+    background-color: rgb(181, 214, 64);
+    border: 3px solid rgb(108, 132, 21);
 }
     
 
@@ -102,40 +114,39 @@ input[type=number]::-webkit-outer-spin-button {
     height: 22rem;
     
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    gap: 10rem;
     box-shadow: 0 0 1rem 1px black;
     border-radius: 2rem;
-    
-    padding: 3rem 0rem;
+    padding: 1rem 0rem;
 
 }
     
 
 .child_container div{
 
+    width: 50rem;
     display: flex;
-    flex-direction: column;
-    justify-content: start;
+    flex-direction: row;
+    justify-content: space-around;
     flex-wrap: wrap;
-    align-items: start;
-    gap: 3rem;
+    align-items: center;
+    line-height: 4rem;
 
+    position: relative;
+    top: 0rem;
+    
+}
 
+#head-3{
+    margin-top: 4rem;
 }
     
 
 .container .child_container div h1{
     font-size: 2.6rem;
-}
-    
-
-#head-3{
-    position: relative;
-    bottom: 5.6rem;
 }
     
     

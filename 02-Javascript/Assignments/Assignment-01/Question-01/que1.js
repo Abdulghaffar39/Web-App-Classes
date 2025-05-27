@@ -77,9 +77,24 @@ function Result() {
     
   }
 
-
-
-
-
-
 }
+
+
+function Reset(){
+
+  head_1.innerHTML = ``;
+  para_1.innerHTML = ``;
+
+  head_2.innerHTML = ``;
+  para_2.innerHTML = ``;
+
+  head_3.innerHTML = ``;
+
+  input.value = "";
+    
+}
+
+
+
+
+

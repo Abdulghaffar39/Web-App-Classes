@@ -82,7 +82,7 @@ body{
 .container .box button:hover{
     background-color: rgb(181, 214, 64);
     color: rgb(108, 132, 21);
-    border: 2px solid rgb(108, 132, 21);
+    border: 3px solid rgb(108, 132, 21);
 }
 
 
