@@ -6,9 +6,24 @@ var head_2 = document.querySelector("#head-2");
 var para_2 = document.querySelector("#para-2");
 var head_3 = document.querySelector("#head-3");
 
-// Need to check uservalue is perfect divisible by 3 or not.
+// Need to check uservalue what is the reminder by divided by 2.
 function Result() {
-  if (input.value % 2 === 0 && input.value !== "") {
+
+  let reminder = input.value % 2;
+  console.log(reminder);
+
+
+  if (input.value <= 1 && input.value !== "") {
+    head_1.innerHTML = `Divisible by:`;
+    para_1.innerHTML = `2`;
+
+    head_2.innerHTML = `Your Value:`;
+    para_2.innerHTML = `${input.value}`;
+
+    head_3.innerHTML = `Please Enter Greater Than 1`;
+
+    input.value = "";
+  } else if (input.value / 2 && input.value !== "") {
     console.log(`lksaflkasjfokdsj`);
 
     head_1.innerHTML = `Divisible by:`;
@@ -17,7 +32,7 @@ function Result() {
     head_2.innerHTML = `Your Value:`;
     para_2.innerHTML = `${input.value}`;
 
-    head_3.innerHTML = `Your value is Divisible by 2`;
+    head_3.innerHTML = `Divided by 2 & Reminder value is ${reminder}`;
 
     input.value = "";
   } else if (input.value === "") {
@@ -30,16 +45,6 @@ function Result() {
     head_3.innerHTML = `Please Enter Value`;
 
     input.value = "";
-  } else if (input.value % 2 !== 0) {
-    head_1.innerHTML = `Divisible by:`;
-    para_1.innerHTML = `2`;
-
-    head_2.innerHTML = `Your Value:`;
-    para_2.innerHTML = `${input.value}`;
-
-    head_3.innerHTML = `Your number is not Divisible by 2`;
-
-    input.value = "";
   } else {
     head_1.innerHTML = `Divisible by:`;
     para_1.innerHTML = `2`;
@@ -47,7 +52,7 @@ function Result() {
     head_2.innerHTML = `Your Value:`;
     para_2.innerHTML = `${input.value}`;
 
-    head_3.innerHTML = `Please Enter Valid Value`;
+    head_3.innerHTML = `Please Enter Valid Number`;
 
     input.value = "";
   }
