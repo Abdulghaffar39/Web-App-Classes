@@ -187,13 +187,13 @@
 // 3 = 'cherry' ==> Pomegranate
 // 4 = 'mango', 'strawberry', 'pineapple' ==> updated
 
-var fruits = ['watermelon', 'banana', 'apple', 'grapes', 'orange', 'mango', 'strawberry', 'pineapple', 'kiwi', 'cherry']
+// var fruits = ['watermelon', 'banana', 'apple', 'grapes', 'orange', 'mango', 'strawberry', 'pineapple', 'kiwi', 'cherry']
 
 // fruits.splice(1 , 2);
 // fruits.splice(6 , 2);
 // fruits.splice(9 , 1, "Pomegranate");
 // fruits.splice(5 , 3, "updated");
-console.log(fruits);
+// console.log(fruits);
 
 
 // ----------------------------------------------------------
@@ -211,6 +211,67 @@ console.log(fruits);
 // var fullname = `Meher Abdul Ghaffar`
 
 // console.log(fullname.split(`,`));
+
+// ----------------------------------------------------------
+
+// flag variable;
+// var isFound = false;
+
+// ----------------------------------------------------------
+
+// var emails = ["mohsin12@gmail.com","muneeb@gmail.com"];
+// var password = ["12345","234768"];
+// var userEmail = prompt("Enter Your Email");
+// var Userpassword = prompt("Enter Your Password");
+// var isFound = false;
+// for(var i = 0; i<=emails.length; i++){
+//     if(userEmail === emails[i] && Userpassword === password[i]){
+//         isFound = true;
+//         alert("Successfully");
+//     }
+// }
+// if(isFound === false){
+//     alert("Login Failed")
+// }
+
+// ----------------------------------------------------------
+
+// var emails = [];
+// var passwords = [];
+
+// for(var i = 1; i < 6; i++){
+
+//     var giveEmails = prompt(`Enter Your ${i} Email`);
+//     console.log(emails.push(giveEmails))
+//     console.log(emails);
+    
+    
+//     for(var j = 1; j < 2; j++){
+//         var givePasswords = prompt(`Enter Your ${i} Email Password`);
+//         console.log(passwords.push(givePasswords));
+//         console.log(passwords);
+
+//     };
+// };
+
+
+// var find_Email = prompt("Find your email");
+// var find_Password = prompt("Find your Password");
+
+// var isfound = false;
+
+// for(var i = 0; i < emails.length; i++){
+//     if(find_Email === emails[i] && find_Password === passwords[j]){
+
+//         isfound = true
+//         console.log('Login Successfully');
+        
+//     }
+// }
+
+// if(isfound === false){
+//     console.log("Please enter currect email")
+// }
 
 // ----------------------------------------------------------
 
