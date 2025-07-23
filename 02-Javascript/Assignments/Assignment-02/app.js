@@ -5,7 +5,7 @@ let head = document.querySelector('#head');
 
 // function result(){
   
-//   if(input.)
+//   if(input.value)
 // }
 
 function result() {
