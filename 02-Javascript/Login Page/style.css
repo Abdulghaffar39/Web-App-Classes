@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid black; */
+    /* border: 1px solid white; */
 }
 
 body{
@@ -17,8 +17,9 @@ body{
     /* border-radius: 60px; */
     width: 50%; 
     height: 600px;   
-    margin: 80px auto;
+    margin: 0px auto;
     box-shadow: none;
+    border-radius: 16px;
     
 }   
 
@@ -33,13 +34,18 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgb(181, 181, 9);
+    background-color: #097054;
+    border-radius: 66px !important;
+    border: 5px solid #ffde00;
+    border-top: none;
 }   
 
 label{
     
     width: 60%;
     font-size: 25px;
+    color: #ffde00;
+    font-weight: 800;
 }
 
 input{
@@ -50,9 +56,11 @@ input{
     padding: 10px;
     border: 2px solid black;
     border-radius: 0px 8px 8px 8px;
-    background-color: rgb(216, 217, 206);
+    background-color: black;
+    color: #ffde00;
     outline: none;
 }
+
 
 input:focus{
     
@@ -63,91 +71,67 @@ input:focus{
 
 .signin{
 
-    width: 130px;
-    width: 120px;
-    height: 50px;
-    font-size: 20px;
-    font-weight: 800;
+    width: 200px;
+    /* width: 120px; */
+    height: 60px;
+    font-size: 25px;
+    font-weight: 600;
     border-radius: 8px;
     border: 2px solid black;
+    background-color: #ffde00;
+}
+
+
+.signin:hover{
+
+    background-color: black;
+    color: #ffdd00;
+    border: 2px solid #ffdd00;
 }
 
 h1{
     padding: 10px;
     font-size: 50px;
+    color: #ffde00;
     text-align: center;
-    color: rgb(110, 110, 17);
-    background-color: rgb(181, 181, 9);
+    background-color: #097054;
+    border: 5px solid #ffde00;
+    border-radius: 0px 0px 20px 20px;
+
+    border-bottom: none;
+}
+
+.nav{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 550px;
+}
+
+.nav .button{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 
-@media (max-width: 768px) {
+.nav .button button{
+
+    width: 150px;
+    height: 60px;
+    background-color: #ffdd00;
+    border-radius: 20px;
+    font-size: 25px;
+    font-weight: 600;
     
-body{
+}
+
+.nav .button button:hover{
+
     background-color: black;
-}
-    
-.form{
-    
-    width: 80%; 
-    box-shadow: none;
-};   
-
-main{
-    width: 100%;
-    padding: 10px;
+    color: #ffdd00;
+    border: 2px solid #ffdd00;
 }
 
-
-label{
-
-    width: 90%;
-}
-
-
-input{
-
-    width: 90%;
-}
-
-h1{
-
-    font-size: 45px;
-}
-
-
-
-}
-
-
-@media (max-width: 500px) {
-    
-    
-.form{
-    
-    width: 90%; 
-    height: 500px;
-};   
-
-main{
-    width: 90%;
-    height: 500px;
-    padding: 10px;
-}
-
-
-label{
-
-    width: 100%;
-    font-size: 20px;
-}
-
-
-input{
-
-    width: 100%;
-    height: 40px;
-    font-size: 15px;
-}
-
-}
