@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="nav">
+
+        <div class="logo">
+
+            <img src="./Assets/img/58e80f041ec1f7fa0b349e8236066416-removebg-preview.png" width="150px" alt="">
+
+        </div>
+
+        <div class="button" onclick="nav_signin()">
+            <button>Sigin In</button>
+        </div>
+
+    </div>
+
+    <div class="form">
+        <h1>Sign Up Page</h1>
+
+        <form class="main">
+
+            <label for="email">Email</label>
+            <input type="email" placeholder="Enter Your Email" id="signup_email" required="required" autocomplete="off"><br>
+
+            <label for="password">Password</label>
+            <input type="password" placeholder="Enter Your Password" id="signup_password" minlength="4" required autocomplete="new-password"><br>
+
+            <button class="signin" onclick="signup()">Sign Up</button>
+
+        </form>
+
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
