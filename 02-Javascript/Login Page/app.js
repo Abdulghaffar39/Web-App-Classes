@@ -1,15 +1,15 @@
 
-let array = []
+let array = [];
 
-function signin() {
-
-    console.log('success!');
-
+const signin = () => {
 
     let name = document.getElementById('name').value;
     let age = document.getElementById('age').value;
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
+
+
+    // console.log(name + age + email + password);
 
     let obj = {
 
@@ -19,56 +19,30 @@ function signin() {
         password,
     }
 
-    array.push(obj);
-    window.localStorage.setItem('data', JSON.stringify(array));
+    array.push(obj)
 
+    for (let i = 0; i < array.length; i++) {
 
+        if (name == '' || age == '' || email == '' || password == '') {
 
-    
-    // onsole.log(getData[0].name);
+            alert('Please put value')
+        }
+        else if (array[i].email == email && array[i].password == password) {
 
+            alert('Account have already created');
+            return
+        }
+        else {
 
-    // for (let i = 0; i < array.length; i++) {
+            window.localStorage.setItem('data', JSON.stringify(array));
+            window.location.href = 'signup.html'
 
-    //     if(obj[i].email = email){
-
-    //         console.log('a');
-
-    //     }
-
-    // }
-
-
-    alert('Account Created Successfuly');
-    window.location.href = 'signup.html';
-
-
-}
-
-function signup() {
-
-    let signup_email = document.getElementById('signup_email')
-    let signup_password = document.getElementById('signup_password')
-    
-
-    var getData = window.localStorage.getItem('data');
-    getData = JSON.parse(getData);
-    // console.log(getData + 'get');
-
-    for (var i = 0; i <= getData.length; i++) {
-
-        // console.log(getData[i].email);
-
-        if (getData[i].email === signup_email && getData[i].password === signup_password) {
-            
-            alert('Already have accound created!')
         }
     }
 
+
+
 }
-
-
-
 
 
 
