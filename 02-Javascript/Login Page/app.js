@@ -23,12 +23,13 @@ const signin = () => {
 
 
     window.localStorage.setItem('data', JSON.stringify(obj));
-    window.location.href = 'signup.html'
+    
+    window.location.href = 'home.html';
 
 }
 
 function form(event) {
-    
+
     event.preventDefault();
 }
 
@@ -39,36 +40,55 @@ const signup = () => {
     let signup_email = document.getElementById('signup_email').value;
     let signup_password = document.getElementById('signup_password').value;
 
+
+    if (signup_email == '' && signup_password == '') {
+
+        alert('Please enter value')
+        return;
+    }
+
+
     var getdata = window.localStorage.getItem('data');
     getdata = JSON.parse(getdata);
 
-    for (let i = 0; i <= getdata.length; i++) {
 
-        // console.log(getdata[0].email);
-        // console.log(getdata[i].email);
-        
+    let isFound = false;
+
+
+    for (let i = 0; i < getdata.length; i++) {        
         
 
-        if (getdata[i].email == signup_email && getdata[i].password == signup_password) {
+        if (getdata[i].email === signup_email && getdata[i].password === signup_password) {
 
             alert('Successfuly')
-            window.location.href = 'home.html'
-        }
-        else if (getdata[i].email !== signup_email && getdata[i].password !== signup_password) {
-            
-            console.log(getdata[0].email);
-            console.log(getdata[i].email);
-            
-            alert('Please valid Email or Password')
-            return
+            isFound = true;
+            window.location.href = 'home.html';
+            break;
         }
 
     }
 
+    if (isFound === false) {
 
+        alert("Incorrect Email or Password");
+        return;
+    }
+
+//     let found = false;
+
+//   for (let i = 0; i < getData.length; i++) {
+//     if (getData[i].email === loginEmail && getData[i].password === loginPassword) {
+//       alert('Login successfully');
+//       found = true;
+//       break; // stop loop if login is successful
+//     }
+//   }
+
+//   if (!found) {
+//     alert('Incorrect Email or Password');
+//   }
 
 }
-
 
 
 
