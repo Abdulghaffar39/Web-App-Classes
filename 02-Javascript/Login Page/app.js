@@ -1,6 +1,3 @@
-
-let array = [];
-
 const signin = () => {
 
     let name = document.getElementById('name').value;
@@ -9,35 +6,63 @@ const signin = () => {
     let password = document.getElementById('password').value;
 
 
-    // console.log(name + age + email + password);
 
-    let obj = {
+    if (name == '' || age == '' || email == '' || password == '') {
+        alert('Please fill page');
+        return
+    }
 
+
+    let obj = JSON.parse(window.localStorage.getItem('data')) || [];
+    obj.push({
         name,
         age,
         email,
         password,
-    }
+    });
 
-    array.push(obj)
 
-    for (let i = 0; i < array.length; i++) {
+    window.localStorage.setItem('data', JSON.stringify(obj));
+    window.location.href = 'signup.html'
 
-        if (name == '' || age == '' || email == '' || password == '') {
+}
 
-            alert('Please put value')
+function form(event) {
+    
+    event.preventDefault();
+}
+
+const signup = () => {
+
+
+
+    let signup_email = document.getElementById('signup_email').value;
+    let signup_password = document.getElementById('signup_password').value;
+
+    var getdata = window.localStorage.getItem('data');
+    getdata = JSON.parse(getdata);
+
+    for (let i = 0; i <= getdata.length; i++) {
+
+        // console.log(getdata[0].email);
+        // console.log(getdata[i].email);
+        
+        
+
+        if (getdata[i].email == signup_email && getdata[i].password == signup_password) {
+
+            alert('Successfuly')
+            window.location.href = 'home.html'
         }
-        else if (array[i].email == email && array[i].password == password) {
-
-            alert('Account have already created');
+        else if (getdata[i].email !== signup_email && getdata[i].password !== signup_password) {
+            
+            console.log(getdata[0].email);
+            console.log(getdata[i].email);
+            
+            alert('Please valid Email or Password')
             return
         }
-        else {
 
-            window.localStorage.setItem('data', JSON.stringify(array));
-            window.location.href = 'signup.html'
-
-        }
     }
 
 
