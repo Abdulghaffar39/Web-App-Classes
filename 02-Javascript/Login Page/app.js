@@ -14,6 +14,34 @@ const signin = () => {
 
 
     let obj = JSON.parse(window.localStorage.getItem('data')) || [];
+
+
+    let isFound = false;
+
+    for (let i = 0; i < obj.length; i++) {
+
+        console.log(obj[i].email + '1');
+
+        if (obj[i].email === email && obj[i].password === password) {
+
+            console.log(obj[i].email + '2');
+            alert('This Email Account is already exists!');
+
+            isFound = true;
+            return;
+        }
+
+
+    }
+
+    if (!isFound) {
+
+        alert('Account created successfuly');
+        window.location.href = 'signup.html'
+
+    }
+
+
     obj.push({
         name,
         age,
@@ -23,8 +51,8 @@ const signin = () => {
 
 
     window.localStorage.setItem('data', JSON.stringify(obj));
-    
-    window.location.href = 'home.html';
+
+
 
 }
 
@@ -55,8 +83,8 @@ const signup = () => {
     let isFound = false;
 
 
-    for (let i = 0; i < getdata.length; i++) {        
-        
+    for (let i = 0; i < getdata.length; i++) {
+
 
         if (getdata[i].email === signup_email && getdata[i].password === signup_password) {
 
@@ -74,22 +102,24 @@ const signup = () => {
         return;
     }
 
-//     let found = false;
-
-//   for (let i = 0; i < getData.length; i++) {
-//     if (getData[i].email === loginEmail && getData[i].password === loginPassword) {
-//       alert('Login successfully');
-//       found = true;
-//       break; // stop loop if login is successful
-//     }
-//   }
-
-//   if (!found) {
-//     alert('Incorrect Email or Password');
-//   }
-
 }
 
+
+let head = document.getElementById('head')
+
+var getdata = window.localStorage.getItem('data');
+getdata = JSON.parse(getdata);
+
+for (let i = 0; i < getdata.length; i++) {
+    
+    
+
+    head.innerHTML = getdata[i].name;
+    console.log(head.innerHTML);
+    
+
+    
+}
 
 
 
@@ -99,6 +129,11 @@ function nav_signup() {
 }
 
 function nav_signin() {
+
+    window.location.href = 'index.html';
+}
+
+function nav_logout() {
 
     window.location.href = 'index.html';
 }

@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid white;  */
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url(./Assets/font/poppins/Poppins-Regular.ttf);
+}
+
+.poppins{
+    font-family: 'poppins';
+}
+
+body{
+    
+    font-family: 'poppins';
+    background-color: black;
+    color: white;
+    
+}   
+
+/* Navbar started */
+
+.nav{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 550px;
+}
+
+.nav .button{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.nav .button button{
+
+    width: 150px;
+    height: 60px;
+    background-color: #ffdd00;
+    border-radius: 20px;
+    font-size: 25px;
+    font-weight: 600;
+    border-style: none;
+    
+}
+
+.nav .button button:hover{
+
+    background-color: black;
+    color: #ffdd00;
+    border: 2px solid #ffdd00;
+}
+
+/* Navbar ended */
+
+
+
+/* Home.html started */
+.home_main{
+
+    width: 50%;
+    border-radius: 0px 0px 42px 42px;
+    box-shadow: 0px 0px 10px white;
+    margin: 100px auto;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.parent_1{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#head{
+
+    font-size: 80px;
+}
+
+#para{
+
+    font-size: 40px;
+}
+
+/* Home.html ended */
+
+
+
+@media (max-width: 1270px) {
+    
+
+/* Home.html started */
+.home_main{
+
+    width: 80%;
+}
+
+/* Home.html ended */
+
+
+}
+
+
+@media (max-width: 1024px) {
+    
+/* Navbar started */
+
+.nav{
+
+    gap: 200px;
+}
+/* Navbar ended */
+
+
+}
+
+
+@media (max-width: 780px) {
+    
+
+/* Home.html started */
+.home_main{
+
+    width: 90%;
+}
+
+#head{
+
+    font-size: 60px;
+}
+
+#para{
+
+    font-size: 30px;
+}
+
+/* Home.html ended */
+
+
+}
+
+@media (max-width: 520px) {
+    
+ 
+/* Navbar started */
+
+.nav{
+
+    gap: 0px;
+}
+
+.nav .logo img {
+    width: 100px;
+}
+
+.nav .button button{
+
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+/* Navbar ended */
+
+/* Home.html started */
+.home_main{
+
+    width: 95%;
+}
+
+#head{
+
+    font-size: 35px;
+}
+
+#para{
+
+    font-size: 15px;
+}
+
+/* Home.html ended */
+
+
+
+}
+
+@media (max-width: 320px) {
+    
+/* Navbar started */
+
+.nav{
+
+    gap: 100px;
+}
+
+.nav .logo img{
+
+    width: 80px;
+}
+
+.nav .button button{
+
+    width: 80px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 15px;    
+}
+
+/* Navbar ended */
+
+}
