@@ -7,6 +7,7 @@
     <title>Login Page</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
 
 </head>
 
@@ -20,28 +21,30 @@
 
         </div>
 
-        <div class="button" onclick="nav_signin()">
-            <button>Sigin In</button>
+        <div class="button" onclick="nav_signup()">
+            <button>Sigin Up</button>
         </div>
 
     </div>
 
     <div class="form">
-        <h1>Sign Up Page</h1>
+        <h1>Sign In Page</h1>
 
         <form class="main" onsubmit="form(event)">
 
             <label for="email">Email</label>
-            <input type="email" placeholder="Enter Your Email" id="signup_email" required="required" autocomplete="off"><br>
+            <input type="email" placeholder="Enter Your Email" id="signin_email" required="required" autocomplete="off"><br>
 
             <label for="password">Password</label>
-            <input type="password" placeholder="Enter Your Password" id="signup_password" minlength="4" required autocomplete="new-password"><br>
+            <input type="password" placeholder="Enter Your Password" id="signin_password" minlength="4" required autocomplete="new-password"><br>
 
-            <button class="signin" onclick="signup()">Sign Up</button>
+            <button class="signin" onclick="signin()">Sign In</button>
 
         </form>
 
     </div>
+
+    
 
 
     <script src="app.js"></script>

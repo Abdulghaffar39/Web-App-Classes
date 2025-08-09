@@ -1,4 +1,4 @@
-const signin = () => {
+const signup = () => {
 
     let name = document.getElementById('name').value;
     let age = document.getElementById('age').value;
@@ -20,11 +20,11 @@ const signin = () => {
 
     for (let i = 0; i < obj.length; i++) {
 
-        console.log(obj[i].email + '1');
+        // console.log(obj[i].email + '1');
 
         if (obj[i].email === email && obj[i].password === password) {
 
-            console.log(obj[i].email + '2');
+            // console.log(obj[i].email + '2');
             alert('This Email Account is already exists!');
 
             isFound = true;
@@ -37,7 +37,7 @@ const signin = () => {
     if (!isFound) {
 
         alert('Account created successfuly');
-        window.location.href = 'signup.html'
+        window.location.href = 'signup.html';
 
     }
 
@@ -51,25 +51,19 @@ const signin = () => {
 
 
     window.localStorage.setItem('data', JSON.stringify(obj));
+    display();
+
+};
+
+// let array = [];
+
+const signin = () => {
+
+    let signin_email = document.getElementById('signin_email').value;
+    let signin_password = document.getElementById('signin_password').value;
 
 
-
-}
-
-function form(event) {
-
-    event.preventDefault();
-}
-
-const signup = () => {
-
-
-
-    let signup_email = document.getElementById('signup_email').value;
-    let signup_password = document.getElementById('signup_password').value;
-
-
-    if (signup_email == '' && signup_password == '') {
+    if (signin_email == '' && signin_password == '') {
 
         alert('Please enter value')
         return;
@@ -86,7 +80,7 @@ const signup = () => {
     for (let i = 0; i < getdata.length; i++) {
 
 
-        if (getdata[i].email === signup_email && getdata[i].password === signup_password) {
+        if (getdata[i].email === signin_email && getdata[i].password === signin_password) {
 
             alert('Successfuly')
             isFound = true;
@@ -102,33 +96,69 @@ const signup = () => {
         return;
     }
 
+
+};
+
+let main = document.getElementById('main');
+
+function display() {
+
+    let obj = JSON.parse(window.localStorage.getItem('data')) || [];
+    let homeData = '';
+
+    // console.log(obj);
+    
+    obj.forEach((element , i) => {
+
+        console.log(element);
+        
+        homeData += `<h1 id="head">${element.name}</h1>
+
+        <div class="parent_1">
+
+            <div>
+                <p id="para">Age</p>
+                <p id="para">Email</p>
+                <p id="para">Password</p>
+            </div>
+
+            <div>
+                <p id="para">:</p>
+                <p id="para">:</p>
+                <p id="para">:</p>
+            </div>
+
+            <div>
+                <p id="para">${element.age}</p>
+                <p id="para">${element.email}</p>
+                <p id="para">${element.password}</p>
+            </div>
+
+        </div>`
+    });
+
+    console.log(homeData);
+
+    main.innerHTML = homeData;
+
+
+    
+
+
 }
 
 
-let head = document.getElementById('head')
-
-var getdata = window.localStorage.getItem('data');
-getdata = JSON.parse(getdata);
-
-for (let i = 0; i < getdata.length; i++) {
-    
-    
-
-    head.innerHTML = getdata[i].name;
-    console.log(head.innerHTML);
-    
-
-    
-}
+display();
 
 
 
-function nav_signup() {
+
+function nav_signin() {
 
     window.location.href = 'signup.html';
 }
 
-function nav_signin() {
+function nav_signup() {
 
     window.location.href = 'index.html';
 }
@@ -136,5 +166,10 @@ function nav_signin() {
 function nav_logout() {
 
     window.location.href = 'index.html';
+}
+
+function form(event) {
+
+    event.preventDefault();
 }
 
