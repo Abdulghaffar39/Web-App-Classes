@@ -20,11 +20,9 @@ const signup = () => {
 
     for (let i = 0; i < obj.length; i++) {
 
-        // console.log(obj[i].email + '1');
 
         if (obj[i].email === email && obj[i].password === password) {
 
-            // console.log(obj[i].email + '2');
             alert('This Email Account is already exists!');
 
             isFound = true;
@@ -55,7 +53,6 @@ const signup = () => {
 
 };
 
-// let array = [];
 
 const signin = () => {
 
@@ -99,57 +96,31 @@ const signin = () => {
 
 };
 
-let main = document.getElementById('main');
 
-function display() {
-
-    let obj = JSON.parse(window.localStorage.getItem('data')) || [];
-    let homeData = '';
-
-    // console.log(obj);
-    
-    obj.forEach((element , i) => {
-
-        console.log(element);
-        
-        homeData += `<h1 id="head">${element.name}</h1>
-
-        <div class="parent_1">
-
-            <div>
-                <p id="para">Age</p>
-                <p id="para">Email</p>
-                <p id="para">Password</p>
-            </div>
-
-            <div>
-                <p id="para">:</p>
-                <p id="para">:</p>
-                <p id="para">:</p>
-            </div>
-
-            <div>
-                <p id="para">${element.age}</p>
-                <p id="para">${element.email}</p>
-                <p id="para">${element.password}</p>
-            </div>
-
-        </div>`
-    });
-
-    console.log(homeData);
-
-    main.innerHTML = homeData;
-
-
-    
-
-
+function viewBlogs() {
+  let card = document.getElementById("Cards");
+  let viewBlogs = document.getElementById("Vblog");
+  let blogs = JSON.parse(localStorage.getItem("blog"));
+  // Display Blog Detail in FrontEnd
+  for (let i = 0; i < blogs.length; i++) {
+    card.innerHTML += `<div class="card">
+    <div class="iamge">
+          <img src="./assets/Images/screenshot.jpg" alt="">
+        </div>
+        <div class="title">
+          <h1>${blogs[i].title.slice(0, 30)}</h1>
+        </div>
+        <div class="content">
+          <p>${blogs[i].Content.slice(0, 200)}</p>
+        </div>
+        <div class="author">
+          <i class="fa-solid fa-circle-user"></i>
+          <p><b>Author:</b><span>${blogs[i].author}</span></p>
+        </div>
+    </div>`;
+  }
+  viewBlogs.disabled = true;
 }
-
-
-display();
-
 
 
 
