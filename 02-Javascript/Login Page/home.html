@@ -24,33 +24,54 @@
 
     </div>
 
-    <div class="home_main" id="main" onsubmit="form(event)">
+    <!-- <div class="home_main" id="main" onsubmit="form(event)">
 
-        <h1 id="head"></h1>
+       
+    </div> -->
 
-        <div class="parent_1">
+    <h1 id="welcomeMessage">Hello</h1>
+    <button id="logoutButton" class="hidden">Logout</button>
 
-            <div>
-                <p id="para">Age</p>
-                <p id="para">Email</p>
-                <p id="para">Password</p>
-            </div>
 
-            <div>
-                <p id="para">:</p>
-                <p id="para">:</p>
-                <p id="para">:</p>
-            </div>
 
-            <div>
-                <p id="para">abdul</p>
-                <p id="para">asdkjfs</p>
-                <p id="para">asdfdsa</p>
-            </div>
 
-    </div>
+
+
+
+
 
     <script src="app.js"></script>
+
+
+    <script>
+
+        var getdata = window.localStorage.getItem('data');
+
+        getdata = JSON.parse(getdata);
+        for (let i = 0; i < getdata.length; i++) {
+
+            
+            if (getdata) {
+                
+
+                document.getElementById("welcomeMessage").innerHTML = `Hello ${getdata[i].name}`;
+                document.getElementById("logoutButton").classList.remove("hidden");
+
+            } else {
+
+                document.getElementById("welcomeMessage").innerHTML = `Hello, please <a href='login.html'>login</a>.`;
+            }
+
+        }
+
+        document
+            .getElementById("logoutButton")
+            .addEventListener("click", function () {
+                localStorage.removeItem("user");
+                window.location.href = "login.html";
+            });
+    </script>
+
 </body>
 
 </html>

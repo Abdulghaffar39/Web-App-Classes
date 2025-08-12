@@ -49,7 +49,6 @@ const signup = () => {
 
 
     window.localStorage.setItem('data', JSON.stringify(obj));
-    display();
 
 };
 
@@ -97,20 +96,38 @@ const signin = () => {
 };
 
 
-let head = document.getElementById('head')
     
- var getdata = window.localStorage.getItem('data');
-    getdata = JSON.parse(getdata);
+// function viewBlogs() {
+//   let main = document.getElementById("main");
+//   let obj = JSON.parse(window.localStorage.getItem('data')) || [];
 
 
-    for (let i = 0; i < getdata.length; i++) {
+//   for (let i = 0; i < obj.length; i++) {
+//     main.innerHTML = `<h1 id="head">${obj[i].name}</h1>
 
+//         <div class="parent_1">
 
+//             <div>
+//                 <p id="para">Age</p>
+//                 <p id="para">Email</p>
+//                 <p id="para">Password</p>
+//             </div>
 
-        head.innerHTML = getdata[i].name
+//             <div>
+//                 <p id="para">:</p>
+//                 <p id="para">:</p>
+//                 <p id="para">:</p>
+//             </div>
 
-    }
+//             <div>
+//                 <p id="para">${obj[i].age.slice}</p>
+//                 <p id="para">${obj[i].email}</p>
+//                 <p id="para">${obj[i].password}</p>
+//             </div>`;
+//   }
+// }
 
+// viewBlogs()
 
 
 function nav_signin() {
