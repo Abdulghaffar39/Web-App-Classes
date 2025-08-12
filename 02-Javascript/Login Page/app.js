@@ -97,30 +97,19 @@ const signin = () => {
 };
 
 
-function viewBlogs() {
-  let card = document.getElementById("Cards");
-  let viewBlogs = document.getElementById("Vblog");
-  let blogs = JSON.parse(localStorage.getItem("blog"));
-  // Display Blog Detail in FrontEnd
-  for (let i = 0; i < blogs.length; i++) {
-    card.innerHTML += `<div class="card">
-    <div class="iamge">
-          <img src="./assets/Images/screenshot.jpg" alt="">
-        </div>
-        <div class="title">
-          <h1>${blogs[i].title.slice(0, 30)}</h1>
-        </div>
-        <div class="content">
-          <p>${blogs[i].Content.slice(0, 200)}</p>
-        </div>
-        <div class="author">
-          <i class="fa-solid fa-circle-user"></i>
-          <p><b>Author:</b><span>${blogs[i].author}</span></p>
-        </div>
-    </div>`;
-  }
-  viewBlogs.disabled = true;
-}
+let head = document.getElementById('head')
+    
+ var getdata = window.localStorage.getItem('data');
+    getdata = JSON.parse(getdata);
+
+
+    for (let i = 0; i < getdata.length; i++) {
+
+
+
+        head.innerHTML = getdata[i].name
+
+    }
 
 
 
@@ -128,6 +117,7 @@ function nav_signin() {
 
     window.location.href = 'signup.html';
 }
+
 
 function nav_signup() {
 
