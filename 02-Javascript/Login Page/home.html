@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="home.css">
 </head>
 
-<body onsubmit="form(event)">
+<body onsubmit="form(event)" onload="viewBlogs()">
 
     <div class="nav" onfocus="display()">
 
@@ -24,54 +24,35 @@
 
     </div>
 
-    <!-- <div class="home_main" id="main" onsubmit="form(event)">
 
-       
-    </div> -->
+    <div class="home_main" id="main" onsubmit="form(event)">
 
-    <h1 id="welcomeMessage">Hello</h1>
-    <button id="logoutButton" class="hidden">Logout</button>
+        <h1 id="home_haed"></h1>
+
+        <div class="parent_1">
+
+            <div class='div1'>
+                <p id="para">Age</p>
+                <p id="para">Email</p>
+                <p id="para">Password</p>
+            </div>
+
+            <div class='div2'>
+                <p id="para">:</p>
+                <p id="para">:</p>
+                <p id="para">:</p>
+            </div>
+
+            <div class='div3'>
+                <p id="home_age"></p>
+                <p id="home_email"></p>
+                <p id="home_password"></p>
+            </div>
+
+        </div>
 
 
-
-
-
-
-
-
-
-    <script src="app.js"></script>
-
-
-    <script>
-
-        var getdata = window.localStorage.getItem('data');
-
-        getdata = JSON.parse(getdata);
-        for (let i = 0; i < getdata.length; i++) {
-
-            
-            if (getdata) {
-                
-
-                document.getElementById("welcomeMessage").innerHTML = `Hello ${getdata[i].name}`;
-                document.getElementById("logoutButton").classList.remove("hidden");
-
-            } else {
-
-                document.getElementById("welcomeMessage").innerHTML = `Hello, please <a href='login.html'>login</a>.`;
-            }
-
-        }
-
-        document
-            .getElementById("logoutButton")
-            .addEventListener("click", function () {
-                localStorage.removeItem("user");
-                window.location.href = "login.html";
-            });
-    </script>
-
+        <script src="app.js"></script>
 </body>
 
 </html>

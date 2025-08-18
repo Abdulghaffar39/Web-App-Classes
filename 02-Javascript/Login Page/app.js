@@ -78,7 +78,8 @@ const signin = () => {
 
         if (getdata[i].email === signin_email && getdata[i].password === signin_password) {
 
-            alert('Successfuly')
+            alert('Successfuly');
+            window.localStorage.setItem('currentUser' , JSON.stringify({validUser: getdata[i]}))
             isFound = true;
             window.location.href = 'home.html';
             break;
@@ -97,37 +98,26 @@ const signin = () => {
 
 
     
-// function viewBlogs() {
-//   let main = document.getElementById("main");
-//   let obj = JSON.parse(window.localStorage.getItem('data')) || [];
+function viewBlogs() {
+  
+    let user = window.localStorage.getItem('currentUser');
+    user = JSON.parse(user);
+    console.log(user);
+    
+
+    let home_haed = document.getElementById('home_haed');
+    let home_age = document.getElementById('home_age');
+    let home_email = document.getElementById('home_email');
+    let home_password = document.getElementById('home_password');
 
 
-//   for (let i = 0; i < obj.length; i++) {
-//     main.innerHTML = `<h1 id="head">${obj[i].name}</h1>
+    home_haed.innerHTML = user.validUser.name;
+    home_age.innerHTML = user.validUser.age;
+    home_email.innerHTML = user.validUser.email;
+    home_password.innerHTML = user.validUser.password;
+}
 
-//         <div class="parent_1">
-
-//             <div>
-//                 <p id="para">Age</p>
-//                 <p id="para">Email</p>
-//                 <p id="para">Password</p>
-//             </div>
-
-//             <div>
-//                 <p id="para">:</p>
-//                 <p id="para">:</p>
-//                 <p id="para">:</p>
-//             </div>
-
-//             <div>
-//                 <p id="para">${obj[i].age.slice}</p>
-//                 <p id="para">${obj[i].email}</p>
-//                 <p id="para">${obj[i].password}</p>
-//             </div>`;
-//   }
-// }
-
-// viewBlogs()
+viewBlogs()
 
 
 function nav_signin() {
