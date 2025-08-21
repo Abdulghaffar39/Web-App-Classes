@@ -10,49 +10,54 @@
 
 <body onsubmit="form(event)" onload="viewBlogs()">
 
-    <div class="nav" onfocus="display()">
+    <div class="sider" id="sider" onclick="sider()"></div>
 
-        <div class="logo">
 
-            <img src="./Assets/img/58e80f041ec1f7fa0b349e8236066416-removebg-preview.png" width="150px" alt="">
+    <div class="main" id="main">
+
+
+        <div class="parent_1">
+
+            <div class="child_1" id="Log Out" onclick="close_sider()"><i class="fa fa-times" aria-hidden="true"></i>
+            </div>
 
         </div>
 
-        <div class="button" onclick="nav_logout()">
-            <button>Log Out</button>
+        <div class="parent_2">
+
+            <div class="child_3" id="Log Out" onclick="logout()">
+                <button>Log Out</button>
+            </div>
+
         </div>
 
     </div>
 
 
-    <div class="home_main" id="main" onsubmit="form(event)">
-
-        <h1 id="home_haed"></h1>
+    <div class="main_2" id="main_2">
 
         <div class="parent_1">
-
-            <div class='div1'>
-                <p id="para">Age</p>
-                <p id="para">Email</p>
-                <p id="para">Password</p>
-            </div>
-
-            <div class='div2'>
-                <p id="para">:</p>
-                <p id="para">:</p>
-                <p id="para">:</p>
-            </div>
-
-            <div class='div3'>
-                <p id="home_age"></p>
-                <p id="home_email"></p>
-                <p id="home_password"></p>
-            </div>
-
+            <img src="./Assets/img/58e80f041ec1f7fa0b349e8236066416-removebg-preview.png" width="100%" alt="log">
         </div>
 
 
-        <script src="app.js"></script>
+        <div class="parent_2" id="profile" onclick="check_profile()"></div>
+
+    </div>
+
+
+
+    <div>
+
+        <h1>Blog</h1>
+
+
+        
+
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/1de706ad7b.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
