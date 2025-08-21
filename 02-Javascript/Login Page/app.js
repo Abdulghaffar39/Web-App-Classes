@@ -153,9 +153,7 @@ function sider() {
 
     let sider = document.getElementById('sider');
     let main = document.getElementById('main');
-    // let main_2 = document.getElementById('main_2');
 
-    // main_2.style.display = 'none';
     sider.style.display = 'none';
     main.style.display = 'flex';
     main.style.flexDirection = 'column';
@@ -166,17 +164,55 @@ function close_sider() {
 
     let sider = document.getElementById('sider');
     let main = document.getElementById('main');
-    // let main_2 = document.getElementById('main_2');
 
     sider.style.display = 'block';
     
     main.style.display = 'none';
     main.style.flexDirection = 'column';
     main.style.justifyContent = 'space-between';
+}
+
+function submit(){
+
+    let title = document.getElementById('title').value;
+    let author = document.getElementById('author').value;
+    let description = document.getElementById('description').value;
+
+    if(title === '' || author === '' || description === ''){
+
+        alert('Please fill page');
+        return;
+    };
+
+
+    let blog_obj = {
+
+        title, 
+        author, 
+        description
+    };
+
+    window.localStorage.setItem('blog' , JSON.stringify(blog_obj));
     
-    // main_2.style.display = 'flex';
-    // main_2.style.flexDirection = 'row';
-    // main_2.style.justifyContent = 'space-around';
+    console.log(blog_obj);
+    
+    for(let i = 0; i < blog_obj.length; i++){
+
+        if(blog_obj[i].title && blog_obj[i].author  && blog_obj[i].description){
+            
+            window.localStorage.setItem('current_blog' , JSON.stringify({validValue : blog_obj[i]}));
+        }
+    }
+    
+    window.location.href = 'home.html'
+}
+
+function blog_value(){
+
+    let user_value = window.localStorage.getItem('current_blog');
+    user_value = JSON.parse(user_value)
+    console.log(user_value);
+    
 }
 
 

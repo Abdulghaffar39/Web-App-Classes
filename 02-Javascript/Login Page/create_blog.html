@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="home.css">
 
 </head>
-<body>
+<body onload="blog_value()">
 
     <div class="main_2" id="main_2">
 
@@ -26,12 +26,12 @@
     <h1 class="Blog">Blog</h1>
 
 
-    <form class="box_1">
+    <form class="box_1" onsubmit="form(event)">
 
         <div class="parent" id="parent_1">
 
             <label for="title">Title</label>
-            <input type="text" placeholder="Enter title">
+            <input type="text" placeholder="Enter title" id="title">
 
         </div>
 
@@ -44,12 +44,12 @@
 
         <div class="parent"  id="parent_3">
 
-            <label for="Description">Description</label>
-            <textarea name="Description" id="Description" placeholder="Write Description" rows="7"></textarea>
+            <label for="description">Description</label>
+            <textarea name="description" placeholder="Write Description" rows="7" id="description"></textarea>
 
         </div>
 
-        <div>
+        <div  onclick="submit()">
             <input type="submit" id="submit">
         </div>
 
