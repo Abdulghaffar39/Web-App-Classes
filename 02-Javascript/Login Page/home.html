@@ -25,7 +25,9 @@
 
         <div class="parent_2">
 
-            <div class="child_3" id="Log Out" onclick="logout()">
+            <div class="child_1" id="profile" onclick="check_profile()"></div>
+
+            <div class="child_2" id="Log Out" onclick="logout()">
                 <button>Log Out</button>
             </div>
 
@@ -41,20 +43,42 @@
         </div>
 
 
-        <div class="parent_2" id="profile" onclick="check_profile()"></div>
+        <div class="parent_2"><button>Create Blog</button></div>
 
     </div>
 
 
 
-    <div>
+    <form class="box_1">
 
         <h1>Blog</h1>
 
 
-        
+        <div class="parent_1">
 
-    </div>
+            <label for="title">Title</label>
+            <input type="text" placeholder="Enter title">
+
+        </div>
+
+        <div class="parent_2">
+
+            <label for="author">Author</label>
+            <input type="text" placeholder="Enter author name" id="author">
+
+        </div>
+
+        <div class="parent_3">
+
+            <label for="author">Description</label>
+            <input type="text" placeholder="Write Description" id="author">
+
+        </div>
+
+        <input type="submit">
+
+
+    </form>
 
     <script src="app.js"></script>
     <script src="https://kit.fontawesome.com/1de706ad7b.js" crossorigin="anonymous"></script>
