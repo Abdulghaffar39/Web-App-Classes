@@ -180,6 +180,12 @@ function close_sider() {
 }
 
 
+function create_blog() {
+
+    window.location.href = 'create_blog.html';
+}
+
+
 function back_home() {
 
     window.location.href = 'home.html';
