@@ -106,46 +106,50 @@ function viewBlogs() {
     let profile = document.getElementById('profile');
 
     profile.innerHTML = user.validUser.name[0];
-    console.log(profile.innerHTML + '119');
-    
+    // console.log(profile.innerHTML + '119');
+
 
     let blog = window.localStorage.getItem('User value');
     blog = JSON.parse(blog);
-    console.log(blog);
+    // console.log(blog);
 
 
-    let small_box = document.getElementById('small_box');
+    let Container_small_box = document.getElementById('Container_small_box');
 
-    small_box.innerHTML = ``;
+    Container_small_box.innerHTML = ``;
 
-    for(let i = 0; i < blog.length; i++){
+    for (let i = 0; i < blog.length; i++) {
 
-        small_box.innerHTML += `<img src="./Assets/img/58e80f041ec1f7fa0b349e8236066416-removebg-preview.png" width="100%" alt="">
-
+        Container_small_box.innerHTML += `<div class="small_box" id="small_box">
+        
+        <img src="./Assets/img/58e80f041ec1f7fa0b349e8236066416-removebg-preview.png" width="100%" alt="">
+        
             <div class="parent">
 
                 <div class="child" id="child_1">
 
-                    <h1>Title</h1>
-                    <p id="title_value">${blog[0].title}</p>
+                <h1>Title</h1>
+                <p id="title_value">${blog[0].title}</p>
 
                 </div>
-
+                
                 <div class="child" id="child_2">
-
+                
                     <h1>Author</h1>
                     <p id="author_value">${blog[0].author}</p>
-
+                    
                 </div>
-
+                
                 <div class="child_3" id="child_3">
 
-                    <h1>Description</h1>
-                    <p id="description_value">${blog[0].description}</p>
-
+                <h1>Description</h1>
+                <p id="description_value">${blog[0].description}</p>
+                
                 </div>
-
-            </div>`
+                
+                </div>
+                
+                </div>`
     }
 
 }
@@ -179,7 +183,6 @@ function Details() {
 
 }
 
-let array = []
 
 function submit() {
 
@@ -195,17 +198,19 @@ function submit() {
     }
 
 
-    let blog_obj = {
+
+    let blog_obj = JSON.parse(window.localStorage.getItem('User value')) || [];
+
+
+    blog_obj.push({
 
         title,
         author,
         description,
-    }
-
-    array.push(blog_obj)
+    });
 
 
-    window.localStorage.setItem('User value', JSON.stringify(array))
+    window.localStorage.setItem('User value', JSON.stringify(blog_obj));
     window.location.href = 'home.html';
 }
 
