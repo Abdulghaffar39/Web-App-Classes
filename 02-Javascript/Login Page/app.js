@@ -112,15 +112,16 @@ function viewBlogs() {
     let blog = window.localStorage.getItem('User value');
     blog = JSON.parse(blog);
     // console.log(blog);
-
-
+    
+    
     let Container_small_box = document.getElementById('Container_small_box');
-
+    
     Container_small_box.innerHTML = ``;
-
+    
     for (let i = 0; i < blog.length; i++) {
-
+        
         Container_small_box.innerHTML += `<div class="small_box" id="small_box">
+        
         
         <img src="./Assets/img/58e80f041ec1f7fa0b349e8236066416-removebg-preview.png" width="100%" alt="">
         
@@ -129,21 +130,21 @@ function viewBlogs() {
                 <div class="child" id="child_1">
 
                 <h1>Title</h1>
-                <p id="title_value">${blog[0].title}</p>
+                <p id="title_value">${blog[i].title}</p>
 
                 </div>
                 
                 <div class="child" id="child_2">
                 
                     <h1>Author</h1>
-                    <p id="author_value">${blog[0].author}</p>
+                    <p id="author_value">${blog[i].author}</p>
                     
                 </div>
                 
                 <div class="child_3" id="child_3">
 
                 <h1>Description</h1>
-                <p id="description_value">${blog[0].description}</p>
+                <p id="description_value">${blog[i].description}</p>
                 
                 </div>
                 
