@@ -16,12 +16,13 @@ const signup = () => {
     let obj = JSON.parse(window.localStorage.getItem('data')) || [];
 
 
+
     let isFound = false;
 
     for (let i = 0; i < obj.length; i++) {
 
 
-        if (obj[i].email === email && obj[i].password === password) {
+        if (obj[i].email === email) {
 
             alert('This Email Account is already exists!');
 
@@ -35,7 +36,7 @@ const signup = () => {
     if (!isFound) {
 
         alert('Account created successfuly');
-        window.location.href = 'signup.html';
+        // window.location.href = 'signup.html';
 
     }
 
@@ -79,7 +80,7 @@ const signin = () => {
         if (getdata[i].email === signin_email && getdata[i].password === signin_password) {
 
             alert('Successfuly');
-            window.localStorage.setItem('currentUser' , JSON.stringify({validUser: getdata[i]}))
+            window.localStorage.setItem('currentUser', JSON.stringify({ validUser: getdata[i] }))
             isFound = true;
             window.location.href = 'home.html';
             break;
@@ -97,35 +98,66 @@ const signin = () => {
 };
 
 
-    
 function viewBlogs() {
-  
+
     let user = window.localStorage.getItem('currentUser');
     user = JSON.parse(user);
-    console.log(user);
+
+    let profile = document.getElementById('profile');
+
+    profile.innerHTML = user.validUser.name[0];
+    console.log(profile.innerHTML + '119');
     
 
-    let home_haed = document.getElementById('home_haed');
-    let home_age = document.getElementById('home_age');
-    let home_email = document.getElementById('home_email');
-    let home_password = document.getElementById('home_password');
-    let profile = document.getElementById('profile');
-    
-    profile.innerHTML = user.validUser.name[0];
-    home_haed.innerHTML = user.validUser.name;
-    home_age.innerHTML = user.validUser.age;
-    home_email.innerHTML = user.validUser.email;
-    home_password.innerHTML = user.validUser.password;
+    let blog = window.localStorage.getItem('User value');
+    blog = JSON.parse(blog);
+    console.log(blog);
+
+
+    let small_box = document.getElementById('small_box');
+
+    small_box.innerHTML = ``;
+
+    for(let i = 0; i < blog.length; i++){
+
+        small_box.innerHTML += `<img src="./Assets/img/58e80f041ec1f7fa0b349e8236066416-removebg-preview.png" width="100%" alt="">
+
+            <div class="parent">
+
+                <div class="child" id="child_1">
+
+                    <h1>Title</h1>
+                    <p id="title_value">${blog[0].title}</p>
+
+                </div>
+
+                <div class="child" id="child_2">
+
+                    <h1>Author</h1>
+                    <p id="author_value">${blog[0].author}</p>
+
+                </div>
+
+                <div class="child_3" id="child_3">
+
+                    <h1>Description</h1>
+                    <p id="description_value">${blog[0].description}</p>
+
+                </div>
+
+            </div>`
+    }
+
 }
 
-    
+
 function Details() {
-  
+
     let user = window.localStorage.getItem('currentUser');
     user = JSON.parse(user);
     console.log(user);
-    
-    
+
+
     let profile_name = document.getElementById('profile_name');
     let home_age = document.getElementById('home_age');
     let home_email = document.getElementById('home_email');
@@ -135,19 +167,50 @@ function Details() {
     let home_email_2 = document.getElementById('home_email_2');
     let home_password_2 = document.getElementById('home_password_2');
 
-    
+
     profile_name.innerHTML = user.validUser.name;
     home_age.innerHTML = user.validUser.age;
     home_email.innerHTML = user.validUser.email;
     home_password.innerHTML = user.validUser.password;
-    
+
     home_age_2.innerHTML = user.validUser.age;
     home_email_2.innerHTML = user.validUser.email;
     home_password_2.innerHTML = user.validUser.password;
 
-}   
+}
+
+let array = []
+
+function submit() {
 
 
+    let title = document.getElementById('title').value;
+    let author = document.getElementById('author').value;
+    let description = document.getElementById('description').value;
+
+    if (title === '' || author === '' || description === '') {
+
+        alert('Please enter value');
+        return;
+    }
+
+
+    let blog_obj = {
+
+        title,
+        author,
+        description,
+    }
+
+    array.push(blog_obj)
+
+
+    window.localStorage.setItem('User value', JSON.stringify(array))
+    window.location.href = 'home.html';
+}
+
+
+// =====================================================================================================
 
 function sider() {
 
@@ -166,53 +229,10 @@ function close_sider() {
     let main = document.getElementById('main');
 
     sider.style.display = 'block';
-    
+
     main.style.display = 'none';
     main.style.flexDirection = 'column';
     main.style.justifyContent = 'space-between';
-}
-
-function submit(){
-
-    let title = document.getElementById('title').value;
-    let author = document.getElementById('author').value;
-    let description = document.getElementById('description').value;
-
-    if(title === '' || author === '' || description === ''){
-
-        alert('Please fill page');
-        return;
-    };
-
-
-    let blog_obj = {
-
-        title, 
-        author, 
-        description
-    };
-
-    window.localStorage.setItem('blog' , JSON.stringify(blog_obj));
-    
-    console.log(blog_obj);
-    
-    for(let i = 0; i < blog_obj.length; i++){
-
-        if(blog_obj[i].title && blog_obj[i].author  && blog_obj[i].description){
-            
-            window.localStorage.setItem('current_blog' , JSON.stringify({validValue : blog_obj[i]}));
-        }
-    }
-    
-    window.location.href = 'home.html'
-}
-
-function blog_value(){
-
-    let user_value = window.localStorage.getItem('current_blog');
-    user_value = JSON.parse(user_value)
-    console.log(user_value);
-    
 }
 
 
@@ -221,18 +241,15 @@ function create_blog() {
     window.location.href = 'create_blog.html';
 }
 
-
 function back_home() {
 
     window.location.href = 'home.html';
 }
 
-
 function check_profile() {
 
     window.location.href = 'profile.html';
 }
-
 
 function logout() {
 
@@ -258,4 +275,5 @@ function form(event) {
 
     event.preventDefault();
 }
+// =====================================================================================================
 

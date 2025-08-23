@@ -452,7 +452,7 @@ body {
 .small_box{
     
     width: 28%;
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 4px 4px 20px 20px;
     background-color: rgb(9, 112, 85);
     
     display: flex;
@@ -464,8 +464,9 @@ body {
 .small_box img{
     
     width: 94%;
-    margin: 6px auto;
+    margin: 10px auto;
     background-color: white;
+    border-radius: 18px;
     
     display: flex;
     flex-direction: column;
