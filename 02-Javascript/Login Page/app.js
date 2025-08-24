@@ -36,7 +36,7 @@ const signup = () => {
     if (!isFound) {
 
         alert('Account created successfuly');
-        // window.location.href = 'signup.html';
+        window.location.href = 'signup.html';
 
     }
 
@@ -100,59 +100,115 @@ const signin = () => {
 
 function viewBlogs() {
 
-    let user = window.localStorage.getItem('currentUser');
-    user = JSON.parse(user);
-
+    let user = JSON.parse(localStorage.getItem('currentUser'));
     let profile = document.getElementById('profile');
-
     profile.innerHTML = user.validUser.name[0];
-    // console.log(profile.innerHTML + '119');
 
 
-    let blog = window.localStorage.getItem('User value');
-    blog = JSON.parse(blog);
-    // console.log(blog);
-    
-    
+    let blog = JSON.parse(localStorage.getItem('User value')) || [];
+
     let Container_small_box = document.getElementById('Container_small_box');
-    
-    Container_small_box.innerHTML = ``;
-    
+    Container_small_box.innerHTML = '';
+
     for (let i = 0; i < blog.length; i++) {
-        
-        Container_small_box.innerHTML += `<div class="small_box" id="small_box">
-        
-        
-        <img src="./Assets/img/58e80f041ec1f7fa0b349e8236066416-removebg-preview.png" width="100%" alt="">
-        
-            <div class="parent">
+
+        if (blog[i].email === user.validUser.email) {
+
+            Container_small_box.innerHTML += `<div class="small_box" id="small_box">
+            
+            <div class="parent_1">
+
+                <img src="" alt="">
+
 
                 <div class="child" id="child_1">
 
-                <h1>Title</h1>
-                <p id="title_value">${blog[i].title}</p>
+                    <h1>Title</h1>
+                    <p id="title_value">${blog[i].title}</p>
 
                 </div>
-                
+
                 <div class="child" id="child_2">
-                
+
                     <h1>Author</h1>
                     <p id="author_value">${blog[i].author}</p>
-                    
+
                 </div>
-                
+
                 <div class="child_3" id="child_3">
 
-                <h1>Description</h1>
-                <p id="description_value">${blog[i].description}</p>
-                
-                </div>
-                
-                </div>
-                
-                </div>`
-    }
+                    <h1>Description</h1>
+                    <p id="description_value">${blog[i].description}</p>
 
+                </div>
+
+            </div>
+
+            <div class="parent_2" id="parent_2">
+
+                <div onclick="delete_blog(${i})">
+
+                    <div><i class="fa-solid fa-x"></i></div>
+                    <div>
+                        <p>Delete</p>
+                    </div>
+
+                </div>
+
+                <div onclick="edit_blog(${i})">
+
+                    <div><i class="fas fa-edit"></i></div>
+                    <div>
+                        <p>Edit</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>`;
+        }
+    }
+}
+
+
+function delete_blog(index) {
+
+    let blog = JSON.parse(localStorage.getItem('User value')) || [];
+
+    blog.splice(index, 1);
+
+    localStorage.setItem('User value', JSON.stringify(blog));
+
+    viewBlogs();
+}
+
+
+function edit_blog(index) {
+
+    let blog = JSON.parse(window.localStorage.getItem('User value')) || [];
+
+    let oldtitle = blog[index].title;
+    let oldauthor = blog[index].author;
+    let olddesc = blog[index].description;
+
+    let newtitle = prompt('Edit your Title');
+    if (newtitle === null) return;
+    let newauthor = prompt('Edit your Author name');
+    if (newauthor === null) return;
+    let newdesc = prompt('Edit your Description');
+    if (newdesc === null) return;
+
+
+    blog[index].title = newtitle;
+    blog[index].author = newauthor;
+    blog[index].description = newdesc;
+
+
+    window.localStorage.setItem('User value', JSON.stringify(blog));
+
+    viewBlogs()
 }
 
 
@@ -187,33 +243,31 @@ function Details() {
 
 function submit() {
 
-
     let title = document.getElementById('title').value;
     let author = document.getElementById('author').value;
     let description = document.getElementById('description').value;
 
     if (title === '' || author === '' || description === '') {
-
         alert('Please enter value');
         return;
     }
 
+    let blog_obj = JSON.parse(localStorage.getItem('User value')) || [];
 
-
-    let blog_obj = JSON.parse(window.localStorage.getItem('User value')) || [];
-
+    let currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
     blog_obj.push({
-
-        title,
-        author,
-        description,
+        title: title,
+        author: author,
+        description: description,
+        email: currentUser.validUser.email,
     });
 
-
-    window.localStorage.setItem('User value', JSON.stringify(blog_obj));
+    localStorage.setItem('User value', JSON.stringify(blog_obj));
     window.location.href = 'home.html';
 }
+
+
 
 
 // =====================================================================================================
@@ -240,7 +294,6 @@ function close_sider() {
     main.style.flexDirection = 'column';
     main.style.justifyContent = 'space-between';
 }
-
 
 function create_blog() {
 
