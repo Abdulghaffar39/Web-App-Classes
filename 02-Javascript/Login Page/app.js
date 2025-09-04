@@ -12,6 +12,10 @@ const signup = () => {
         return
     }
 
+    if (email.indexOf('@gmail.com') === -1) {
+        alert('Please enter correct Gmail address!');
+        return;
+    }
 
     let obj = JSON.parse(window.localStorage.getItem('data')) || [];
 
@@ -115,10 +119,12 @@ function viewBlogs() {
         if (blog[i].email === user.validUser.email) {
 
             Container_small_box.innerHTML += `<div class="small_box" id="small_box">
+
+
             
             <div class="parent_1">
 
-                <img src="" alt="">
+                <img src="./Assets/img/39daa6e9a23d95e8fcd89ac5d84fc67a.jpg" alt="image">
 
 
                 <div class="child" id="child_1">
@@ -260,13 +266,12 @@ function submit() {
         title: title,
         author: author,
         description: description,
-        email: currentUser.validUser.email,
+        email: currentUser.validUser.email
     });
 
     localStorage.setItem('User value', JSON.stringify(blog_obj));
     window.location.href = 'home.html';
 }
-
 
 
 
