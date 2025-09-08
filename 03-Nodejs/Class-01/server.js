@@ -25,4 +25,22 @@
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>> Type of Code (Peace of code) <<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
+// ======================= server peace of code ===========================
 // Data ko save karwana Server ke zarye
+// Is me hum server se request karte hai ke mera data save kardo database par
+// Har bande ka data us tak phounchana hai kisi ka data match nhi ho
+// ye kisi ka data match nhi hone deta
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Node js <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+// ====================== javascript ka Nodejs ka server parhe ge ======================
+// ye ek engine hai or is ka kam hai server ko start kardena Ex Bike start karna
+// Nodejs ka engine (V8) ka engine hai ye engine Audi me bhi istemal hota hai
+
+
+// ==================================== Nodejs version =====================================
+
+// Nodejs ka version check karne ke liye cmd me (node -v) likhne ke se pata chal jata hai
+
+
+
