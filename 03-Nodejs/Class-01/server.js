@@ -42,6 +42,16 @@
 
 // Nodejs ka version check karne ke liye cmd me (node -v) likhne ke se pata chal jata hai
 
+// node js subke sath chalti hai
+
+// mobile
+// websits
+// destop application
+// electron ai
+// etc...
+
+// open source 
+// cross-platform
 
 // Integrated Terminal => Drop Down => Select Default Profile => select => command.
 
