@@ -43,4 +43,23 @@
 // Nodejs ka version check karne ke liye cmd me (node -v) likhne ke se pata chal jata hai
 
 
+// Integrated Terminal => Drop Down => Select Default Profile => select => command.
+
+// -------------------------------------------------------------------------------------
+
+// npm mean (node package manager)
+
+// Phir (npm init) or detail dalne se package.json download ho jaya ga
+// npm init
+// Detail
+// Download
+
+// package.json server ki configration ka risponsible hai
+// -------------------------------------------------------------------------------------
+// Phir (npm i) kare ga jo package-lock.json download kare ga
+// npm i (npm install)
+// Download
+
+// (npm i) se intall package-lock.json download hoga or install packages dekhai ga(veiw packages intall)
+// -------------------------------------------------------------------------------------
 
