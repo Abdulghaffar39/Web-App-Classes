@@ -96,6 +96,7 @@ sync function
 jis ne data provide kardia ye usko chala deta hai Ex: phele first wala phir second
 
 -------------------------------------------------------------------------------------------------
+
 primitive (mutable yani jo change ho sakta hai)
 
 Number
@@ -112,6 +113,7 @@ Array
 Function
 Date
 Regex
+
 -------------------------------------------------------------------------------------------------
 
 node_module
