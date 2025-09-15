@@ -45,5 +45,14 @@ const fs = require('fs')
 
 // Make Directory (Create Folder)
 // fs.mkdirSync("my-doc");
-fs.mkdirSync("my-doc/a/b", {recursive: true});
+// fs.mkdirSync("my-doc/a/b", {recursive: true});
+
+
+
+// Architecture
+const fs = require("fs");
+
+const result = fs.readFileSync("contacts.txt" , "utf-8");
+console.log(result);
+
 
