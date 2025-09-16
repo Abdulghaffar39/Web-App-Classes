@@ -1,0 +1,8 @@
+15/9/2025 Task
+
+01-Create an array,
+02-In the array there is an object,
+03-Which holds users email and password data make sure atleast add 10 users data randomly,
+04-But this is nacessary to check weather user emails are different with each other, 
+05-Then need to create / login API and check user is valid or not, 
+06-If user is valid so show "Login is successfully" other wise login is failed,

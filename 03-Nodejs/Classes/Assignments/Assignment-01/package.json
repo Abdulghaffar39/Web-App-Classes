@@ -1,0 +1,15 @@
+{
+  "name": "assignment-01",
+  "version": "1.0.0",
+  "description": "Create login conditions",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Abdul Ghaffar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

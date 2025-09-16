@@ -82,8 +82,8 @@
 // Default Thread Pool Size = 4
 // Max? - 8core cpu - 8
 
-const os = require('os')
-console.log(os.cpus().length);
+// const os = require('os')
+// console.log(os.cpus().length);
 
 
 
