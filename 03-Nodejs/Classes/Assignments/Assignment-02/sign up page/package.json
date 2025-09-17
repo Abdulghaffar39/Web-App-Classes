@@ -1,0 +1,15 @@
+{
+  "name": "sign-up-page",
+  "version": "1.0.0",
+  "description": "Create sign up page",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Abdul ghaffar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
