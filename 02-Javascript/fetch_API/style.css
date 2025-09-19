@@ -1,0 +1,176 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* border: 1px solid #ffcf79; */
+}
+
+body {
+
+    color: white;
+    font-size: 62.5%;
+    background-color: #e5e4d7;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+main {
+
+    padding: 40px 20px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.box_1 {
+
+    width: 20%;
+    height: 400px;
+    color: #2c6700;
+    border-radius: 12px;
+    background-color: #92cd00;
+    border: 3px solid #2c6700;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.box_1 .parent_1 {
+
+    width: 80%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.box_1 .parent_1 img {
+
+    width: 100%;
+}
+
+.box_1 .parent_2 {
+
+    width: 80%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-items: space-between;
+}
+
+.box_1 .parent_2 .child_2 {
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.box_1 .parent_2 .child_2 div {
+
+    width: 50%;
+
+    display: flex;
+}
+
+.box_1 .parent_2 .child_2 div h1 {
+
+    width: 100%;
+    font-size: 22px;
+    text-transform: capitalize;
+
+    text-align: start;
+}
+
+.box_1 .parent_2 .child_2 div p {
+
+    width: 100%;
+    font-size: 20px;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+
+@media (max-width: 1024px) {
+
+    .box_1 {
+
+        width: 35%;
+        height: 400px;
+    }
+
+    .box_1 .parent_1 {
+
+        width: 80%;
+    }
+
+    .box_1 .parent_2 {
+
+        width: 80%;
+    }
+
+    .box_1 .parent_2 .child_2 div h1 {
+
+        font-size: 20px;
+    }
+
+    .box_1 .parent_2 .child_2 div p {
+
+        font-size: 18px;
+    }
+
+}
+
+
+@media (max-width: 786px) {
+
+    main{
+
+        gap: 20px;
+    }
+
+    .box_1 {
+
+        width: 45%;
+        height: 400px;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    main{
+
+        gap: 20px;
+    }
+
+    .box_1 {
+
+        width: 60%;
+        height: 400px;
+    }
+
+    
+}
+
+
+@media (max-width: 425px) {
+
+    main{
+
+        gap: 20px;
+    }
+
+    .box_1 {
+
+        width: 90%;
+        height: 400px;
+    }
+}

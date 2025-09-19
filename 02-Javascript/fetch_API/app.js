@@ -6,21 +6,76 @@
 
 // // //------------------------------ First Way (ye use karna Good practice hai) ------------------------------------
 
-// // async function getData(){
+async function getData(){
 
-// //     let result = await fetch('https://dummyjson.com/products/category/smartphones');
+    let result = await fetch('https://dummyjson.com/products/category/smartphones');
+    let data = await result.json()
+    let main = document.getElementById('main')    
+    
+    console.log(data);
 
-
-// //     console.log(await result.json());
-
-// //     for (let i = 0; i < products.length; i++) {
+    for (let i = 0; i < data.products.length; i++) {
         
-// //         console.log( products[i].brand);
-        
-// //     }
-// // }
+      main.innerHTML += `
+      
+        <div class="box_1">
 
-// // getData()
+            <div class="parent_1">
+                <img src="${data.products[i].images[2]}" alt="">
+            </div>
+
+            <div class="parent_2">
+
+                <div class="child_2">
+                    <div class="grand_Child_1">
+                        <h1>title</h1>
+                    </div>
+
+                    <div class="grand_Child_2">
+                        <p>${data.products[i].title}</p>
+                    </div>
+                </div>
+
+                <div class="child_2">
+                    <div class="grand_Child_1">
+                        <h1>Category</h1>
+                    </div>
+
+                    <div class="grand_Child_2">
+                        <p>${data.products[i].category}</p>
+                    </div>
+                </div>
+
+                <div class="child_2">
+                    <div class="grand_Child_1">
+                        <h1>Price</h1>
+                    </div>
+
+                    <div class="grand_Child_2">
+                        <p>${data.products[i].price}</p>
+                    </div>
+                </div>
+
+                <div class="child_2">
+                    <div class="grand_Child_1">
+                        <h1>stock</h1>
+                    </div>
+
+                    <div class="grand_Child_2">
+                        <p>${data.products[i].stock}</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        `
+        
+    }
+}
+
+getData()
 
 // // //------------------------------ Second Way ------------------------------------
 
@@ -58,21 +113,21 @@
 
 
 
-async function getData() {
-  const url = "https://dummyjson.com/products/category/smartphones";
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`);
-    }
+// async function getData() {
+//   const url = "https://dummyjson.com/products/category/smartphones";
+//   try {
+//     const response = await fetch(url);
+//     if (!response.ok) {
+//       throw new Error(`Response status: ${response.status}`);
+//     }
 
-    const result = await response.json();
-    console.log(result);
+//     const result = await response.json();
+//     console.log(result);
 
-  } catch (error) {
-    console.error(error.message);
-  }
-}
+//   } catch (error) {
+//     console.error(error.message);
+//   }
+// }
 
-getData()
+// getData()
 // // ------------------------------------------------------------------------------------------------------
