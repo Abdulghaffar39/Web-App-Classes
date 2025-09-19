@@ -23,6 +23,34 @@ const array = [
     },
 
     {
+        name: "akram",
+        age: "27",
+        email: "akram@gmail.com",
+        password: "1235664"
+    },
+
+    {
+        name: "aslam",
+        age: "27",
+        email: "aslam@gmail.com",
+        password: "1235667"
+    },
+
+    {
+        name: "Anus",
+        age: "27",
+        email: "Anus@gmail.com",
+        password: "123566"
+    },
+
+    {
+        name: "Anus",
+        age: "27",
+        email: "Anus@gmail.com",
+        password: "123566"
+    },
+
+    {
         name: "Anus",
         age: "27",
         email: "Anus@gmail.com",
@@ -54,6 +82,7 @@ app.post('/login', (req, res, next) => {
         return res.send('Put at least 6 digits in Password');
 
     }
+
     
     for (let i = 0; i < array.length; i++) {
 
