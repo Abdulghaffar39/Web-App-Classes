@@ -8,7 +8,7 @@
 
 async function getData(){
 
-    let result = await fetch('https://dummyjson.com/products/category/smartphones');
+    let result = await fetch("onedrive/?docId=81C203D4081371DD%21s567e8e17e48b4661a408d1082843fc57&driveId=81C203D4081371DD");
     let data = await result.json()
     let main = document.getElementById('main')    
     
@@ -74,8 +74,8 @@ async function getData(){
         
     }
 }
-
 getData()
+
 
 // // //------------------------------ Second Way ------------------------------------
 
