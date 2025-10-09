@@ -1,29 +1,29 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 let schemaClass = new mongoose.Schema({
 
     userName: {
 
         type: String,
-        require: true,
+        required: true,
     },
 
     userAge: {
 
         type: String,
-        require: true,
+        required: true,
     },
 
     userEmail: {
 
         type: String,
-        require: true,
+        required: true,
     },
 
     userPass: {
 
         type: String,
-        require: true,
+        required: true,
     }
 
 })

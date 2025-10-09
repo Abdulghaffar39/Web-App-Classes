@@ -1,27 +1,25 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const { Schema } = require('./../schema/dbSchema');
 
 
 
-mongoose.connect('mongodb+srv://Abdulghaffar:fAvHoNs28azHE7iC@cluster0.d1n4lpf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect('mongodb+srv://Abdulghaffar:yIeCsohSQl5z6NOF@cluster0.d1n4lpf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
 
     useNewUrlParser: true,
     useUnifiedTopology: true,
+}).then(() => {
+
+    console.log('Connect with mongooDB');
+
+}).catch((err) => {
+
+    console.log('Error connect', err);
+
 })
 
-    .then(() => {
-
-        console.log('Connect with mongooDB');
-
-    }).catch((err) => {
-
-        console.log('Error connect', err);
-
-    })
 
 
-
-const user = [
+const userdummy = [
 
     {
         name: "Abdul Ghaffar",
@@ -62,23 +60,36 @@ const user = [
 
 function auth(req, res, next) {
 
-    res.send('Hello World')
+    res.send('Hello World!!!')
 }
 
 
 
 
-async function singup(req, res, next) {
+async function signup(req, res, next) {
 
     try {
 
         const { userName, userAge, userEmail, userPass } = req.body;
 
-        const data = await Schema.find({})
-        console.log(data);
+        const user = await Schema.findOne({ userEmail: userEmail })
+        console.log(user, 'line number 41');
+
+        if (user) {
+
+            return res.send({
+                status: 505,
+                message: "user already exists",
+            })
+        }
+
+
+        const newUser = new Schema({ userName, userAge, userEmail, userPass });
+        await newUser.save();
 
 
         return res.send({
+
             status: 200,
             message: 'accound created successfuly',
         })
@@ -95,50 +106,79 @@ async function singup(req, res, next) {
 
     }
 
-
-
-    if (userAge < 18) {
-
-        return res.send('Invalid age');
-
-    }
-
 }
 
 
-async function login (req, res, next) {
-
-
-    const { useremail, userpass } = req.body
-
-    let isfound = false;
-
-    for (let i = 0; i < user.length; i++) {
-
-        if (useremail === user[i].email && userpass === user[i].pass) {
-
-            isfound = true;
-
-            return res.send({
-                status: 201,
-                message: `login successfully`,
-            })
-
-        }
-
-        // console.log(user);
-    }
-
-    if (isfound === false) {
-
+async function userDetails(req, res, next) {
+    try {
+        // const someOtherPlaintextPassword = 'not_bacon';
+        // use for get API to get all user data
+        const data = await Schema.find({})
+        console.log(data);
+        // use for spacific user finding
+        // const users = await Schema.find()
+        // console.log(users, 'line number 41');
         res.send({
-            status: 404,
-            message: 'email or password is invalid'
+            message: "users recieved",
+            data
+        })
+
+
+    } catch (err) {
+        console.log(err);
+        res.send({
+            status: 500,
+            message: "server code is failed",
+            err,
         })
     }
-
-
 }
 
 
-module.exports = { auth, singup, login}
+async function login(req, res) {
+    try {
+
+        const { loginEmail, loginPass } = req.body;
+
+        const user = await Schema.findOne({ userEmail: loginEmail });
+
+        if (!user) {
+
+            return res.send({
+
+                status: 404,
+                message: 'Email is not exists',
+            });
+        }
+
+        if (user.userPass !== loginPass) {
+
+            return res.send({
+
+                status: 401,
+                message: 'Password wrong'
+            });
+        }
+
+        res.send({
+
+            status: 200,
+            message: 'Login successful',
+            data: user,
+        });
+
+    }
+    catch (err) {
+
+        console.log(err);
+
+        res.send({
+            status: 500,
+            message: 'Server error',
+            err
+        });
+
+    }
+}
+
+module.exports = { auth, signup, login, userDetails }

@@ -1,6 +1,6 @@
 const express = require('express');
-const mongoose = require("mongoose");
-const { Schema } = require("./schema/dbSchema")
+const router = require("./Router/route");
+
 
 const app = express();
 const PORT = 3000;
@@ -9,6 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
+app.use('/api', router)
 
 
 app.listen(PORT, () => {
