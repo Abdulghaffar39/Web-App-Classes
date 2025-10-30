@@ -42,4 +42,9 @@ connection
 
 // ---------------------------------------------------------------------------------------------------
 
+// Dotenv kya hai?
+// Ye aapko allow karta hai ke aap apne secret data (jaise passwords, API keys, database URLs) ek .env file mein rakho — taake wo code ke andar directly na likhna pade.
+
+// ---------------------------------------------------------------------------------------------------
+
 
