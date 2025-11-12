@@ -1,5 +1,11 @@
 // Advance Javascript
 
+// 01- Sets
+// 02-forEach
+// 03-filters
+// 04-Map
+// 05-Spread
+
 // -------------------------------------------------------------------------------------------
 
 
@@ -60,7 +66,7 @@
 
 // -------------------------------------------------------------------------------------------
 
-// forEach
+// 02-forEach
 // forEach() ka kaam hai array ya set ke har item par action perform karna, bina manually loop counters ko manage kiye.
 
 
@@ -88,7 +94,7 @@
 
 // -------------------------------------------------------------------------------------------
 
-// // filters: JavaScript me ek method hai jo ek nayi array banata hai jisme sirf wo elements hote hain jo di gayi condition ko satisfy karte hain, aur original array ko modify nahi karta.
+// // 03-filters: JavaScript me ek method hai jo ek nayi array banata hai jisme sirf wo elements hote hain jo di gayi condition ko satisfy karte hain, aur original array ko modify nahi karta.
 
 // const ages = [12, 35, 34, 94, 43, 13, 8, 34]
 // const result = ages.filter(checkAdult)
@@ -118,7 +124,7 @@
 
 // -------------------------------------------------------------------------------------------
 
-// Key
+// 04-Map
 // Map ek aisa object hai jo keys aur unki values ko store karta hai aur yaad rakhta hai ke keys ko kis order mein daala gaya tha.
 
 // const numbers = [4, 8, 16, 32 , 64, 128, 256, 512];
@@ -137,7 +143,7 @@
 
 // -------------------------------------------------------------------------------------------
 
-// Spread
+// 05-Spread
 // array ya object ke elements ko spread (phaila) karne ke liye use hota hai. Ye existing array ya object ko copy karne, merge karne, ya nayi values add karne ka kaam karta hai.
 
 
