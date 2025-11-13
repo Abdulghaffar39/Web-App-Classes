@@ -61,4 +61,36 @@
 
 // -------------------------- Ended 2017 ------------------------------------
 
+// ------------------------- Started 2018 -----------------------------------
+
+// ------------ Array Rest operator (...) ---------------
+
+// JavaScript me use hota hai jab hum kisi array ya object ko destructure karte hain. Ye operator baqi bache huye elements ko ek nayi array (ya object) me jama kar leta hai.
+
+// let a, b, rest;
+// const arr1 = [1,2,3,4,5,6,7,8];
+// [a, b, ...rest] = arr1;
+// console.log(rest);
+
+// const numbers = [1, 2, 3, 4, 5];
+// const [first, second, ...baqi] = numbers;
+
+// console.log(first);  // 1  
+// console.log(second); // 2  
+// console.log(baqi);   // [3, 4, 5]
+
+
+// ------------ Object Rest Properties ---------------
+
+
+// // Create an Object:
+// const car = { type: "Fiat", model: "500", color: "white" };
+
+// // Destructure the Object
+// let { type, model, color } = car;
+// console.log(type);
+
+
+// -------------------------- Ended 2017 ------------------------------------
+
 // ==========================================================================
