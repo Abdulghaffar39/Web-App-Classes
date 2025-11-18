@@ -1,0 +1,34 @@
+-------------------------------- Node.js / Backend ----------------------------
+
+Express
+Middleware
+Authorization
+MongoDB Connection
+Mongoose Schema & Model
+Password Hash (bcrypt)
+Password Verify
+
+--- Folder Structure ---
+Controller
+Router
+Middleware
+Schema
+.env / .gitignore
+
+JWT (jsonwebtoken)
+Postman
+Axios
+Cookies
+Port Setup
+Packages Installation
+Async/Await
+module.exports
+req, res, next
+APIs (GET, POST, PUT, DELETE)
+mongoose.connection.on()
+dotenv
+Config
+process.env.DB
+CORS
+Path
+Destructuring

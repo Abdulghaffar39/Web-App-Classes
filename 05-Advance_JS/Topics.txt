@@ -1,0 +1,31 @@
+------------------------- Advanced JavaScript (1999 → 2020) -----------------------------
+
+--- ES5 ---
+
+charAt
+trim()
+isArray()
+Map
+forEach
+reduce
+some
+indexOf, lastIndexOf
+JSON.parse, JSON.stringify
+toISOString
+get, set
+
+--- ES6 ---
+
+let, const
+Arrow functions
+Destructuring
+Spread operator
+for...of
+Promises
+Default parameters
+Rest parameter
+includes(), startsWith()
+Array.from(), Array.keys(), Array.entries()
+Array.find()
+matchAll()
+Filters

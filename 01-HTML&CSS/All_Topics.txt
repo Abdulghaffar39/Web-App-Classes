@@ -1,0 +1,61 @@
+-------------------------------------- HTML ---------------------------------------
+
+h1, p
+br, hr
+strong, em
+sup, sub
+q, blockquote
+abbr, cite, dfn
+address
+Links: a, target="_blank", mailto:
+Lists:
+Ordered List
+Unordered List
+Definition List (dt, dd)
+img
+figure + figcaption
+Tables (tr, th, td, colspan, rowspan)
+
+-- Forms --
+label, input
+Input types 
+(text, password, radio, checkbox, file, submit, button, hidden, date, email, url, search)
+placeholder
+textarea
+select
+
+fieldset + legend
+div, span
+id, class
+iframe
+video + source
+Comments
+
+
+-------------------------------------- CSS ---------------------------------------
+
+Linking CSS
+Color (RGB, HEX, HSL, Names)
+background, background-color, background-image
+font-family
+font-size, font-weight, font-style
+@font-face
+text-transform, text-decoration
+line-height, letter-spacing, word-spacing
+width, height
+
+--- Selectors ---
+Universal
+Type
+Class
+ID
+Descendant
+Child
+Adjacent Sibling
+General Sibling
+
+opacity
+cursor
+display (block, inline, inline-block, flex, grid)
+position (static, relative, absolute)
+Semantic Tags: header, footer, nav, article, aside, section

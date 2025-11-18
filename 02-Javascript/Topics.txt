@@ -1,3 +1,4 @@
+------------------------------------- JavaScript ----------------------------------------
 
 Introduction to JavaScript
 Variables and Data Types
