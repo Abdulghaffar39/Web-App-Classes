@@ -1,0 +1,7 @@
+------------------------------------- React.js ----------------------------------
+
+install react in your local pc :
+01- npm i create-react-app -g
+
+create your first app in VS_Code:
+02- npx create-react-app app-name
