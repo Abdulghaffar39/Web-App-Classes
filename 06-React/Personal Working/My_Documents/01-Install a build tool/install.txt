@@ -1,0 +1,18 @@
+------------------------------ installing a build tool type ------------------------------
+
+1- Vite
+2- Parcel
+3- Rsbuild
+
+------- Vite ------
+Ye tez aur Lightweight Development Experience for Modern Web Projects
+
+npm create vite@latest my-app -- --template react-ts
+
+------- Parcel ------
+Ek web bundler jo tez development setup deta hai aur bade projects ke liye easily scale hota hai.
+
+npm install --save-dev parcel
+
+Parcel out-of-the-box fast refresh, JSX, TypeScript, Flow, aur styling ko support karta hai
+
