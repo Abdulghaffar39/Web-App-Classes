@@ -1,0 +1,7 @@
+Download vite in React
+    npm create vite@latest
+
+Automataicaly Run 
+    Open the package.json file located in the root of your project directory.
+    Find the "scripts" section.
+    Modify the "dev" script to include --open as shown below
