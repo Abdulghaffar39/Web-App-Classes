@@ -1,13 +1,14 @@
 import React from 'react'
-import Home from './Components/Home/index'
+import Container_1 from './Components/Home';
+
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
+
     <div>
 
-      <Home />
-      <h1>alfjsdfjsadlfasdjflk</h1>
+      <Container_1 />
+
     </div>
   )
 }
