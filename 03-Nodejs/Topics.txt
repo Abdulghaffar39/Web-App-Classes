@@ -32,3 +32,46 @@ process.env.DB
 CORS
 Path
 Destructuring
+
+
+
+
+
+// read file
+const fs = require("fs")
+// let http = require("http")
+const express = require("express");
+// const { log } = require("console");
+
+// http.createServer(function (req, res) {
+const app = express();
+let PORT = process.env.PORT || 3000;
+
+app.get("/", async (req, res) => {
+
+    // res.end("Hello world")
+
+    try {
+
+        fs.readFile("data.txt", (err, data) => {
+            if (err) throw err;
+            console.log(data);
+
+        })
+
+    }
+    catch (err) {
+
+        console.log(err);
+
+    }
+});
+
+
+app.listen(PORT, () => {
+console.log("server running");
+
+
+})
+// }).listen(8080);
+
