@@ -14,9 +14,7 @@ export default function RootLayout({ children }) {
 
       <body>
 
-        <header style={{ background: "green" }}>Header</header>
         {children}
-        <footer style={{ background: "green" }}>Footer</footer>
 
       </body>
 
