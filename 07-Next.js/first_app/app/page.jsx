@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,10 +13,11 @@ export default function Home() {
 
       <h1>Technical Agency</h1>
 
-      <h1>Hello world</h1>
-      <Link href="/about">About</Link><br />
-      <Link href="/services">services</Link>
-      <Link href="/blog">Blog</Link>
+      <p><Link href="/about">About</Link></p>
+      <p><Link href="/services">services</Link></p>
+      <p><Link href="/blog">Blog</Link></p>
+      <p><Link href="/files">Files</Link></p>
+
     </div>
   );
 }
