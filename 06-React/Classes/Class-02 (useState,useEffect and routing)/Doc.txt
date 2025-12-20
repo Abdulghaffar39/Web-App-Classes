@@ -1,0 +1,2 @@
+useState:
+useState Hook React ka aik bunyadi feature hai jo functional components mein state (component-specific memory) add karne ki ijazat deta hai. Yeh un data ko manage karne ke liye zaroori hai jo waqt ke saath badalte hain, jaise user input, toggles, ya fetched data, aur jab state mein tabdeeli aati hai to component ko dobara render karta hai.
