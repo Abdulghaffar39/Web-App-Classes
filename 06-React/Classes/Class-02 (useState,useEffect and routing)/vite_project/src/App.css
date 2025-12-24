@@ -7,9 +7,10 @@
 }
 
 body {
-  
+
   background-image: linear-gradient(45deg, #1e3a8a, #3b82f6, #93c5fd);
 }
+
 
 .card {
 
@@ -24,8 +25,26 @@ body {
   gap: 20px;
 }
 
+.card div {
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+ul{
+
+  padding: 20px;
+  border-radius: 20px;
+  list-style-position: inside;
+  background-image: linear-gradient(45deg, #7092ef, #134aa1, #3072be);
+}
+
+
 h1 {
-  
+
   width: 100%;
   text-align: center;
 }
@@ -51,7 +70,7 @@ button:hover {
   background-image: linear-gradient(#96cde7, #73a5f5);
 }
 
-.changeName{
+.changeName {
 
   width: 100%;
 
@@ -67,8 +86,8 @@ button:hover {
   font-size: 40px;
 }
 
-input{
-  
+input {
+
   width: 100%;
   height: 60px;
   outline: none;
@@ -80,7 +99,7 @@ input{
   background-image: linear-gradient(#96cde7, #73a5f5);
 }
 
-input::placeholder{
+input::placeholder {
 
   font-size: 20px;
   color: rgb(122, 122, 122);
