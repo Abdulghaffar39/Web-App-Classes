@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 
@@ -13,6 +13,28 @@ function App() {
     setTodos([...todos, input]);
     setInput('');
   }
+
+  // useEffect(() => {
+  //   console.log("Conter Monuted");
+
+  // }, []);
+
+  useEffect(() => {
+
+    console.log("User Updated Count")
+
+    return function () {
+
+      console.log("Unmount Conter");
+    }
+
+  },[])
+
+  useEffect(() => {
+
+    console.log("User Updated Count")
+
+  },[count, isOn, todos, input])
 
   return (
     <>
@@ -52,7 +74,10 @@ function App() {
 
         </div>
 
+        {/* <Home /> */}
+
       </div>
+
 
     </>
   )
