@@ -1,0 +1,1 @@
+Download React Release Version: npm install react@rc
