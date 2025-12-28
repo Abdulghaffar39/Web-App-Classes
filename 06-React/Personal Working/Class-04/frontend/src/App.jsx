@@ -24,7 +24,7 @@ function App() {
       {/* <RadioBtn /> */}
       {/* <DropDown /> */}
       {/* <Loop /> */}
-      <DigitalClock />
+      {/* <DigitalClock /> */}
 
     </>
   )
