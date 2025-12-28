@@ -8,6 +8,7 @@ import CheckBoxes from './Containers/CheckBoxes/CheckBoxes'
 import RadioBtn from './Containers/RadioBtn/RadioBtn'
 import DropDown from './Containers/DropDown/DropDown'
 import Loop from './Containers/Loop&Map/Loop_Map'
+import DigitalClock from './Containers/Clock/Clock'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,7 +23,8 @@ function App() {
       {/* <CheckBoxes /> */}
       {/* <RadioBtn /> */}
       {/* <DropDown /> */}
-      <Loop />
+      {/* <Loop /> */}
+      <DigitalClock />
 
     </>
   )
