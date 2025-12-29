@@ -36,12 +36,6 @@ const SignupForm = () => {
     return (
         <div>
             <input
-                type="email"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-            />
-            <input
                 type="fname"
                 placeholder="first name"
                 value={fname}
@@ -52,6 +46,12 @@ const SignupForm = () => {
                 placeholder="last name"
                 value={lname}
                 onChange={(e) => setLName(e.target.value)}
+            />
+            <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
             />
 
             <input
@@ -69,7 +69,7 @@ const SignupForm = () => {
             </button>
 
             {error && <p style={{ color: "red" }}>{error}</p>}
-            {user && <h2>Welcome, {user.name}</h2>}
+            {user && <h2>Welcome, {user.result.fname + user.result.lname}</h2>}
         </div>
     );
 };

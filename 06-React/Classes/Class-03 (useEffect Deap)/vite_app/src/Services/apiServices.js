@@ -1,4 +1,4 @@
-export const apiRequest = ({ url, params = {} }) => {
+export const apiRequest = (url, params = {}) => {
 
     console.log(url, params)
 
@@ -9,11 +9,13 @@ export const apiRequest = ({ url, params = {} }) => {
 
                     throw new Error(`HTTP error! status: ${response.status}`)
                 }
-                console.log(response);
+                console.log(response.result);
                 return response.json();
             })
             .then(data => {
                 resolve(data);
+                console.log(data);
+                
             })
             .catch(error => {
 

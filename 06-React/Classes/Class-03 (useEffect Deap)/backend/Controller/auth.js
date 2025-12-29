@@ -1,62 +1,115 @@
-const userValue = require("../db/userSchema");
-const bcrypt = require("bcrypt");
+const bcrypt = require('bcrypt');
 const saltRounds = 10;
+const userSchema = require('../db/userSchema');
 
 async function signUp(req, res) {
+
     try {
-        // destructure
-        const { fname, lname, email, password, role } = req.body;
+
+        const { fname, lname, email, password } = req.body;
+        const findEmail = await userSchema.findOne({ email })
+
+        if (findEmail) {
+
+            return res.send({
+                status: 505,
+                message: "User already exist! Please try another email account"
+            })
+        }
 
         bcrypt.genSalt(saltRounds, function (err, salt) {
+            bcrypt.hash(password, salt, async function (err, hash) {
 
-            bcrypt.hash(password, salt, function (err, hash) {
+                const user = { fname, lname, email, password: hash };
 
-                const user = { fname, lname, email, password, role };
+                // const users = new await userSchema(req.body).save();
+                const result = await new userSchema(req.body).save();
 
-                const result = new userValue(user).save();
                 return res.send({
-                    message: "signup successfully",
+
                     result,
                     status: 200,
+                    message: `🎉 Thank you! Your details have been submitted successfully.`,
                 });
+
             });
         });
-    } catch (err) {
-        res.send({
-            err,
+
+
+    }
+    catch (err) {
+
+        console.log("SIGNUP ERROR:", err);
+
+        return res.send({
+
             status: 500,
-            message: "sorry! server is not responding",
-        });
+            message: "Sorry! Server is not responding"
+        })
     }
 }
 
-async function login(req, res) {
-    // destructure
-    try {
-        const { email, password } = req.body;
+// async function login(req, res) {
 
-        const dbUser = await userValue.findOne({ email });
-        console.log(dbUser, "here is a user");
+//     try {
 
-        // Load hash from your password DB.
-        bcrypt.compare(password, dbUser.password, function (err, result) {
-            // result == true
+//         const { email, password } = req.body;
 
-            if (result) {
+//         const user = await userValue.findOne({ email })
 
-                res.send({
-                    status: 200,
-                    message: "user login successfully",
-                });
-            }
-        });
-    } catch (err) {
-        res.send({
-            err,
-            status: 500,
-            message: "sorry! server is not responding",
-        });
-    }
-}
+//         if (!user) {
 
-module.exports = { signUp, login};
+//             return res.send({
+//                 status: 404,
+//                 message: "User not found! Please try again anothor email"
+//             })
+//         }
+
+//         bcrypt.compare(password, user.password, function (err, result) {
+
+//             if (err) {
+
+//                 console.log(err);
+
+//             }
+
+//             if (result) {
+
+//                 return res.send({
+
+//                     token,
+//                     result,
+//                     status: 200,
+//                     message: `🎉 Thank you, ${user.fullName}! Your details have been verify successfully.`,
+//                 });
+
+//             }
+//             else {
+
+//                 console.log("Your password invalid! Please try anothor password");
+
+//                 return res.send({
+
+//                     status: 401,
+//                     message: "Your password invalid! Please try anothor password"
+//                 })
+//             }
+
+//         });
+
+
+//     }
+//     catch (err) {
+
+//         console.log("SIGNUP ERROR:", err);
+
+//         return res.send({
+
+//             status: 500,
+//             message: "Sorry! Server is not responding"
+//         })
+//     }
+// }
+
+
+module.exports = { signUp }
