@@ -9,6 +9,8 @@ const MainLayout = () => {
                 <NavLink to="/about">About</NavLink>
                 <NavLink to="/setting">setting</NavLink>
                 <NavLink to="/signup">Singup</NavLink>
+                <NavLink to="/login">Login</NavLink>
+                <NavLink to="/contact">Contact</NavLink>
             </nav>
 
 

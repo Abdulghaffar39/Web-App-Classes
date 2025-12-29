@@ -23,7 +23,7 @@ async function signUp(req, res) {
                 const user = { fname, lname, email, password: hash };
 
                 // const users = new await userSchema(req.body).save();
-                const result = await new userSchema(req.body).save();
+                const result = await new userSchema(user).save();
 
                 return res.send({
 
@@ -49,67 +49,66 @@ async function signUp(req, res) {
     }
 }
 
-// async function login(req, res) {
+async function login(req, res) {
 
-//     try {
+    try {
 
-//         const { email, password } = req.body;
+        const { email, password } = req.body;
 
-//         const user = await userValue.findOne({ email })
+        const user = await userSchema.findOne({ email })
 
-//         if (!user) {
+        if (!user) {
 
-//             return res.send({
-//                 status: 404,
-//                 message: "User not found! Please try again anothor email"
-//             })
-//         }
+            return res.send({
+                status: 404,
+                message: "User not found! Please try again anothor email"
+            })
+        }
 
-//         bcrypt.compare(password, user.password, function (err, result) {
+        bcrypt.compare(password, user.password, function (err, result) {
 
-//             if (err) {
+            if (err) {
 
-//                 console.log(err);
+                console.log(err);
 
-//             }
+            }
 
-//             if (result) {
+            if (result) {
 
-//                 return res.send({
+                return res.send({
 
-//                     token,
-//                     result,
-//                     status: 200,
-//                     message: `🎉 Thank you, ${user.fullName}! Your details have been verify successfully.`,
-//                 });
+                    result,
+                    status: 200,
+                    message: `🎉 Thank you, ${user.fname + " " + user.lname}! Your details have been verify successfully.`,
+                });
 
-//             }
-//             else {
+            }
+            else {
 
-//                 console.log("Your password invalid! Please try anothor password");
+                console.log("Your password invalid! Please try anothor password");
 
-//                 return res.send({
+                return res.send({
 
-//                     status: 401,
-//                     message: "Your password invalid! Please try anothor password"
-//                 })
-//             }
+                    status: 401,
+                    message: "Your password invalid! Please try anothor password"
+                })
+            }
 
-//         });
-
-
-//     }
-//     catch (err) {
-
-//         console.log("SIGNUP ERROR:", err);
-
-//         return res.send({
-
-//             status: 500,
-//             message: "Sorry! Server is not responding"
-//         })
-//     }
-// }
+        });
 
 
-module.exports = { signUp }
+    }
+    catch (err) {
+
+        console.log("SIGNUP ERROR:", err);
+
+        return res.send({
+
+            status: 500,
+            message: "Sorry! Server is not responding"
+        })
+    }
+}
+
+
+module.exports = { signUp, login }
