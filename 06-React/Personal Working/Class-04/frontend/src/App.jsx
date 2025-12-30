@@ -10,6 +10,7 @@ import DropDown from './Containers/DropDown/DropDown'
 import Loop from './Containers/Loop&Map/Loop_Map'
 import DigitalClock from './Containers/Clock/Clock'
 import NestedLoop from './Containers/NestedLoop/NestedLoop'
+import UseEffect from './Containers/UseEffect/UseEffect'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -26,7 +27,8 @@ function App() {
       {/* <DropDown /> */}
       {/* <Loop /> */}
       {/* <DigitalClock /> */}
-      <NestedLoop />
+      {/* <NestedLoop /> */}
+      <UseEffect />
 
     </>
   )

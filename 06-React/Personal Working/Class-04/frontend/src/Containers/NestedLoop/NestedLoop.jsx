@@ -1,4 +1,5 @@
 import React from 'react'
+import NestLoop from '../../Components/Props/NestLoop/NestLoop'
 
 export default function NestedLoop() {
 
@@ -10,19 +11,19 @@ export default function NestedLoop() {
             website: "www.dj.com",
             student: [
                 {
-                    name: "Adeel",
+                    name: "Ibrahim",
                     age: "23",
-                    email: "adeel@gmail.com"
+                    email: "Ibrahim@gmail.com"
                 },
                 {
-                    name: "Aseel",
+                    name: "Huzaifa",
                     age: "23",
-                    email: "aseel@gmail.com"
+                    email: "Huzaifa@gmail.com"
                 },
                 {
-                    name: "Akeel",
+                    name: "Ismail",
                     age: "23",
-                    email: "akeel@gmail.com"
+                    email: "Ismail@gmail.com"
                 },
             ]
         },
@@ -33,19 +34,19 @@ export default function NestedLoop() {
             website: "www.sm.com",
             student: [
                 {
-                    name: "Adeel",
+                    name: "Ibrahim",
                     age: "23",
-                    email: "adeel@gmail.com"
+                    email: "Ibrahim@gmail.com"
                 },
                 {
-                    name: "Aseel",
+                    name: "Huzaifa",
                     age: "23",
-                    email: "aseel@gmail.com"
+                    email: "Huzaifa@gmail.com"
                 },
                 {
-                    name: "Akeel",
+                    name: "Ismail",
                     age: "23",
-                    email: "akeel@gmail.com"
+                    email: "Ismail@gmail.com"
                 },
             ]
         },
@@ -56,19 +57,19 @@ export default function NestedLoop() {
             website: "www.ar.com",
             student: [
                 {
-                    name: "Adeel",
+                    name: "Ibrahim",
                     age: "23",
-                    email: "adeel@gmail.com"
+                    email: "Ibrahim@gmail.com"
                 },
                 {
-                    name: "Aseel",
+                    name: "Huzaifa",
                     age: "23",
-                    email: "aseel@gmail.com"
+                    email: "Huzaifa@gmail.com"
                 },
                 {
-                    name: "Akeel",
+                    name: "Ismail",
                     age: "23",
-                    email: "akeel@gmail.com"
+                    email: "Ismail@gmail.com"
                 },
             ]
         },
@@ -78,6 +79,7 @@ export default function NestedLoop() {
 
     <div>
         <h1>Nested Loop</h1>
+        <NestLoop collages={collages} />
     </div>
   )
 }
