@@ -1,6 +1,8 @@
 const bcrypt = require('bcrypt');
+const jwt = require("jsonwebtoken");
 const saltRounds = 10;
 const userSchema = require('../db/userSchema');
+const dotenv = require("dotenv")
 
 async function signUp(req, res) {
 
@@ -75,11 +77,34 @@ async function login(req, res) {
 
             if (result) {
 
+                let token = jwt.sign(
+
+                    {
+                        "fname": user.fname,
+                        "lname": user.lname,
+                        email: user.email,
+                        password: user.password
+                    },
+                    process.env.JWTSECRETKEY,
+                    { expiresIn: "1d" }
+
+                );
+
+                res.cookie("jwtToken", token, {
+                    httpOnly: true,
+                    // maxAge: 24 * 60 * 60 * 1000, // 1 day
+                    // sameSite: "Lax"
+                });
+
+                console.log(token);
+
+
                 return res.send({
 
+                    token,
                     result,
                     status: 200,
-                    message: `🎉 Thank you, ${user.fname + " " + user.lname}! Your details have been verify successfully.`,
+                    message: `🎉 Thank you! Your details have been verify successfully.`,
                 });
 
             }
@@ -97,8 +122,7 @@ async function login(req, res) {
         });
 
 
-    }
-    catch (err) {
+    }catch (err) {
 
         console.log("SIGNUP ERROR:", err);
 
