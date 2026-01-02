@@ -6,7 +6,7 @@ const MainLayout = () => {
         <div>
             <nav style={{ display: "flex", gap: "16px", marginBottom: "20px" }}>
                 <NavLink to="/" end>Home</NavLink>
-                <NavLink to="/about">About</NavLink>
+                <NavLink to="/About">About</NavLink>
                 <NavLink to="/setting">setting</NavLink>
                 <NavLink to="/signup">Singup</NavLink>
                 <NavLink to="/login">Login</NavLink>

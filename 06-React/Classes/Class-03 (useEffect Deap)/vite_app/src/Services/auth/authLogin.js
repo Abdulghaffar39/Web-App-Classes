@@ -1,7 +1,11 @@
+import { useNavigate } from "react-router";
 import { apiRequest } from "../apiServices";
 import { configuration } from "../config";
 
-export default async function Login( email, password) {
+export default async function Login(email, password) {
+
+
+    const navigate = useNavigate();
 
     try {
 
@@ -21,9 +25,8 @@ export default async function Login( email, password) {
 
         if (data && data.token) {
             localStorage.setItem("userToken", data.token);
+            navigate("/home")
         }
-        console.log(data);
-        
         return data;
     }
     catch (error) {

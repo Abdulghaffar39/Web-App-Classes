@@ -5,10 +5,44 @@ export default function UseEffect() {
     const [counter, setCouter] = useState(0)
     const [data, setData] = useState(0)
 
-    useEffect(()=> (
+    // -------------------------------------- UseEffect Use Case Started -------------------------------------------
+    
+    // useEffect(()=> (
 
-        callFun()
-    ),[])
+    //     // Call every time
+    // ))
+
+    // useEffect(()=> (
+
+    //     // Call every Once (One time)
+    // ),[])
+
+    // useEffect(()=> (
+
+    //     // Call on changing single state
+    // ),[state1])
+
+    // useEffect(()=> (
+
+    //     // Call on changing both state
+    // ),[state1, state2])
+
+    // useEffect(()=> (
+
+    //     // Call on changing props
+    // ),[props, props])
+
+    // -------------------------------------- UseEffect Use Case Ended -------------------------------------------
+
+    // useEffect(()=> (
+
+    //     callFun()
+    // ),[])
+
+    // useEffect(()=> (
+
+    //     callFun()
+    // ),[counter])
 
     function callFun(){
 
