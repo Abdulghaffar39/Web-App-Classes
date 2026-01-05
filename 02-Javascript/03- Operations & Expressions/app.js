@@ -60,7 +60,7 @@ var num = 10;
 
 // Arithemetic Operators ended
 
-// ////////////////////////////////////---------------------------------------------\\\\\\\\\\\\\\\\\\\\\\\\\\
+/////////////////////////////---------------------------------------------\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 // Assignment Operators started
 
@@ -128,11 +128,11 @@ var num = 10;
 
 // greater (>) than started
 
-// correct answer
-// console.log(50 > 70);
+// // incorrect answer
+// console.log(30 > 70);
 // console.log(10 > 50);
 
-// // incorrect answer
+// correct answer
 // console.log(60 > 50);
 // console.log(51 > 50);
 
@@ -165,12 +165,12 @@ var num = 10;
 // Less than (<) started
 
 // correct answer
-// console.log(50 > 70);
-// console.log(10 > 50);
+// console.log(50 < 70);
+// console.log(10 < 50);
 
 // // incorrect answer
-// console.log(60 > 50);
-// console.log(51 > 50);
+// console.log(60 < 50);
+// console.log(51 < 50);
 
 // Less than (<) ended
 
@@ -243,8 +243,6 @@ var num = 10;
 // console.log(15 !== 15 && 8 * 2 !== 20 || 'hello' === 'world' && 10 > 15 || 6 === '6');
 // console.log(false && true || false && false || false)
 // console.log(false)
-
-// console.log(9 > 8 && 3 + 7 === 11 || 4 !== '4' && 10 - 2 === 8 || 5 * 3 === 15);
 // console.log(true && false || true && true || true)
 // console.log(true)
 
