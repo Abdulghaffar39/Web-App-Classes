@@ -44,12 +44,21 @@ export default function UseEffect() {
     //     callFun()
     // ),[counter])
 
+    
     function callFun(){
-
+        
         console.log("Function is running successfuly");
     }
+    
+    // useEffect(()=> (
+    
+    //     callFun()
+    // ), [])
 
-    // callFun()
+    useEffect(()=> (
+    
+        callFun()
+    ), [data])
 
     return (
 

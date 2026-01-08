@@ -1,11 +1,14 @@
-import './App.css'
 import SignUp from './Containers/SignUp/SignUp'
+// import { ThemeProvider } from '@mui/material';
+// import theme from './theme'
 
 function App() {
 
   return (
     <>
-      <SignUp />
+        <SignUp />
+      {/* <ThemeProvider theme={theme}>
+      </ThemeProvider> */}
     </>
   )
 }
