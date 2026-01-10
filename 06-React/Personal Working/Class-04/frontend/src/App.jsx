@@ -11,6 +11,8 @@ import Loop from './Containers/Loop&Map/Loop_Map'
 import DigitalClock from './Containers/Clock/Clock'
 import NestedLoop from './Containers/NestedLoop/NestedLoop'
 import UseEffect from './Containers/UseEffect/UseEffect'
+import MountUnmount from './Containers/Mount/Unmount/MountUnmount'
+import Styling from './Containers/Styling/StylingIntro/StylingIntro'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -28,7 +30,9 @@ function App() {
       {/* <Loop /> */}
       {/* <DigitalClock /> */}
       {/* <NestedLoop /> */}
-      <UseEffect />
+      {/* <UseEffect /> */}
+      {/* <MountUnmount /> */}
+      <Styling />
 
     </>
   )

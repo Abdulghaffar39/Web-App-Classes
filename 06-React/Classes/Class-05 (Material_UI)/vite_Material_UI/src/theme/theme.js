@@ -4,10 +4,11 @@ import { createTheme } from '@mui/material/styles';
 const customTheme = createTheme({
   palette: {
     primary: {
-      main: '#1976D2', // Your primary color
+      main: '#222222', // Your primary color
     },
     secondary: {
-      main: '#DC004E', // Your secondary color
+      main: '#dfdfdfff', // Your secondary color
+      blue: '#1c5a80ff', // Your secondary color
     },
     // You can also define dark mode here or in a separate file/logic
     // mode: 'dark', 
