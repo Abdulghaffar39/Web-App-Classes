@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button, Paper, Stack, Typography } from '@mui/material'
 import Input from '../../Components/Input/Input'
 import { Link } from 'react-router'
+import Logsign from '../../Components/Buttons/Logsign/Logsign'
 
-export default function Login({theme}) {
+export default function Login({ theme }) {
+
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+
+    // const [user, setUser] = useState(null)
+    // const [error, setError] = useState(null)
+    // const [isLoading, setIsLoading] = useState(false)
+    // const [shouldSignup, setShouldSignup] = useState(false)
 
     return (
 
@@ -17,11 +26,20 @@ export default function Login({theme}) {
                         Log In
                     </Typography>
 
-                    <Input label="Email" placeholder="Enter your email name" />
-                    <Input label="Password" placeholder="Enter your password name" />
+                    <Input
+                        value={email}
+                        label="Email"
+                        placeholder="Enter your email name"
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <Input
+                        value={password}
+                        label="Password"
+                        placeholder="Enter your password name"
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
 
-
-                    <Link to="/Home"><Button variant="contained" sx={{ width: "100%", fontWeight: "600", background: theme.palette.secondary.blue, ":hover": { background: theme.palette.primary.main, color: theme.palette.secondary.blue } }} size="medium">Login</Button></Link>
+                    <Link to="/Home"><Logsign theme={theme} value="Log In" /></Link>
                 </Stack>
 
             </Paper >
