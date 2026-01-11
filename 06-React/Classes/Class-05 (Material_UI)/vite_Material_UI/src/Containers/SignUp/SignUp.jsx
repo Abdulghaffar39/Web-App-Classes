@@ -18,8 +18,13 @@ export default function SignUp({ theme }) {
 
     useEffect(() => {
 
+        if (!shouldSignup) return;
+
         const handleSingup = async () => {
             try {
+
+                // setIsLoading(true);
+                setError(null);
 
                 let values = { fname, lname, email, password }
                 console.log(values);
@@ -27,8 +32,12 @@ export default function SignUp({ theme }) {
 
             }
             catch (err) {
+                setError(err.message || "Sign Up failed")
                 console.log(err);
 
+            }
+            finally {
+                setShouldSignup(false)
             }
         }
 
@@ -83,14 +92,15 @@ export default function SignUp({ theme }) {
                 <Link to="/login">
                     <Logsign
                         onClick={() => setShouldSignup(true)}
-                        theme={theme} value="Sign Up"
-                        disabled={isLoading || !email || !password || !fname || !lname}
-                        {isLoading ? "Signup in..." : "Signup"}
+                        theme={theme}
+                        value="Sign Up"
+                        disabled={!email || !password || !fname || !lname}
+
                     />
                 </Link>
 
                 {error && <p style={{ color: "red" }}>{error}</p>}
-                {user && <h2>Welcome, {user.result.fname + " " + user.result.lname}</h2>}
+                {/* {user && <h2>Welcome, {user.result.fname + " " + user.result.lname}</h2>} */}
 
             </Stack>
 
