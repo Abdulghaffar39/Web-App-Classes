@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Box, Paper, Stack, Typography } from '@mui/material'
+import { Box, Button, Paper, Stack, TextField, Typography } from '@mui/material'
 import Input from '../../Components/Input/Input'
 import { Link } from 'react-router'
 import Logsign from '../../Components/Buttons/Logsign/Logsign'
@@ -20,87 +20,92 @@ export default function SignUp({ theme }) {
 
         if (!shouldSignup) return;
 
-        const handleSingup = async () => {
+        async function handleFuc() {
             try {
-
-                // setIsLoading(true);
                 setError(null);
+                setIsLoading(true);
+                console.log(fname + lname + email + password);
 
-                let values = { fname, lname, email, password }
-                console.log(values);
-                console.log('lkjfdlksdf');
+                // const userData = (fname, lname, email, password)
+                // setUser(userData);
 
-            }
-            catch (err) {
-                setError(err.message || "Sign Up failed")
-                console.log(err);
+            } catch (err) {
+                console.log(err + "Error");
+                setError(err.message || "Signup failed");
+                setUser(null);
 
-            }
-            finally {
-                setShouldSignup(false)
+            } finally {
+                setIsLoading(false);
+                setShouldSignup(false);
             }
         }
 
-        handleSingup()
+        handleFuc()
+
 
     }, [shouldSignup, email, password])
 
     return (
 
-        <Paper sx={{ width: "50%", background: theme.palette.primary.main, margin: "120px auto", alignItems: "center", color: theme.palette.secondary.main, borderRadius: "20px", padding: "20px" }}>
+        <Paper sx={{ width: "50%", backgroundColor: theme.palette.secondary.main, margin: "120px auto", alignItems: "center", color: theme.palette.secondary.main, borderRadius: "20px", padding: "20px" }}>
 
             <Stack spacing={2} sx={{ padding: "30px", gap: "30px" }}>
 
-                <Typography sx={{ textAlign: "center", fontSize: "38px", fontWeight: "600" }}>
+                <Typography sx={{ color: "black", textAlign: "center", fontSize: "38px", fontWeight: "700" }}>
                     SignUp
                 </Typography>
 
                 <Box sx={{ display: "flex", gap: "20px" }}>
 
-                    <Input
+                    <TextField
+                        sx={{ width: "50%", color: "red", label: { color: "gray" }, input: { color: "black", borderColor: "white" } }}
                         type="fname"
-                        value={fname}
                         label="First Name"
                         placeholder="Enter your first name"
                         onChange={(e) => setFname(e.target.value)}
                     />
-                    <Input
+
+                    <TextField
+                        sx={{ width: "50%", color: "red", label: { color: "gray" }, input: { color: "black", borderColor: "white" } }}
                         type="lname"
-                        value={lname}
                         label="Last Name"
                         placeholder="Enter your last name"
                         onChange={(e) => setLname(e.target.value)}
                     />
+
                 </Box>
 
-                <Input
+                <TextField
+                    sx={{ color: "red", label: { color: "gray" }, input: { color: "black", borderColor: "white" } }}
                     type="email"
-                    value={email}
                     label="Email"
-                    placeholder="Enter your email name"
+                    placeholder="Enter your Email"
                     onChange={(e) => setEmail(e.target.value)}
                 />
 
-                <Input
+                <TextField
+                    sx={{ color: "red", label: { color: "gray" }, input: { color: "black", borderColor: "white" } }}
                     type="password"
-                    value={password}
                     label="Password"
-                    placeholder="Enter your password name"
+                    placeholder="Enter your password"
                     onChange={(e) => setPassword(e.target.value)}
                 />
 
                 <Link to="/login">
-                    <Logsign
-                        onClick={() => setShouldSignup(true)}
-                        theme={theme}
-                        value="Sign Up"
+                    <Button
+                        variant="contained"
+                        size="medium"
+                        sx={{ width: "100%", fontWeight: "600", background: theme.palette.secondary.blue, ":hover": { background: theme.palette.primary.main, color: theme.palette.secondary.blue } }}
                         disabled={!email || !password || !fname || !lname}
+                        onClick={() => setShouldSignup(true)}>
 
-                    />
+                        {isLoading ? "Signup in..." : "Signup"}
+
+                    </Button>
                 </Link>
 
                 {error && <p style={{ color: "red" }}>{error}</p>}
-                {/* {user && <h2>Welcome, {user.result.fname + " " + user.result.lname}</h2>} */}
+                {user && <h2>Welcome, {user.fname}</h2>}
 
             </Stack>
 
