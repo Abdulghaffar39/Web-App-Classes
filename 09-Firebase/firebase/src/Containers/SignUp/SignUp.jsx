@@ -10,35 +10,39 @@ export default function SignUp() {
 
 
   const CreateUser = () => {
-    createUserWithEmailAndPassword(auth, email, password).then((value) => { alert("Sign Up Successfuly") })
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((value) => { alert("Sign Up Successfuly") })
+      .catch((err) => { (alert(err)), console.log(err) })
   }
 
   return (
-    <div>
+    <div style={{ width: "80%", margin: "0 auto", display: "flex", flexDirection: "column", gap: "10px", padding: "20px" }}>
 
+      <h1>Sign Up</h1>
 
-      <div>
+      <div style={{ width: "100%", display: "flex", flexDirection: "column", gap: "0px" }}>
 
         <input
           required
           type="email"
+          value={email}
           placeholder='Enter your email'
           onChange={(e) => setEmail(e.target.value)}
-          value={email}
+          style={{ height: '35px', padding: "6px", fontSize: "20px", borderRadius:"10px", outline:"none" }}
         /><br />
 
         <input
           required
           type="password"
+          value={password}
           placeholder='Enter your password'
           onChange={(e) => setPassword(e.target.value)}
-          value={password}
+          style={{ height: '35px', padding: "6px", fontSize: "20px", borderRadius:"10px", outline:"none"  }}
         />
 
       </div>
 
       <button onClick={CreateUser}>Sign Up</button>
-
 
     </div>
   )
