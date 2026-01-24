@@ -9,7 +9,6 @@ export const apiRequest = (url, params = {}) => {
 
                     throw new Error(`HTTP error! status: ${response.status}`)
                 }
-                console.log(response.result);
                 return response.json();
             })
             .then(data => {

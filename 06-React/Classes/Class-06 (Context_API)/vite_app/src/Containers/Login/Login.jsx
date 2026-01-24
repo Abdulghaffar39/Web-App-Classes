@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Login from "../../Services/auth/authLogin";
+import { userContextData } from "../Context/Auth/Authcontext";
 
 const LoginForm = () => {
     const [user, setUser] = useState(null);
@@ -8,6 +9,8 @@ const LoginForm = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [shouldLogin, setShouldLogin] = useState(false);
+    const { UserLogin } = userContextData();
+    
 
     useEffect(() => {
         if (!shouldLogin) return;
@@ -16,10 +19,10 @@ const LoginForm = () => {
             try {
                 setIsLoading(true);
                 setError(null);
-                console.log(user);
+                // console.log(user);
 
                 const userData = await Login(email, password);
-                setUser(userData);
+                setUser(userData)
             } catch (err) {
                 setError(err.message || "Login failed");
                 setUser(null);
@@ -56,8 +59,8 @@ const LoginForm = () => {
             </button>
 
             {error && <p style={{ color: "red" }}>{error}</p>}
-            {user && <h2>Welcome, Login Successfuly</h2>}
-            
+            {user && <h2>Welcome, {user.result}</h2>}
+
         </div>
     );
 };

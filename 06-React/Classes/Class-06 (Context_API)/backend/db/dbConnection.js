@@ -20,8 +20,6 @@ async function dbCon() {
         mongoose.connection.on('disconnected', () =>
             console.log('DATABASE CONNECTION TERMINATED...!')
         );
-
-
         
     }
     catch (err) {

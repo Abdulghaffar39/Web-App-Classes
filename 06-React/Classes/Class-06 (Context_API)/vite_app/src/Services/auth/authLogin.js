@@ -1,11 +1,7 @@
-import { useNavigate } from "react-router";
 import { apiRequest } from "../apiServices";
 import { configuration } from "../config";
 
 export default async function Login(email, password) {
-
-
-    const navigate = useNavigate();
 
     try {
 
@@ -18,14 +14,8 @@ export default async function Login(email, password) {
         },
         )
 
-        if (data.status === 404) {
-            console.log("user already axists" + `${data.message}`);
-            return
-        }
-
         if (data && data.token) {
             localStorage.setItem("userToken", data.token);
-            navigate("/home")
         }
         return data;
     }
