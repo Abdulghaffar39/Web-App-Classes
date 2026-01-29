@@ -98,8 +98,8 @@ async function login(req, res) {
 
                 return res.send({
 
+                    user,
                     token,
-                    result,
                     status: 200,
                     message: `🎉 Thank you! Your details have been verify successfully.`,
                 });

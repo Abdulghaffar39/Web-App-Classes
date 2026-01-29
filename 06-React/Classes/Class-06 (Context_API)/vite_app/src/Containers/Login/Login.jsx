@@ -1,15 +1,17 @@
 import { useEffect, useState } from "react";
 import Login from "../../Services/auth/authLogin";
 import { userContextData } from "../Context/Auth/Authcontext";
+import { useNavigate } from "react-router";
 
 const LoginForm = () => {
-    const [user, setUser] = useState(null);
+    const [userRender, setUserRander] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [shouldLogin, setShouldLogin] = useState(false);
     const { UserLogin } = userContextData();
+    let navigate = useNavigate()
     
 
     useEffect(() => {
@@ -19,13 +21,15 @@ const LoginForm = () => {
             try {
                 setIsLoading(true);
                 setError(null);
-                // console.log(user);
 
                 const userData = await Login(email, password);
-                setUser(userData)
+                setUserRander(userData)
+                UserLogin(userData.user)
+                navigate("/setting")
+                
             } catch (err) {
                 setError(err.message || "Login failed");
-                setUser(null);
+                setUserRander(null);
             } finally {
                 setIsLoading(false);
                 setShouldLogin(false); // reset trigger
@@ -59,7 +63,7 @@ const LoginForm = () => {
             </button>
 
             {error && <p style={{ color: "red" }}>{error}</p>}
-            {user && <h2>Welcome, {user.result}</h2>}
+            {userRender && <h2>Welcome, {`${userRender.user.fname}  ${userRender.user.lname}`}</h2>}
 
         </div>
     );

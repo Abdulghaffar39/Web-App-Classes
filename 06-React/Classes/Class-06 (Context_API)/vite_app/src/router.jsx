@@ -5,6 +5,7 @@ import About from "./Containers/About/about";
 import SignupForm from "./Containers/Signup/Signup";
 import LoginForm from "./Containers/Login/Login";
 import Contact from "./Containers/Contact/Contact";
+import Setting from "./Containers/SettingSetting";
 // import NotFound from "./pages/NotFound";
 
 
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
             { path: "signup", element: <SignupForm /> }, 
             { path: "login", element: <LoginForm /> }, 
             { path: "contact", element: <Contact /> }, 
-            // { path: "setting", element: <Setting /> },
+            { path: "setting", element: <Setting /> },
         ],
     },
 ]);
