@@ -2,20 +2,21 @@ import { useEffect, useState } from "react";
 import Login from "../../Services/auth/authLogin";
 import { userContextData } from "../Context/Auth/Authcontext";
 import { useNavigate } from "react-router";
-import { useCookies } from 'react-cookie';
+// import { useCookies } from 'react-cookie';
 
 const LoginForm = () => {
-    const [userRender, setUserRander] = useState(null);
+    // const [userRender, setUserRander] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [shouldLogin, setShouldLogin] = useState(false);
-    const { UserLogin } = userContextData();
-    // let navigate = useNavigate()
 
-    const cookies = useCookies(userRender);
-    console.log(cookies);
+    const { UserLogin } = userContextData();
+    let navigate = useNavigate()
+
+    // const cookies = useCookies(userRender);
+    // console.log(cookies);
 
     // setCookie('user', userRender.token, { path: '/', expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000) });
     // console.log(setCookie);
@@ -38,13 +39,14 @@ const LoginForm = () => {
                 setError(null);
 
                 const userData = await Login(email, password);
-                setUserRander(userData)
-                UserLogin(userData.user)
-                // navigate("/setting")
+                // setUserRander(userData, Token)
+                // UserLogin(userData.user)
+                UserLogin(userData.user, userData.token);
+                navigate("/setting")
 
             } catch (err) {
                 setError(err.message || "Login failed");
-                setUserRander(null);
+                // setUserRander(null);
             } finally {
                 setIsLoading(false);
                 setShouldLogin(false); // reset trigger
@@ -52,7 +54,7 @@ const LoginForm = () => {
         };
 
         handleLogin();
-    }, [shouldLogin, email, password]);
+    }, [shouldLogin]);
 
     return (
         <div>
@@ -84,7 +86,6 @@ const LoginForm = () => {
             </button>
 
             {error && <p style={{ color: "red" }}>{error}</p>}
-            {userRender && <h2>Welcome, {`${userRender.user.fname}  ${userRender.user.lname}`}</h2>}
 
         </div>
 

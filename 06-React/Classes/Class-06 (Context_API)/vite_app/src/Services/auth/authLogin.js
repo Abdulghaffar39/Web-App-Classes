@@ -14,9 +14,9 @@ export default async function Login(email, password) {
         },
         )
 
-        if (data && data.token) {
-            localStorage.setItem("userToken", data.token);
-        }
+        // if (data && data.token) {
+        //     localStorage.setItem("userToken", data.token);
+        // }
         return data;
     }
     catch (error) {
