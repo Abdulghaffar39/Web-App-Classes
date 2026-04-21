@@ -1,5 +1,5 @@
 var userName: string = "Abdul Ghaffar"
-var age: number = 30
+var age: number = 30;
 console.log(userName, age);
 
 // TypeScript Data types

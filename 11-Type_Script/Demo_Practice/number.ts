@@ -10,4 +10,4 @@ console.log(total);
 var item:number=100;
 var item2="50"
 var itemconversion=+item2
-console.log(item+itemconversion);
+console.log(item + itemconversion);
