@@ -1,0 +1,17 @@
+{
+  "name": "02-child_window",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "nodemon --exec electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^41.3.0",
+    "nodemon": "^3.1.14"
+  }
+}
