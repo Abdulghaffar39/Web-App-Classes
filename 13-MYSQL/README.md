@@ -62,7 +62,7 @@ Database me alag-alag tarah ka data (jaise text, numbers, ya dates) store karne 
 | **`YEAR`** | Date & Time | Yeh sirf aur sirf saal (year) ko 4 digits ke format me (jaise 2026) store karne ke liye hota hai. | `YEAR` |
 
 
-## 🔢 SIGNED vs UNSIGNED in MySQL
+## SIGNED vs UNSIGNED in MySQL
 
 Jab hum koi Number/Integer datatype (jaise `INT` ya `TINYINT`) istemal karte hain, to hum yeh tay kar sakte hain ke usme negative (manfi) numbers aane hain ya nahi. Is maqsad ke liye **SIGNED** aur **UNSIGNED** ka istemal hota hai.
 
@@ -71,18 +71,18 @@ Jab hum koi Number/Integer datatype (jaise `INT` ya `TINYINT`) istemal karte hai
 | **Concept** | Isme Negative (-) aur Positive (+) dono tarah ke numbers store ho sakte hain. | Isme sirf zero (0) aur Positive (+) yani non-negative numbers store ho sakte hain. |
 | **Range** | Range aadhi negative me aur aadhi positive me banti hai. | Negative range khatam ho kar positive side me double (dugni) ho jati hai. |
 | **TINYINT Example** | $-128$ se le kar $127$ tak | $0$ se le kar $255$ tak |
-| **Best Used For** | Bank balance, temperature, ya jahan minus (-) me value aa sakti ho. | ID, Roll Number, Umar (Age), ya Quantity jo kabhi minus me nahi ho sakti. |
+| **Best Used For** | Bank balance, temperature, ya jahan minus (-) me value aa sakti ho. | ID, Roll Number, Age, ya Quantity jo kabhi minus me nahi ho sakti. |
 
 ---
 
-### 💡 Aik Aasan Misaal (`TINYINT`)
+### Aik Aasan Misaal (`TINYINT`)
 
 Farz karein aapke paas total **256** numbers store karne ki jagah hai:
 
 * **SIGNED:** Agar aap nishaan (sign) lagane ki ijazat dete hain, to computer darmiyan me khara ho jata hai. Wo $-128$ kadam peeche (negative) ja sakta hai aur $127$ kadam aage (positive) ja sakta hai.
 * **UNSIGNED:** Jab aap nishaan (+) ya (-) ki tension khatam kar dete hain, to computer zero (0) se shuru karta hai aur poore **255** kadam aage (positive) tak chala jata hai.
 
-### 💻 Code me kaise likhte hain?
+### Code me kaise likhte hain?
 
 ```sql
 CREATE TABLE inventory (
@@ -90,3 +90,16 @@ CREATE TABLE inventory (
     quantity INT UNSIGNED,                -- Stock minus me nahi ja sakta
     temperature INT SIGNED                -- Temperature minus me ho sakta hai
 );
+
+
+## Types of SQL Commands
+
+SQL commands ko unke makhsoos kaam ke mutabiq 5 baray groups me divide kiya gaya hai:
+
+| Category | Full Form | Main Purpose (Urdu/Hindi) | Core Commands |
+| :--- | :--- | :--- | :--- |
+| **`DDL`** | Data Definition Language | Database aur tables ka **Structure / Design** banane ya badalne ke liye. | `CREATE`, `DROP`, `ALTER`, `TRUNCATE` |
+| **`DQL`** | Data Query Language | Database ke andar save kiye huay data ko **Dhoondne ya Dekhne** ke liye. | `SELECT` |
+| **`DML`** | Data Manipulation Language | Tables ke andar maujood **Asal Data** me tabdeeli karne ke liye. | `INSERT`, `UPDATE`, `DELETE` |
+| **`DCL`** | Data Control Language | Database ki **Security aur Permissions** ko manage karne ke liye. | `GRANT`, `REVOKE` |
+| **`TCL`** | Transaction Control Language | Database me chalne wali **Transactions** ko permanent save ya cancel karne ke liye. | `COMMIT`, `ROLLBACK`, `SAVEPOINT` |
