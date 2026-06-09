@@ -97,10 +97,184 @@ CREATE TABLE inventory (
 
 SQL commands ko unke makhsoos kaam ke mutabiq 5 baray groups me divide kiya gaya hai:
 
-| Category | Full Form | Main Purpose (Urdu/Hindi) | Core Commands |
+| Category | Full Form | Main Purpose | Core Commands |
 | :--- | :--- | :--- | :--- |
 | **`DDL`** | Data Definition Language | Database aur tables ka **Structure / Design** banane ya badalne ke liye. | `CREATE`, `DROP`, `ALTER`, `TRUNCATE` |
 | **`DQL`** | Data Query Language | Database ke andar save kiye huay data ko **Dhoondne ya Dekhne** ke liye. | `SELECT` |
 | **`DML`** | Data Manipulation Language | Tables ke andar maujood **Asal Data** me tabdeeli karne ke liye. | `INSERT`, `UPDATE`, `DELETE` |
 | **`DCL`** | Data Control Language | Database ki **Security aur Permissions** ko manage karne ke liye. | `GRANT`, `REVOKE` |
 | **`TCL`** | Transaction Control Language | Database me chalne wali **Transactions** ko permanent save ya cancel karne ke liye. | `COMMIT`, `ROLLBACK`, `SAVEPOINT` |
+
+
+
+-- CREATE DATABASE IF NOT EXISTS College;
+-- DROP DATABASE IF EXISTS College;
+-- SHOW DATABASES;
+-- SHOW TABLES;
+
+
+INSERT INTO student
+(rollno, name)
+VALUES
+(101, "ali"),
+(102, "ali"),
+(103, "ali");
+
+
+primary key 
+foregn key
+constraints
+
+cust_id int,
+    FOREIGN KEY (cust_id) REFERENCES customer(id)
+
+CONSTRAINT age_city_check CHECK (age >= 18 AND city="karachi")
+distinct
+where clause
+OPERATORS
+LIMIT CLAUSE
+order by clause
+AGGREGATE FUNCTION
+group by clause
+
+CREATE DATABASE CREATE DATABASE college;
+
+USE college;
+
+CREATE TABLE students(
+	rollno INT PRIMARY KEY,
+    name VARCHAR(50),
+    marks INT NOT NULL,
+    grade VARCHAR(1),
+    city VARCHAR(20)
+);
+
+INSERT INTO students
+(rollno, name, marks, grade, city)
+VALUES
+(1, "azeem", 96, "C", "karachi"),
+(2, "asjad", 76, "C", "islamabad"),
+(3, "zohaib", 56, "C", "quetta"),
+(4, "sudais", 66, "C", "larkhana"),
+(5, "sudais", 66, "C", "larkhana"),
+(6, "sudais", 66, "C", "larkhana"),
+(7, "sudais", 66, "C", "larkhana");
+
+-- SELECT name, marks FROM students
+-- SELECT * FROM students
+-- SELECT DISTINCT city FROM students;
+
+-- SELECT * FROM students WHERE marks > 80;
+-- SELECT * FROM students WHERE city="larkhana";
+-- SELECT * FROM students WHERE marks > 60 AND city="larkhana";
+-- SELECT * FROM students WHERE marks BETWEEN 70 AND 90;
+-- SELECT * FROM students WHERE city IN ("karachi" , "larkhana");
+-- SELECT * FROM students WHERE city NOT IN ("karachi" , "larkhana");
+
+-- SELECT * FROM students LIMIT 3;
+-- SELECT * FROM students WHERE marks > 65 LIMIT 3;
+
+-- SELECT * FROM students ORDER BY city ASC;
+-- SELECT * FROM students ORDER BY marks ASC;
+-- SELECT * FROM students ORDER BY marks ASC LIMIT 3;
+
+-- SELECT * FROM students ORDER BY marks DESC;
+-- SELECT * FROM students ORDER BY marks DESC LIMIT 3;
+;
+
+USE college;
+
+CREATE TABLE students(
+	rollno INT PRIMARY KEY,
+    name VARCHAR(50),
+    marks INT NOT NULL,
+    grade VARCHAR(1),
+    city VARCHAR(20)
+);
+
+INSERT INTO students
+(rollno, name, marks, grade, city)
+VALUES
+(1, "azeem", 96, "C", "karachi"),
+(2, "asjad", 76, "C", "islamabad"),
+(3, "zohaib", 56, "C", "quetta"),
+(4, "sudais", 66, "C", "larkhana"),
+(5, "sudais", 66, "C", "larkhana"),
+(6, "sudais", 66, "C", "larkhana"),
+(7, "sudais", 66, "C", "larkhana");
+
+-- SELECT name, marks FROM students
+-- SELECT * FROM students
+-- SELECT DISTINCT city FROM students;
+
+-- SELECT * FROM students WHERE marks > 80;
+-- SELECT * FROM students WHERE city="larkhana";
+-- SELECT * FROM students WHERE marks > 60 AND city="larkhana";
+-- SELECT * FROM students WHERE marks BETWEEN 70 AND 90;
+-- SELECT * FROM students WHERE city IN ("karachi" , "larkhana");
+-- SELECT * FROM students WHERE city NOT IN ("karachi" , "larkhana");
+
+-- SELECT * FROM students LIMIT 3;
+-- SELECT * FROM students WHERE marks > 65 LIMIT 3;
+
+-- SELECT * FROM students ORDER BY city ASC;
+-- SELECT * FROM students ORDER BY marks ASC;
+-- SELECT * FROM students ORDER BY marks ASC LIMIT 3;
+
+-- SELECT * FROM students ORDER BY marks DESC;
+-- SELECT * FROM students ORDER BY marks DESC LIMIT 3;
+
+SELECT MAX(marks) FROM students;
+SELECT MIN(marks) FROM students;
+SELECT AVG(marks) FROM students;
+SELECT COUNT(name) FROM students;
+
+SELECT city FROM students GROUP BY city;
+SELECT city, COUNT(rollno) FROM students GROUP BY city;
+SELECT city, name, COUNT(rollno) FROM students GROUP BY city, name;
+SELECT city, name, COUNT(rollno) FROM students GROUP BY city, name order by city;
+SELECT city, avg(marks) FROM students GROUP BY city ORDER BY avg(marks) DESC;
+
+
+
+
+CREATE DATABASE customer;
+
+USE customer;
+
+CREATE TABLE payment(
+	customer_id INT PRIMARY KEY,
+    customer VARCHAR(50),
+    mode VARCHAR(50),
+    city VARCHAR(20)
+);
+
+INSERT INTO payment
+(sno, customer, mode, city)
+VALUES
+(101, "Olivia Barrett", "Netbanking", "Portland"),
+(102, "Ethan Sinclair", "Credit Card", "Miami"),
+(103, "Maya Hernandez", "Credit Card", "Seattle"),
+(104, "Liam Donovan", "Netbanking", "Denver"),
+(105, "Sophia Nguyen", "Credit Card ", "New Orleans"),
+(106, "Caleb Foster", "Debit Card", "Minneapolis"),
+(107, "Ava Patel", "Debit Card", "Phoenix"),
+(108, "Lucas Carter", "Netbanking", "Boston"),
+(109, "Isabella Martinez", "Netbanking", "Nashville"),
+(110, "Jackson Brooks", "Credit Card", "Boston");
+
+SELECT mode, COUNT(customer) FROM payment GROUP BY mode;
+
+
+having clause
+SELECT city, COUNT(rollno) FROM students GROUP BY city HAVING MAX(marks) > 90;
+
+
+Gernal order
+
+select (column)
+from (tables)
+where (condition)
+group by (column)
+having (condition)
+order by (column) ASC
