@@ -1,17 +1,16 @@
-# 📊 MySQL Basics & Code Explanation
+# MySQL Basics & Code Explanation
 
-## 🗄️ Core Components
+## Core Components
 
-### 🚀 MySQL Community Server
+### MySQL Community Server
 MySQL Community Server background me chalne wala woh asal system hai jo aapke saare data ko hamesha ke liye mehfooz (store) rakhta hai aur aapke SQL orders par amal karta hai.
 
-### 🎨 MySQL Workbench
+### MySQL Workbench
 MySQL Workbench woh visual window (software) hai jahan aap apna SQL code likhte hain aur databases ko ba-aasaani design ya manage karte hain.
 
-### 🛠️ MySQL Installer for Windows
+### MySQL Installer for Windows
 MySQL Installer for Windows ek aisi single wizard line (software) hai jo aapke computer par MySQL ke tamam zaroori tools—jaise MySQL Server aur Workbench—ko ek hi jagah se ba-aasaani install, update, ya reconfigure (setting badalna) karne ke kaam aati hai.
 
-# -------------------------------- SQL CODE ------------------------------------
 
 CREATE DATABASE Collage;
 
@@ -28,7 +27,6 @@ INSERT INTO student VALUES(2, "AbdulGhaffar", 12);
 
 SELECT * FROM student;
 
-# -------------------------------- SQL CODE ------------------------------------
 
 ## Code Explanation: 
 
@@ -51,7 +49,7 @@ Database me alag-alag tarah ka data (jaise text, numbers, ya dates) store karne 
 | Datatype | Category | Usage Example |
 | :--- | :--- | :--- |
 | **`CHAR`** | Text / String | Yeh fix length (pakki lambai) ka text store karta hai aur khali jagah ko spaces se bhar deta hai. | `CHAR(50)` |
-| **`VARCHAR`** | Text / String | Yeh variable length ka text store karta hai aur sirf utni hi memory leta hai jitna bada text ho. | `VARCHAR(50)` |
+| **`VARCHAR`** | Text / String | Yeh variable length ka text store karta hai aur sirf utni hi memory leta hai jitna bara text ho. | `VARCHAR(50)` |
 | **`BLOB`** | Text / String | Yeh bohot bada binary data jaise images, audio, ya video files ko store karne ke liye use hota hai. | `BLOB(1000)` |
 | **`TINYINT`** | Number (Integer) | Yeh bohot chote numbers ($-128$ se $127$ tak, jaise kisi ki umar) ko store karne ke liye best hai. | `TINYINT` |
 | **`INT`** | Number (Integer) | Yeh aam aur darmiyanay size ke poore numbers (bina point wale, jaise Roll ID) ko store karta hai. | `INT` |
@@ -62,3 +60,33 @@ Database me alag-alag tarah ka data (jaise text, numbers, ya dates) store karne 
 | **`BOOLEAN`** | Special | Yeh sirf do hi values store karta hai: True (1) ya False (0), jaise Pass/Fail ya Yes/No. | `BOOLEAN` |
 | **`DATE`** | Date & Time | Yeh tareekh ko `YYYY-MM-DD` (Saal-Mahina-Din) ke standard format me store karta hai. | `DATE` |
 | **`YEAR`** | Date & Time | Yeh sirf aur sirf saal (year) ko 4 digits ke format me (jaise 2026) store karne ke liye hota hai. | `YEAR` |
+
+
+## 🔢 SIGNED vs UNSIGNED in MySQL
+
+Jab hum koi Number/Integer datatype (jaise `INT` ya `TINYINT`) istemal karte hain, to hum yeh tay kar sakte hain ke usme negative (manfi) numbers aane hain ya nahi. Is maqsad ke liye **SIGNED** aur **UNSIGNED** ka istemal hota hai.
+
+| Property | SIGNED (Default) | UNSIGNED |
+| :--- | :--- | :--- |
+| **Concept** | Isme Negative (-) aur Positive (+) dono tarah ke numbers store ho sakte hain. | Isme sirf zero (0) aur Positive (+) yani non-negative numbers store ho sakte hain. |
+| **Range** | Range aadhi negative me aur aadhi positive me banti hai. | Negative range khatam ho kar positive side me double (dugni) ho jati hai. |
+| **TINYINT Example** | $-128$ se le kar $127$ tak | $0$ se le kar $255$ tak |
+| **Best Used For** | Bank balance, temperature, ya jahan minus (-) me value aa sakti ho. | ID, Roll Number, Umar (Age), ya Quantity jo kabhi minus me nahi ho sakti. |
+
+---
+
+### 💡 Aik Aasan Misaal (`TINYINT`)
+
+Farz karein aapke paas total **256** numbers store karne ki jagah hai:
+
+* **SIGNED:** Agar aap nishaan (sign) lagane ki ijazat dete hain, to computer darmiyan me khara ho jata hai. Wo $-128$ kadam peeche (negative) ja sakta hai aur $127$ kadam aage (positive) ja sakta hai.
+* **UNSIGNED:** Jab aap nishaan (+) ya (-) ki tension khatam kar dete hain, to computer zero (0) se shuru karta hai aur poore **255** kadam aage (positive) tak chala jata hai.
+
+### 💻 Code me kaise likhte hain?
+
+```sql
+CREATE TABLE inventory (
+    product_id INT UNSIGNED PRIMARY KEY,  -- ID kabhi minus me nahi ho sakti
+    quantity INT UNSIGNED,                -- Stock minus me nahi ja sakta
+    temperature INT SIGNED                -- Temperature minus me ho sakta hai
+);
