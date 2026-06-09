@@ -91,7 +91,7 @@ CREATE TABLE inventory (
     temperature INT SIGNED                -- Temperature minus me ho sakta hai
 );
 
-**\`\`\`**
+\`\`\`
 
 ## Types of SQL Commands
 
