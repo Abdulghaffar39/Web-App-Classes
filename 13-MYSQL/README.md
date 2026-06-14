@@ -278,3 +278,132 @@ where (condition)
 group by (column)
 having (condition)
 order by (column) ASC
+
+
+-- SET SQL_SAFE_UPDATES = 0;
+
+-- UPDATE students SET grade = "D" WHERE marks BETWEEN 50 AND 59;
+
+-- UPDATE students SET marks = "10" WHERE rollno = 7;
+
+
+Revisiting FK
+cascading for fk
+ ON DELETE CASCADE
+    ON UPDATE CASCADE
+
+TRUNCATE
+
+
+
+ALTER TABLE student
+ADD COLUMN age INT NOT NULL DEFAULT 20;
+
+ALTER TABLE student
+DROP COLUMN age;
+
+ALTER TABLE students
+RENAME TO student;
+
+ALTER TABLE student
+CHANGE age stu_age INT;
+
+ALTER TABLE student
+MODIFY COLUMN age VARCHAR(2);
+
+INSERT INTO student
+(rollno, name, marks, grade, city, stu_age)
+VALUES
+(7, "Skarik", 98, "A", "KARACHI", 100);
+
+
+joins in sql
+INNER JOINS
+OUTER JOINS (LEFT , RIGHT , FULL JOINS)
+LEFT EXECUTE JOIN
+RIGHT EXECUTE JOIN
+SALF JOIN
+
+
+
+SELECT * FROM student as s
+INNER JOIN course as c
+ON s.id = c.id;
+
+SELECT * FROM student as s
+RIGHT JOIN course as c
+ON s.id = c.id;
+
+SELECT * FROM student as s
+LEFT JOIN course as c
+ON s.id = c.id;
+
+SELECT * FROM student as s
+LEFT JOIN course as c
+ON s.id = c.id
+UNION
+SELECT * FROM student as s
+RIGHT JOIN course as c
+ON s.id = c.id;
+
+SELECT * FROM student as s
+LEFT JOIN course as c
+ON s.id = c.id
+WHERE c.id IS NOT NULL;
+
+SELECT * FROM student as s
+LEFT JOIN course as c
+ON s.id = c.id
+WHERE c.id IS NULL;
+
+SELECT * FROM student as s
+RIGHT JOIN course as c
+ON s.id = c.id
+WHERE s.id IS NULL;
+
+SELECT * FROM student as s
+RIGHT JOIN course as c
+ON s.id = c.id
+WHERE s.id IS NOT NULL;
+
+
+CREATE TABLE employee(
+	id INT PRIMARY KEY,
+    name VARCHAR(20),
+    manager_id INT
+);
+
+INSERT INTO employee
+(id, name, manager_id)
+VALUES
+(1, "arsala", 3),
+(2, "zeeshar", 4),
+(3, "yeseen", NULL),
+(4, "kamran", 3);
+
+SELECT * FROM employee;
+
+SELECT *
+FROM employee AS a
+JOIN employee AS b
+ON a.id = b.manager_id;
+
+SELECT a.name, b.name
+FROM employee AS a
+JOIN employee AS b
+ON a.id = b.manager_id;
+
+SELECT a.name as manager_name, b.name
+FROM employee AS a
+JOIN employee AS b
+ON a.id = b.manager_id;
+
+SELECT name FROM employee
+UNION
+SELECT name FROM employee;
+
+SELECT name FROM employee
+UNION ALL
+SELECT name FROM employee;
+
+SQL SUB QUERIES
