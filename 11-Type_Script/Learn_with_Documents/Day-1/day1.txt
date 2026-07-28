@@ -1,0 +1,5 @@
+TypeScript: A Static Type Checker
+
+TypeScript, JavaScript ka superset hai.Iska matlab hai ke JavaScript ka har valid syntax, TypeScript mein bhi valid hota hai.
+Syntax se murad woh tareeqa hai jis tarah hum code likhte hain taake ek program ban sake.
+TypeScript sirf syntax ki wajah se kisi bhi valid JavaScript code ko error nahi maanta.
